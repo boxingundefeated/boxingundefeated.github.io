@@ -2,7 +2,7 @@ site:
   name: Boxing Undefeated
   site: 'https://boxingundefeated.github.io'
   base: '/'
-  trailingSlash: false
+  trailingSlash: true
 
   googleSiteVerificationId:
 

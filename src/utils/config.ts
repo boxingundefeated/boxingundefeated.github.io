@@ -85,7 +85,7 @@ const getSite = () => {
     name: DEFAULT_SITE_NAME,
     site: 'boxingundefeated.github.io',
     base: 'boxingundefeated.github.io',
-    trailingSlash: false,
+    trailingSlash: true,
 
     googleSiteVerificationId: '',
   };

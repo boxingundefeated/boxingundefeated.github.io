@@ -27,7 +27,7 @@ const getSite = () => {
     name: DEFAULT_SITE_NAME,
     site: 'serpcompany.github.io',
     base: 'serpcompany.github.io',
-    trailingSlash: false,
+    trailingSlash: true,
 
 
     googleSiteVerificationId: '',
