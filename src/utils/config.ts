@@ -135,7 +135,7 @@ const getI18N = () => {
 const getAppBlog = () => {
   const _default = {
     isEnabled: false,
-    postsPerPage: 50,
+    postsPerPage: 100,
     post: {
       isEnabled: true,
       permalink: '/blog/%slug%',
