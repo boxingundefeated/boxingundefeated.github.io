@@ -1,9 +1,8 @@
-name: Deploy GitHub Pages
+name: Deploy Astro
 
 on:
   push:
     branches: [ main ]
-  
   workflow_dispatch:
 
 permissions:
@@ -13,7 +12,8 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-large
+    runs-on: self-hosted
+    if: github.repository != 'serpcompany/.github'
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
@@ -22,11 +22,12 @@ jobs:
         with:
           package-manager: pnpm@latest
         env:
-          NODE_OPTIONS: --max-old-space-size=32768
+          NODE_OPTIONS: --max-old-space-size=65536
           
   deploy:
     needs: build
-    runs-on: ubuntu-large
+    runs-on: self-hosted
+    if: github.repository != 'serpcompany/.github'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
