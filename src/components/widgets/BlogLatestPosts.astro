@@ -1,13 +1,11 @@
 ---
-import { APP_BLOG } from "~/utils/config";
-
-import Grid from "~/components/blog/Grid.astro";
-
-import { getBlogPermalink } from "~/utils/permalinks";
-import { findLatestPosts } from "~/utils/blog";
-import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
-import type { Widget } from "~/types";
-import Button from "../ui/Button.astro";
+import type { ContentEntryMap } from 'astro:content';
+import { APP_BLOG } from '~/utils/config';
+import Grid from '~/components/blog/Grid.astro';
+import { getBlogPermalink, getPermalink } from '~/utils/permalinks';
+import { findLatestPostsByCollection } from '~/utils/blog';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import type { Widget } from '~/types';
 
 export interface Props extends Widget {
   title?: string;
@@ -15,25 +13,28 @@ export interface Props extends Widget {
   linkUrl?: string | URL;
   information?: string;
   count?: number;
+  collection?: keyof ContentEntryMap;
 }
 
+const collection = Astro.props?.collection || 'post';
+const linkUrl = collection === 'post' ? getPermalink(collection, 'post') : getBlogPermalink();
+
 const {
-  title = await Astro.slots.render("title"),
-  linkText = "View all",
-  linkUrl = getBlogPermalink(),
-  information = await Astro.slots.render("information"),
-  count = 50,
+  title = await Astro.slots.render('title'),
+  linkText = 'More',
+  information = await Astro.slots.render('information'),
+  count = 500,
 
   id,
   isDark = false,
   classes = {},
-  bg = await Astro.slots.render("bg"),
+  bg = await Astro.slots.render('bg'),
 } = Astro.props;
 
-const posts = APP_BLOG.isEnabled ? await findLatestPosts({ count }) : [];
+const posts = APP_BLOG.isEnabled ? await findLatestPostsByCollection({ count, collectionName: collection }) : [];
 ---
 
-{
+<!-- src/components/widgets/BlogLatestPosts.astro -->{
   APP_BLOG.isEnabled ? (
     <WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container} bg={bg}>
       <div class="flex flex-col lg:justify-between lg:flex-row mb-8">
@@ -43,9 +44,6 @@ const posts = APP_BLOG.isEnabled ? await findLatestPosts({ count }) : [];
               class="text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none group font-heading mb-2"
               set:html={title}
             />
-            {APP_BLOG.list.isEnabled && linkText && linkUrl && (
-              <Button variant="link" href={linkUrl}> {linkText} »</Button>
-            )}
           </div>
         )}
 

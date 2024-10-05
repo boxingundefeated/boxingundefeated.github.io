@@ -12,7 +12,6 @@ export async function GET(context) {
     pubDate: post.data.publishDate,
     content: sanitizeHtml(parser.render(post.body)),
     ...post.frontmatter,
-    
   }));
 
   return rss({

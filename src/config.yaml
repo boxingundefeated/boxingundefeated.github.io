@@ -1,3 +1,5 @@
+# src/config.yaml
+
 site:
   name: Boxing Undefeated
   site: 'https://boxingundefeated.github.io'
@@ -11,7 +13,7 @@ metadata:
   title:
     default: Boxing Undefeated
     template: '%s — Boxing Undefeated'
-  description: "\U0001F680 Train Smarter & Harder."
+  description: ''
   robots:
     index: true
     follow: true
@@ -34,7 +36,7 @@ i18n:
 apps:
   blog:
     isEnabled: true
-    postsPerPage: 100
+    postsPerPage: 500
 
     post:
       isEnabled: true

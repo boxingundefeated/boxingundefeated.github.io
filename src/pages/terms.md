@@ -13,7 +13,6 @@ We will not use or share your information with anyone except as described in thi
 
 We use your Personal Information for providing and improving the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible at https://boxingundefeated.com
 
-
 Information Collection And Use
 While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information (“Personal Information”) may include, but is not limited to:
 
@@ -38,7 +37,6 @@ Various other social media platforms
 Log Data
 We collect information that your browser sends whenever you visit our Service (“Log Data”). This Log Data may include information such as your computer’s Internet Protocol (“IP”) address, browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages and other statistics.
 
-
 How will we use your data?
 Our Company collects your data so that we can:
 
@@ -48,12 +46,10 @@ Generally, our Company does not sell user data to third-parties, but we may shar
 
 When Our Company processes your order, it may send your data to, and also use the resulting information from, credit reference agencies to prevent fraudulent purchases.
 
-
 How do we store your data?
 Our Company securely stores your data in our internal CRM database that is accessible only to necessary Company personnel.
 
 Our Company will keep the collected contact information indefinitely, and other user data is stored for 180 days or however long any partnered third-parties (YouTube, Facebook, etc.) may store your data. Once this time period has expired, we will delete your data (other than contact information) by removing it from our CRM database.
-
 
 Marketing
 We would like to send you information about products and services of ours that we think you might like, as well as third-parties that we work with, including Facebook, Amazon, and Google.
@@ -64,10 +60,8 @@ You have the right at any time to stop us from contacting you for marketing purp
 
 If you no longer wish to be contacted for marketing purposes, please email us at privacy @ boxingundefeated.com.
 
-
 Google AdSense & DoubleClick Cookie
 Google, as a third-party vendor, uses cookies to serve ads on our Service.
-
 
 Cookies
 Cookies are files with small amounts of data, which may include an anonymous unique identifier. Cookies are sent to your browser from a web site and stored on your computer’s hard drive.
@@ -76,38 +70,31 @@ We use “cookies” to collect information including Log Data to understand how
 
 For further information, visit allaboutcookies[dot]org.
 
-
 Service Providers
 We may employ third-party companies and individuals to facilitate our Service, to provide the Service on our behalf, to perform Service-related services or to assist us in analyzing how our Service is used.
 
 These third parties have access to your Personal Information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.
 
-
 Security
 The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security.
-
 
 Links To Other Sites
 Our Service may contain links to other sites that are not operated by us. If you click on a third-party link, you will be directed to that third party’s site. We strongly advise you to review the Privacy Policy of every site you visit.
 
 We have no control over, and assume no responsibility for the content, privacy policies or practices of any third-party sites or services.
 
-
 Children’s Privacy
 Our Service does not address anyone under the age of 18 (“Children”).
 
 We do not knowingly collect personally identifiable information from children under 18. If you are a parent or guardian and you are aware that your child has provided us with Personal Information, please contact us. If we discover that a child under 18 has provided us with Personal Information, we will delete such information from our servers immediately.
 
-
 Compliance With Laws
 We will disclose your Personal Information where required to do so by law or subpoena.
-
 
 Changes To This Privacy Policy
 We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
 
 You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page. This Privacy Policy was last updated in June ..
-
 
 Facebook Advertising
 Facebook’s custom audiences feature enables you to create an audience using your data such as email addresses and phone numbers. When using Facebook’s custom audiences feature, your data is locally hashed on your system before you upload and pass such data to Facebook to be used to create your custom audience (the “Hashed Data”). Without limiting any agreement between you and Facebook, by clicking “I accept,” passing to Facebook the Hashed Data, or using custom audiences or advertising, you agree to the following:
@@ -119,7 +106,7 @@ You instruct Facebook to use the Hashed Data for the matching process. Facebook 
 Facebook will not give access to or information about the custom audience(s) to third parties or other advertisers, use your custom audience(s) to append to the information we have about our users or build interest-based profiles, or use your custom audience(s) except to provide services to you, unless we have your permission or are required to do so by law.
 Facebook may modify, suspend or terminate access to, or discontinue the availability of, the custom audiences feature at any time. You may discontinue your use of the custom audiences feature at any time. You may delete your custom audience(s) from the Facebook system at any time through your account tools.
 You may not sell or transfer custom audiences, or authorize any third party to sell or transfer custom audiences
-These Custom Audience Terms and, to the extent applicable, the Data Processing Terms, govern the provision by you of Hashed Data to us and your use of the custom audiences feature, and your use of custom audiences for advertising. They do not replace any terms applicable to your purchase of advertising inventory from Facebook (including but not limited to the Facebook Advertising Guidelines at 
+These Custom Audience Terms and, to the extent applicable, the Data Processing Terms, govern the provision by you of Hashed Data to us and your use of the custom audiences feature, and your use of custom audiences for advertising. They do not replace any terms applicable to your purchase of advertising inventory from Facebook (including but not limited to the Facebook Advertising Guidelines at
 
 https://www.facebook.com/ad_guidelines.php
 
@@ -143,42 +130,34 @@ We will respond to your request consistent with applicable law.
 
 If you are a California resident, you may obtain information about exercising your rights, as described above, by contacting us via the methods listed below.
 
-
 What are your data protection rights? (EU Users)
 We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:
 
-
 The right to access
 
- – You have the right to request us for copies of your personal data. We may charge you a small fee for this service.
-
+– You have the right to request us for copies of your personal data. We may charge you a small fee for this service.
 
 The right to rectification
 
- – You have the right to request that we correct any information you believe is inaccurate. You also have the right to request us to complete the information you believe is incomplete.
-
+– You have the right to request that we correct any information you believe is inaccurate. You also have the right to request us to complete the information you believe is incomplete.
 
 The right to erasure
 
- – You have the right to request that we erase your personal data, under certain conditions.
-
+– You have the right to request that we erase your personal data, under certain conditions.
 
 The right to restrict processing
 
- – You have the right to request that we restrict the processing of your personal data, under certain conditions.
-
+– You have the right to request that we restrict the processing of your personal data, under certain conditions.
 
 The right to object to processing
 
- – You have the right to object to our processing of your personal data, under certain conditions.
-
+– You have the right to object to our processing of your personal data, under certain conditions.
 
 The right to data portability
 
- – You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.
+– You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.
 
 If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us at our email listed below.
-
 
 Warranty, Disclaimer, and Limitations of Liability
 
@@ -195,7 +174,6 @@ From our website, you can visit other websites by following hyperlinks to such e
 
 Please be also aware that when you leave our website, other sites may have different privacy policies and terms which are beyond our control. Please be sure to check the Privacy Policies of these sites as well as their “Terms of Service” before engaging in any business or uploading any information.
 
-
 Affiliate Disclosures
 
 Disclosure of Material Connection
@@ -210,15 +188,12 @@ The owner(s) of this website may be compensated to provide opinions on products,
 
 This website does not contain any content which might present a conflict of interest.
 
-
 Amazon Associates™ affiliate disclaimer
 
 : As an Amazon™ Associate, boxingundefeated.com and/or its related web properties, earn from qualifying purchases.
 
-
 Indemnity
 You agree to defend, indemnify and hold harmless boxingundefeated.com., and its subsidiaries, agents, licensors, managers, and other affiliated companies, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney’s fees) arising from: (i) your use of and access to the Sites, including any data or Content transmitted, submitted, viewed, or received by you; (ii) your violation of any provision of these Terms, including without limitation your breach of any of the representations and warranties above; (iii) your violation of any third-party right, including without limitation any right of privacy or intellectual property rights; (iv) your violation of any applicable law, rule or regulation; (v) any claim or damages that arise as a result of any of your Content or any that is submitted via your account; or (vi) any other party’s access and use of the Sites with your unique username, password or other appropriate security code; (vii) your use of any information, advice, suggestions, recommendations, reviews, guides, guidance, counsel, direction, or instruction from any and/or all content read on any of our web properties.
-
 
 Limitations of Liability
 Your access to and use of this website and/or any of our other web properties, or any Content is at your own risk.
@@ -227,16 +202,13 @@ THE SITES ARE AVAILABLE “AS IS”: YOU UNDERSTAND AND AGREE THAT THE SITES ARE
 
 boxingundefeated.com makes no representations or warranties of any kind with respect to the Sites, including any representation or warranty that the use of the Sites will (a) be timely, uninterrupted or error-free or operate in combination with any other hardware, software, system or data, (b) meet your requirements or expectations, (c) be free from errors or that defects will be corrected, or (d) be free of viruses or other harmful components. boxingundefeated.com also makes no representations or warranties of any kind with respect to Content; user Content, in particular, is provided by and is solely the responsibility of the users providing that Content. No advice or information, whether oral or written, obtained from boxingundefeated.com or through the Sites, will create any warranty not expressly made herein.
 
-
 Release From Liability
 
 : You release, to the fullest extent permitted by law, boxingundefeated.com, its affiliated entities, parent companies, subsidiaries, directors, officers, shareholders, employees, representatives, consultants, agents, suppliers, and/or distributors from responsibility, liability, claims, demands, and/or damages (actual and consequential) of every kind and nature, known and unknown, arising out of or in any way connected with the following: (i) Disputes between users, including those between you and other users; (ii) Third party sites and services, including Content found on such sites and services; (iii) Disputes concerning any use of or action taken using your account by you or a third party; (iv) Claims relating to the unauthorized access to any data communications or Content stored under or relating to your account, including unauthorized use or alteration of such communications or your Content.
 
-
 Limitation of Liability
 
 : TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, boxingundefeated.com, ITS AFFILIATED ENTITIES, PARENT COMPANIES, SUBSIDIARIES, DIRECTORS, OFFICERS, SHAREHOLDERS, EMPLOYEES, REPRESENTATIVES, CONSULTANTS, AGENTS, SUPPLIERS, AND/OR DISTRIBUTORS SHALL NOT BE LIABLE FOR: (A) ANY INDIRECT, INCIDENTAL, EXEMPLARY PUNITIVE, OR CONSEQUENTIAL DAMAGES OF ANY KIND WHATSOEVER; (B) LOSS OF: PROFITS, REVENUE, DATA, USE, GOOD-WILL, OR OTHER INTANGIBLE LOSSES; (C) DAMAGES RELATING TO YOUR ACCESS TO, USE OF, OR INABILITY TO ACCESS OR USE THE SITES; (D) DAMAGES RELATING TO ANY CONDUCT OR CONTENT OF ANY THIRD PARTY OR SUBSCRIBER USING THE SITES, INCLUDING WITHOUT LIMITATION, DEFAMATORY, OFFENSIVE OR ILLEGAL CONDUCT OR CONTENT; AND/OR (E) DAMAGES IN ANY MANNER RELATING TO ANY CONTENT. THIS LIMITATION APPLIES TO ALL CLAIMS, WHETHER BASED ON WARRANTY, CONTRACT, TORT, OR ANY OTHER LEGAL THEORY, WHETHER OR NOT boxingundefeated.com HAS BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGE, AND FURTHER WHERE A REMEDY SET FORTH HEREIN IS FOUND TO HAVE FAILED ITS ESSENTIAL PURPOSE. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE TOTAL LIABILITY OF boxingundefeated.com AND ITS DIRECTORS, OFFICERS, SHAREHOLDERS, EMPLOYEES, REPRESENTATIVES, CONSULTANTS, AGENTS, SUPPLIERS, AND/OR DISTRIBUTORS, FOR ANY CLAIM UNDER THIS AGREEMENT, INCLUDING FOR ANY IMPLIED WARRANTIES, IS LIMITED TO THE GREATER OF FIFTY DOLLARS (USD$50) OR THE AMOUNT YOU PAID US TO USE THE APPLICABLE SITE(S).
-
 
 Contact Us
 If you have any questions about these terms, please contact us.

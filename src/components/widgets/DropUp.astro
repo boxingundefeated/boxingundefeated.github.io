@@ -9,41 +9,241 @@ function toggleMenu() {
 
 <div class="relative">
   <!-- DropUp Button -->
-  <button id="dropUpButton" type="button" class="bg-transparent text-white-500 border border-white-500 hover:bg-transparent-500 hover:text-white p-2 rounded" @click={toggleMenu}>
+  <button
+    id="dropUpButton"
+    type="button"
+    class="p-2 bg-transparent border rounded text-white-500 border-white-500 hover:bg-transparent-500 hover:text-white"
+    @click={toggleMenu}
+  >
     © SERP
   </button>
 
   <!-- DropUp Menu -->
-  <div id="dropUp" class={`absolute bottom-full mb-2 right-0 bg-white shadow-lg rounded w-auto min-w-max ${isMenuOpen ? 'block' : 'hidden'}`}>
+  <div
+    id="dropUp"
+    class={`absolute bottom-full mb-2 right-0 bg-white shadow-lg rounded w-auto min-w-max ${isMenuOpen ? 'block' : 'hidden'}`}
+  >
     <!-- Dropdown Title (SERP BRANDS) -->
-    <span class="block px-4 py-2 text-sm text-gray-700 font-semibold">SERP BRANDS</span>
+    <span class="block px-4 py-2 text-sm font-semibold text-gray-700">SERP</span>
 
     <!-- Dropdown Items -->
     <a href="https://serp.co" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP</a>
-    <a href="https://serp.ai" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP AI</a>
-    <a href="https://serp.fm" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP FM</a>
-    <a href="https://serp.app" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP App</a>
-    <a href="https://serp.games" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP Games</a>
-    <a href="https://serp.wiki" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP Wiki</a>
-    <a href="https://serp.dev" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP Dev</a>
-    <a href="https://serp.style" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP Style</a>
-    <a href="https://serp.site" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP Site</a>
-    <a href="https://serp.media" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP Media</a>
-    <a href="https://serp.travel" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP Travel</a>
-    <a href="https://serp.pet" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP Pets</a>
-    <a href="https://serpuniversity.com" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP University</a>
+    <a href="https://serp.ai" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP AI</a
+    >
+    <a href="https://serp.app" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP App</a
+    >
+    <a href="https://serpbooks.com" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Books</a
+    >
+    <a href="https://serp.best" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Best</a
+    >
+    <a href="https://best.serp.co" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Co Best</a
+    >
+    <a href="https://serp.dev" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Dev</a
+    >
+    <a href="https://serp.deals" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Deals</a
+    >
+    <a href="https://serp.fm" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP FM</a
+    >
+    <a href="https://serp.games" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Games</a
+    >
+    <a href="https://serp.media" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Media</a
+    >
+    <a href="https://serp.pet" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Pets</a
+    >
+    <a href="https://serp.reviews" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Reviews</a
+    >
+    <a href="https://serp.style" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Style</a
+    >
+    <a href="https://serp.site" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Site</a
+    >
+    <a href="https://serp.travel" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Travel</a
+    >
+    <a href="https://serpuniversity.com" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP University</a
+    >
+    <a href="https://serp.wiki" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Wiki</a
+    >
+    <a href="https://serp.ly" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">SERP ly</a
+    >
 
     <!-- Divider -->
-    <div class="border-t border-gray-200 my-2"></div>
-
+    <div class="my-2 border-t border-gray-200"></div>
     <!-- Partner Brands Section -->
-    <span class="block px-4 py-2 text-sm text-gray-700 font-semibold">PARTNER BRANDS</span>
-    <a href="https://daft.fm" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">DAFT FM</a>
-    <a href="https://boxingundefeated.com" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">Boxing Undefeated</a>
-    <a href="https://devinschumacher.com" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">Devin Schumacher</a>
-    <a href="https://universityofguns.com" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">University of Guns</a>
-    <a href="https://www.petsmarketplc.com" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">Pets Marketplace</a>
-    <a href="https://merchantalternatives.com" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">Merchant Alternatives</a>
+    <span class="block px-4 py-2 text-sm font-semibold text-gray-700">PARTNERS</span>
+    <a href="https://daft.fm" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank">DAFT FM</a
+    >
+    <a
+      href="https://boxingundefeated.com"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">Boxing Undefeated</a
+    >
+    <a
+      href="https://devinschumacher.com"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">Devin Schumacher</a
+    >
+    <a
+      href="https://universityofguns.com"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">University of Guns</a
+    >
+    <a
+      href="https://www.petsmarketplc.com"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">Pets Marketplace</a
+    >
+    <a
+      href="https://merchantalternatives.com"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">Merchant Alternatives</a
+    >
+
+    <!-- Piggyback -->
+    <div class="my-2 border-t border-gray-200"></div>
+    <span class="block px-4 py-2 text-sm font-semibold text-gray-700">PROJECTS</span>
+    <a
+      href="https://universityofguns.pages.dev/"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">universityofguns.pages.dev</a
+    >
+    <a
+      href="https://boxingundefeated.pages.dev/"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">boxingundefeated.pages.dev</a
+    >
+    <a
+      href="https://moviestvshows.pages.dev/"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">moviestvshows.pages.dev</a
+    >
+    <a
+      href="https://allmoviestvshowslists.firebaseapp.com/"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">allmoviestvshowslists.firebaseapp.com</a
+    >
+    <a
+      href="http://bestalternativesreview.s3-website.us-east-2.amazonaws.com/"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">bestalternativesreview.s3-website.us-east-2.amazonaws.com</a
+    >
+    <a
+      href="https://serpbest.hashnode.dev/"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">serpbest.hashnode.dev</a
+    >
+    <a
+      href="https://serpmovies.hashnode.dev/"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">serpmovies.hashnode.dev</a
+    >
+    <a
+      href="https://bestpies.hashnode.dev/"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">bestpies.hashnode.dev</a
+    >
+    <a
+      href="https://mediums.hashnode.dev/"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">mediums.hashnode.dev</a
+    >
+    <a
+      href="https://devinschumacher.github.io"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">devinschumacher.github.io</a
+    >
+    <a
+      href="https://boxingundefeated.github.io"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">boxingundefeated.github.io</a
+    >
+    <a
+      href="https://universityofguns.github.io"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">universityofguns.github.io</a
+    >
+    <a
+      href="https://allmoviestvshowslists.storage.googleapis.com"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">allmoviestvshowslists.storage.googleapis.com</a
+    >
+
+    <!-- Pies -->
+    <div class="my-2 border-t border-gray-200"></div>
+    <span class="block px-4 py-2 text-sm font-semibold text-gray-700">🥧</span>
+    <a
+      href="https://sites.google.com/serp.co/best-pies"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">Google 🥧</a
+    >
+    <a
+      href="https://serp-best.mystrikingly.com"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">Strikingly 🥧</a
+    >
+    <a
+      href="https://devinschumacher.github.io/pies"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">DS 🥧</a
+    >
+    <a
+      href="https://bestpies.hashnode.dev/"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">Hashnode 🥧</a
+    >
+
+    <!-- Links -->
+    <div class="my-2 border-t border-gray-200"></div>
+    <span class="block px-4 py-2 text-sm font-semibold text-gray-700">🥧🔗</span>
+    <a
+      href="https://links.boxingundefeated.com"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">Boxing Undefeated 🔗</a
+    >
+    <a href="https://links.daft.fm" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >DAFT FM 🔗</a
+    >
+    <a
+      href="https://links.devinschumacher.com"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">DS 🔗</a
+    >
+    <a href="https://links.serp.ai" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP AI 🔗</a
+    >
+    <a href="https://links.serp.co" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP 🔗</a
+    >
+    <a href="https://links.serp.games" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Games 🔗</a
+    >
+    <a href="https://links.serp.ly" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERPly 🔗</a
+    >
+    <a href="https://links.serp.media" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Media 🔗</a
+    >
+    <a href="https://links.serp.style" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" target="_blank"
+      >SERP Style 🔗</a
+    >
+    <a
+      href="https://links.universityofguns.com"
+      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+      target="_blank">UofG 🔗</a
+    >
   </div>
 </div>
 

@@ -175,7 +175,7 @@ Please be also aware that when you leave our website, other sites may have diffe
 
 Affiliate Disclosures
 
-Disclosure of Material Connection: Some of the links in this website are affiliate links. This means if you click on the link and purchase the item, the owner of this website will receive an affiliate commission. Regardless, the owner of this website only recommends products or services that will add value to the readers. The owner of this website is disclosing this in accordance with the Federal Trade Commission’s 16 CFR, Part 255: Guides Concerning the 
+Disclosure of Material Connection: Some of the links in this website are affiliate links. This means if you click on the link and purchase the item, the owner of this website will receive an affiliate commission. Regardless, the owner of this website only recommends products or services that will add value to the readers. The owner of this website is disclosing this in accordance with the Federal Trade Commission’s 16 CFR, Part 255: Guides Concerning the
 
 Use of Endorsements and Testimonials in Advertising.
 

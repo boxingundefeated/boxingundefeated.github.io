@@ -1,90 +1,42 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+// src/navigation.js
+import { getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    // {
-    //   text: 'Boxing',
-    //   links: [
-    //     {
-    //       text: 'Boxers',
-    //       href: getPermalink('/boxers'),
-    //     },
-    //     {
-    //       text: 'Divisions',
-    //       href: getPermalink('/weight-classes'),
-    //     },
-    //     {
-    //       text: 'Fights',
-    //       href: getPermalink('/fights'),
-    //     },
-    //     {
-    //       text: 'Schedule',
-    //       href: getPermalink('/schedule'),
-    //     },
-    //     {
-    //       text: 'Tickets',
-    //       href: getPermalink('/tickets'),
-    //     },
-    //   ],
-    // },
     {
-      text: 'Videos',
+      text: 'Reviews',
       links: [
         {
-          text: 'YouTube',
-          href: 'https://youtube.com/@boxingundefeated',
-          target: '_blank',
+          text: '1',
+          href: getPermalink('/category/reviews/'),
         },
         {
-          text: 'Full Fights',
-          href: 'https://youtube.com/@boxingundefeated-fightarchive',
-          target: '_blank',
+          text: '2',
+          href: getPermalink('/category/reviews/2/'),
+        },
+        {
+          text: '3',
+          href: getPermalink('/category/reviews/3/'),
         },
       ],
     },
-    {
-      text: 'Content',
-      links: [
-        {
-          text: 'Blog',
-          href: getBlogPermalink(),
-        },
-        // {
-        //   text: 'Glossary',
-        //   href: getPermalink('/glossary'),
-        // },
-      ],
-    },
-   
   ],
-  actions: [{ text: 'Subscribe', href: '/subscribe/', target: '_blank' }],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'Company',
-      links: [
-        { text: 'Website', href: 'https://boxingundefeated.com' },
-        { text: 'About', href: '/about/' },
-      ],
-    },
-    {
-      title: 'Community',
-      links: [
-        { text: 'Newsletter', href: '/subscribe/' },
-        // { text: 'Forum', href: '#' },
-        // { text: 'Community', href: '#' },
-      ],
-    },
-    {
       title: 'Links',
       links: [
-        { text: 'Medium', href: 'https://medium.com/boxing-undefeated', target: '_blank' },
-        { text: 'Pages', href: 'https://boxingundefeated.pages.dev', target: '_blank' },
-        { text: 'Github', href: 'https://boxingundefeated.github.io', target: '_blank' },
-        { text: 'Substack', href: 'https://boxingundefeated.substack.com/', target: '_blank' },
-        { text: 'Hashnode', href: 'https://boxingundefeated.hashnode.dev/', target: '_blank' },
+        { text: 'Website',href: 'https://boxingundefeated.com' },
+        { text: 'boxingundefeated.github.io',href: 'https://boxingundefeated.github.io' },
+        { text: 'boxingundefeated.pages.dev',href: 'https://boxingundefeated.pages.dev' }
+      ], 
+    },
+    {
+      title: 'Tags',
+      links: [
+        { text: 'Tags', href: '/tags/' },
       ],
     },
     {
@@ -94,21 +46,42 @@ export const footerData = {
         { text: 'Terms & Conditions', href: '/terms/' },
         { text: 'Affiliate Disclosure', href: '/affiliate-disclosure/' },
         { text: 'DMCA', href: '/dmca/' },
-        // { text: 'Archive', href: '/archive/' },
-        // { text: 'Tags', href: '/tags/' },
+        { text: 'Archive', href: '/archive/' },
       ],
     },
   ],
-  secondaryLinks: [
-    { text: 'Free Stuff', href: 'https://stuff.boxingundefeated.com' },
-  ],
-  socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://serp.ly/@boxingundefeated/twitter', target: '_blank' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://serp.ly/@boxingundefeated/instagram', target: '_blank' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://serp.ly/@boxingundefeated/facebook', target: '_blank' },
-    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://serp.ly/@boxingundefeated/youtube', target: '_blank' },
-    { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://serp.ly/@boxingundefeated/linkedin', target: '_blank' },
-    { ariaLabel: 'TikTok', icon: 'tabler:brand-tiktok', href: 'https://serp.ly/@boxingundefeated/tiktok', target: '_blank' },
-    { ariaLabel: 'Medium', icon: 'tabler:brand-medium', href: 'https://medium.com/boxing-undefeated', target: '_blank' },
+  secondaryLinks: [],
+  socialLinks: [  
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://serp.ly/@boxundefeated/twitter', target: '_blank' },
+    {
+      ariaLabel: 'Instagram',
+      icon: 'tabler:brand-instagram',
+      href: 'https://serp.ly/@boxundefeated/instagram',
+      target: '_blank',
+    },
+    {
+      ariaLabel: 'Facebook',
+      icon: 'tabler:brand-facebook',
+      href: 'https://serp.ly/@boxundefeated/facebook',
+      target: '_blank',
+    },
+    {
+      ariaLabel: 'YouTube',
+      icon: 'tabler:brand-youtube',
+      href: 'https://serp.ly/@boxundefeated/youtube',
+      target: '_blank',
+    },
+    {
+      ariaLabel: 'Linkedin',
+      icon: 'tabler:brand-linkedin',
+      href: 'https://serp.ly/@boxundefeated/linkedin',
+      target: '_blank',
+    },
+    {
+      ariaLabel: 'TikTok',
+      icon: 'tabler:brand-tiktok',
+      href: 'https://serp.ly/@boxundefeated/tiktok',
+      target: '_blank',
+    },
   ],
 };

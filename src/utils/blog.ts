@@ -1,6 +1,6 @@
 import type { PaginateFunction } from 'astro';
 import { getCollection } from 'astro:content';
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry, ContentEntryMap } from 'astro:content';
 import type { Post } from '~/types';
 import { APP_BLOG } from '~/utils/config';
 import { cleanSlug, trimSlash, BLOG_BASE, POST_PERMALINK_PATTERN, CATEGORY_BASE, TAG_BASE } from './permalinks';
@@ -40,14 +40,15 @@ const generatePermalink = async ({
     .join('/');
 };
 
-const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> => {
-  const { id, slug: rawSlug = '', data } = post;
-  const { Content, remarkPluginFrontmatter } = await post.render();
+const getNormalizedPost = async (post: CollectionEntry<keyof ContentEntryMap>): Promise<Post> => {
+  const { id, slug: rawSlug = '', data, collection } = post;
+  const { Content } = await post.render();
 
   const {
     publishDate: rawPublishDate = new Date(),
     updateDate: rawUpdateDate,
     title,
+    seoTitle,
     excerpt,
     image,
     tags: rawTags = [],
@@ -55,13 +56,14 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     author,
     draft = false,
     metadata = {},
+    metaRobots,
   } = data;
 
-  const slug = cleanSlug(rawSlug); // cleanSlug(rawSlug.split('/').pop());
+  const slug = cleanSlug(String(rawSlug));
   const publishDate = new Date(rawPublishDate);
   const updateDate = rawUpdateDate ? new Date(rawUpdateDate) : undefined;
-  const category = rawCategory ? cleanSlug(rawCategory) : undefined;
-  const tags = rawTags.map((tag: string) => cleanSlug(tag));
+  const category = rawCategory ? cleanSlug(String(rawCategory)) : undefined;
+  const tags = Array.isArray(rawTags) ? rawTags.map((tag: string) => cleanSlug(String(tag))) : [];
 
   return {
     id: id,
@@ -72,8 +74,11 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     updateDate: updateDate,
 
     title: title,
+    seoTitle: seoTitle,
     excerpt: excerpt,
     image: image,
+
+    collection,
 
     category: category,
     tags: tags,
@@ -82,17 +87,29 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     draft: draft,
 
     metadata,
+    metaRobots,
 
     Content: Content,
     // or 'content' in case you consume from API
 
-    readingTime: remarkPluginFrontmatter?.readingTime,
+    // readingTime: remarkPluginFrontmatter?.readingTime,
   };
 };
 
 const load = async function (): Promise<Array<Post>> {
-  const posts = await getCollection('post');
-  const normalizedPosts = posts.map(async (post) => await getNormalizedPost(post));
+  const collections = ['post'];
+  const allPosts: CollectionEntry<keyof ContentEntryMap>[] = [];
+
+  for (const collection of collections) {
+    try {
+      const posts = await getCollection(collection as keyof ContentEntryMap);
+      allPosts.push(...posts);
+    } catch (error) {
+      console.warn(`Warning: Collection "${collection}" does not exist or is empty.`);
+    }
+  }
+
+  const normalizedPosts = allPosts.map(async (post) => await getNormalizedPost(post));
 
   const results = (await Promise.all(normalizedPosts))
     .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
@@ -155,19 +172,48 @@ export const findPostsByIds = async (ids: Array<string>): Promise<Array<Post>> =
 };
 
 /** */
-export const findLatestPosts = async ({ count }: { count?: number }): Promise<Array<Post>> => {
-  const _count = count || 4;
+export const findLatestPostsByCollection = async ({
+  count,
+  collectionName = 'post',
+}: {
+  count?: number;
+  collectionName: keyof ContentEntryMap;
+}): Promise<Array<Post>> => {
+  const _count = count || 200;
   const posts = await fetchPosts();
 
-  return posts ? posts.slice(0, _count) : [];
+  console.log(`[DEBUG] Total posts fetched: ${posts.length}`);
+  console.log(`[DEBUG] Filtering for collection: ${collectionName}`);
+
+  const filteredPosts = posts.filter((post) => post.collection === collectionName);
+  console.log(`[DEBUG] Posts in ${collectionName} collection: ${filteredPosts.length}`);
+
+  const slicedPosts = filteredPosts.slice(0, _count);
+  console.log(`[DEBUG] Returning ${slicedPosts.length} posts`);
+
+  return slicedPosts;
 };
 
 /** */
 export const getStaticPathsBlogList = async ({ paginate }: { paginate: PaginateFunction }) => {
   if (!isBlogEnabled || !isBlogListRouteEnabled) return [];
-  return paginate(await fetchPosts(), {
-    params: { blog: BLOG_BASE || undefined },
-    pageSize: blogPostsPerPage,
+
+  const collections = ['post'];
+  const posts = await fetchPosts();
+
+  return collections.flatMap((collection: keyof ContentEntryMap) => {
+    const filteredPosts = posts.filter((post) => post.collection === collection);
+
+    const param = collection === 'post' ? 'post' : BLOG_BASE;
+    const title = collection === 'post' ? 'post' : 'Blog';
+
+    return paginate(filteredPosts, {
+      params: { blog: param || undefined },
+      pageSize: blogPostsPerPage,
+      props: {
+        title,
+      },
+    });
   });
 };
 

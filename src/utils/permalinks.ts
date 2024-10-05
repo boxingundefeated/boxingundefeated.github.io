@@ -1,4 +1,4 @@
-import slugify from 'limax';
+// src/utils/permalinks.ts
 
 import { SITE, APP_BLOG } from '~/utils/config';
 
@@ -15,11 +15,15 @@ const createPath = (...params: string[]) => {
 
 const BASE_PATHNAME = SITE.base || '/';
 
-export const cleanSlug = (text = '') =>
-  trimSlash(text)
-    .split('/')
-    .map((slug) => slugify(slug))
-    .join('/');
+export const cleanSlug = (slug: string): string => {
+  if (typeof slug !== 'string') {
+    throw new Error('Expected a string in cleanSlug');
+  }
+  return slug
+    .toLowerCase()
+    .replace(/[^a-z0-9/]+/g, '-') // Allow slashes
+    .replace(/(^-|-$)+/g, '');
+};
 
 export const BLOG_BASE = cleanSlug(APP_BLOG?.list?.pathname);
 export const CATEGORY_BASE = cleanSlug(APP_BLOG?.category?.pathname);

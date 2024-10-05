@@ -1,16 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Boxing Undefeated',
@@ -19,48 +10,11 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
-  <Hero
-    actions={[{ text: 'Subscribe', href: '/subscribe/' }]}
-    >
-    <Fragment slot="title">Boxing Undefeated</Fragment>
-    <Fragment slot="subtitle">Subscribe to our newsletter.</Fragment>
+  <Hero>
+    <Fragment slot='title'>Boxing Undefeated</Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
-
-  <Note />
-
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Posts"
-  />
-
-
-
-  <!-- CallToAction Widget *********** -->
-
-  <!-- <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised!
-    </Fragment>
-  </CallToAction> -->
-
+  <!-- customize these -->
+  <a href=''><h2 class='container mx-auto text-2xl font-extrabold'>Reviews</h2></a>
+  <BlogLatestPosts collection='post' />
 </Layout>
