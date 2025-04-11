@@ -37,16 +37,24 @@ const { language, textDirection } = I18N;
     <!-- <Analytics /> -->
 
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-<script type="module">
-	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+  <script type="module">
+	  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-	createChat({
-    initialMessages: [
-		"Hi there! 👋 I'm serpy. Will you venmo be $1?"
-	],
-		webhookUrl: 'https://agents.serp.co/webhook/ffcf29b6-19e9-40fd-81a6-132910560043/chat'
-	});
+    createChat({
+      initialMessages: [
+      "Hi there! 👋 I'm serpy. Will you venmo be $1?"
+    ],
+      webhookUrl: 'https://agents.serp.co/webhook/ffcf29b6-19e9-40fd-81a6-132910560043/chat'
+    });
 </script>
+<style>
+  :root {
+    --chat--window--width: 500px;
+    --chat--window--height: 700px;
+    --chat--message--font-size: 1.0rem;
+    --chat--heading--font-size: 2.0em;
+  }
+</style>
 
     <!-- Google Tag Manager -->
     <script>
