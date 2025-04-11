@@ -36,6 +36,15 @@ const { language, textDirection } = I18N;
     <SiteVerification />
     <!-- <Analytics /> -->
 
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'https://agents.serp.co/webhook/ffcf29b6-19e9-40fd-81a6-132910560043/chat'
+	});
+</script>
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
