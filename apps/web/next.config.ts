@@ -25,8 +25,8 @@ let nextConfig: NextConfig = {
 
   // GitHub Pages serves from subdirectory when using project pages
   // Comment out or modify if using custom domain
-  basePath: process.env.NODE_ENV === 'production' ? '/boxing-directory' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/boxing-directory' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/boxing' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/boxing' : '',
 
   transpilePackages: INTERNAL_PACKAGES,
 
