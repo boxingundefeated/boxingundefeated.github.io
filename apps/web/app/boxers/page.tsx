@@ -1,5 +1,5 @@
 import { ClientBoxersList } from '@/components/boxers-list'
-import { getBoxers } from '@/lib/boxers-loader'
+import { getBoxersWithoutBouts } from '@/lib/boxers-loader'
 import { Breadcrumb } from '@thedaviddias/design-system/breadcrumb'
 import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
 import type { Metadata } from 'next'
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 }
 
 export default async function BoxersPage() {
-  const boxers = await getBoxers()
+  const boxers = await getBoxersWithoutBouts()
   const baseUrl = getBaseUrl()
   
   const breadcrumbItems = [{ name: 'Boxers', href: '/boxers' }]

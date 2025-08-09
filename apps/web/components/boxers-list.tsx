@@ -23,7 +23,7 @@ export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [boxers, setBoxers] = useState(initialBoxers)
   const [currentPage, setCurrentPage] = useState(1)
-  const itemsPerPage = 24
+  const itemsPerPage = 48
 
   // Read filters from URL searchParams on client side
   const divisionFromUrl = searchParams.get('division') || 'all'
@@ -58,7 +58,10 @@ export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
 
     // Filter by division if selected
     if (divisionFilter !== 'all') {
-      filteredBoxers = filteredBoxers.filter(boxer => boxer.proDivision === divisionFilter)
+      // Map division slugs to actual division values
+      const category = categories.find(c => c.slug === divisionFilter)
+      const divisionValue = category ? category.division : divisionFilter
+      filteredBoxers = filteredBoxers.filter(boxer => boxer.proDivision === divisionValue)
     }
 
     // Sort by selected criteria

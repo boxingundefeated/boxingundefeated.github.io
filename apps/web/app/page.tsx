@@ -1,4 +1,4 @@
-import { getBoxers } from '@/lib/boxers-loader'
+import { getBoxersWithoutBouts } from '@/lib/boxers-loader'
 import { JsonLd } from '@/components/json-ld'
 import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
 import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
-  const boxers = await getBoxers()
+  const boxers = await getBoxersWithoutBouts()
   const totalBoxers = boxers.length
   
   // Calculate stats
-  const activeBoxers = boxers.filter(b => b.proStatus === 'active').length
+  const activeBoxers = boxers.filter(b => !b.proStatus || b.proStatus !== 'inactive').length
   const totalBouts = boxers.reduce((sum, b) => sum + (b.proTotalBouts || 0), 0)
-  const champions = boxers.filter(b => b.proWins && b.proWins > 20 && b.proLosses && b.proLosses < 5).length
+  const eliteBoxers = boxers.filter(b => b.proWins && b.proWins > 30 && (!b.proLosses || b.proLosses < 5)).length
   
   // Get featured boxers (highest win counts)
   const featuredBoxers = boxers
@@ -111,7 +111,7 @@ export default async function Home() {
               <Trophy className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{champions.toLocaleString()}</div>
+              <div className="text-2xl font-bold">{eliteBoxers.toLocaleString()}</div>
             </CardContent>
           </Card>
         </section>
@@ -126,11 +126,20 @@ export default async function Home() {
             {featuredBoxers.map(boxer => (
               <Card key={boxer.id} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <CardTitle>
-                    <Link href={`/boxers/${boxer.slug}`} className="hover:underline">
-                      {boxer.name}
-                    </Link>
-                  </CardTitle>
+                  <div className="flex items-center gap-3">
+                    {boxer.avatarImage && (
+                      <img
+                        src={boxer.avatarImage}
+                        alt={boxer.name}
+                        className="w-12 h-12 rounded-full object-cover"
+                      />
+                    )}
+                    <CardTitle>
+                      <Link href={`/boxers/${boxer.slug}`} className="hover:underline">
+                        {boxer.name}
+                      </Link>
+                    </CardTitle>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <dl className="space-y-2">
@@ -171,15 +180,23 @@ export default async function Home() {
             <p className="text-muted-foreground">Find boxers in specific weight classes</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {['heavy', 'light-heavy', 'middle', 'welter', 'light', 'feather', 'bantam', 'fly'].map(division => {
-              const divisionBoxers = boxers.filter(b => b.proDivision === division)
-              const divisionName = division.replace('-', ' ')
+            {[
+              { slug: 'heavy', name: 'Heavyweight', division: 'heavy' },
+              { slug: 'light-heavy', name: 'Light Heavyweight', division: 'light heavy' },
+              { slug: 'middle', name: 'Middleweight', division: 'middle' },
+              { slug: 'welter', name: 'Welterweight', division: 'welter' },
+              { slug: 'light', name: 'Lightweight', division: 'light' },
+              { slug: 'feather', name: 'Featherweight', division: 'feather' },
+              { slug: 'bantam', name: 'Bantamweight', division: 'bantam' },
+              { slug: 'fly', name: 'Flyweight', division: 'fly' }
+            ].map(item => {
+              const divisionBoxers = boxers.filter(b => b.proDivision === item.division)
               return (
-                <Link key={division} href={`/boxers?division=${division}`}>
+                <Link key={item.slug} href={`/boxers?division=${item.slug}`}>
                   <Card className="hover:shadow-lg transition-shadow cursor-pointer">
                     <CardContent className="p-4">
                       <div className="text-center">
-                        <div className="font-semibold capitalize">{divisionName}weight</div>
+                        <div className="font-semibold">{item.name}</div>
                         <div className="text-2xl font-bold mt-1">{divisionBoxers.length}</div>
                         <div className="text-xs text-muted-foreground">boxers</div>
                       </div>

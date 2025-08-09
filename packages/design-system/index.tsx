@@ -8,7 +8,7 @@ import { TooltipProvider } from './components/shadcn/tooltip'
 import { ThemeProvider } from './providers/theme'
 
 interface DesignSystemProviderProperties extends ThemeProviderProps {
-  plausibleDomain: string
+  plausibleDomain?: string
   monitoringSampleRate?: number
 }
 
@@ -18,15 +18,25 @@ export const DesignSystemProvider = ({
   monitoringSampleRate,
   ...properties
 }: DesignSystemProviderProperties) => {
+  const content = (
+    <>
+      <TooltipProvider>
+        {children}
+      </TooltipProvider>
+      <Toaster />
+      {IS_DEVELOPMENT && <VercelToolbar />}
+    </>
+  )
+
   return (
     <ThemeProvider {...properties}>
-      <AnalyticsProvider plausibleDomain={plausibleDomain}>
-        <TooltipProvider>
-          {children}
-        </TooltipProvider>
-        <Toaster />
-        {IS_DEVELOPMENT && <VercelToolbar />}
-      </AnalyticsProvider>
+      {plausibleDomain ? (
+        <AnalyticsProvider plausibleDomain={plausibleDomain}>
+          {content}
+        </AnalyticsProvider>
+      ) : (
+        content
+      )}
     </ThemeProvider>
   )
 }

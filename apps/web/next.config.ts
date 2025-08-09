@@ -3,7 +3,6 @@ import withMDX from '@next/mdx'
 import {
   baseConfig,
   withAnalyzer,
-  withPlausibleProxyConfig,
   withVercelToolbarConfig
 } from '@thedaviddias/config-next'
 import { withSentry } from '@thedaviddias/observability/next-config'
@@ -76,7 +75,6 @@ let nextConfig: NextConfig = {
 }
 
 // Apply other plugins first
-nextConfig = withPlausibleProxyConfig(nextConfig)
 nextConfig = withVercelToolbarConfig(nextConfig)
 nextConfig = withSentry(nextConfig)
 nextConfig = withMDX()(nextConfig)

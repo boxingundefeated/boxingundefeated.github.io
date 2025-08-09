@@ -94,6 +94,31 @@ export function Footer() {
               </li>
             </ul>
           </div>
+          <div className="space-y-3">
+            <h3 className="font-semibold">Links</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a
+                  href="https://boxingundefeated.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  Boxing Undefeated
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/boxingundefeated"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="mt-8 pt-8 border-t">
           <p className="text-center text-sm text-muted-foreground">

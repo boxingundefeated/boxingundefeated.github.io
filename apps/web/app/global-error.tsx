@@ -2,7 +2,7 @@
 
 import { captureException } from '@sentry/nextjs'
 import { Button } from '@thedaviddias/design-system/button'
-import { fonts } from '@thedaviddias/design-system/lib/fonts'
+import { fontVariable } from '@thedaviddias/design-system/lib/fonts'
 import type NextError from 'next/error'
 import { useEffect } from 'react'
 
@@ -17,7 +17,7 @@ const GlobalError = ({ error, reset }: GlobalErrorProperties) => {
   }, [error])
 
   return (
-    <html lang="en" className={fonts}>
+    <html lang="en" className={fontVariable}>
       <body>
         <h1>Oops, something went wrong</h1>
         <Button onClick={() => reset()}>Try again</Button>

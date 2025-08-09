@@ -58,17 +58,20 @@ export interface BoxerMetadata {
   gym?: string | null
 }
 
+// Helper function to generate slug from name
+function generateSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]/g, '')
+}
+
 export function getBoxers(): BoxerMetadata[] {
   return boxersData
     .map((boxer: any) => ({
       ...boxer,
       // Ensure slug exists
-      slug:
-        boxer.slug ||
-        boxer.name
-          .toLowerCase()
-          .replace(/\s+/g, '-')
-          .replace(/[^\w-]/g, '')
+      slug: boxer.slug || generateSlug(boxer.name)
     }))
     .sort((a: BoxerMetadata, b: BoxerMetadata) => {
       // Sort by total bouts (most experienced first), then by wins
@@ -89,14 +92,14 @@ export function getBoxerBySlug(slug: string): BoxerMetadata | null {
 
 export function getBoxerCategories() {
   return [
-    { slug: 'heavy', name: 'Heavyweight' },
-    { slug: 'light-heavy', name: 'Light Heavyweight' },
-    { slug: 'middle', name: 'Middleweight' },
-    { slug: 'welter', name: 'Welterweight' },
-    { slug: 'light', name: 'Lightweight' },
-    { slug: 'feather', name: 'Featherweight' },
-    { slug: 'bantam', name: 'Bantamweight' },
-    { slug: 'fly', name: 'Flyweight' }
+    { slug: 'heavy', name: 'Heavyweight', division: 'heavy' },
+    { slug: 'light-heavy', name: 'Light Heavyweight', division: 'light heavy' },
+    { slug: 'middle', name: 'Middleweight', division: 'middle' },
+    { slug: 'welter', name: 'Welterweight', division: 'welter' },
+    { slug: 'light', name: 'Lightweight', division: 'light' },
+    { slug: 'feather', name: 'Featherweight', division: 'feather' },
+    { slug: 'bantam', name: 'Bantamweight', division: 'bantam' },
+    { slug: 'fly', name: 'Flyweight', division: 'fly' }
   ]
 }
 
@@ -138,4 +141,47 @@ export function getBoxerBouts(boxer: BoxerMetadata): Bout[] {
   }
 
   return boxer.bouts
+}
+
+// Create a map of boxer names to slugs for efficient lookup
+let boxerNameMap: Map<string, string> | null = null
+
+function getBoxerNameMap(): Map<string, string> {
+  if (!boxerNameMap) {
+    boxerNameMap = new Map()
+    const boxers = getBoxersWithoutBouts() // Use lightweight version
+    boxers.forEach(boxer => {
+      // Add both the exact name and lowercase version
+      boxerNameMap!.set(boxer.name, boxer.slug)
+      boxerNameMap!.set(boxer.name.toLowerCase(), boxer.slug)
+    })
+  }
+  return boxerNameMap
+}
+
+// Helper function to find boxer by name and return their slug
+export function getBoxerSlugByName(name: string): string | null {
+  const nameMap = getBoxerNameMap()
+  return nameMap.get(name) || nameMap.get(name.toLowerCase()) || null
+}
+
+// Optimized function to get boxers without bout data for listing pages
+export function getBoxersWithoutBouts(): BoxerMetadata[] {
+  return boxersData
+    .map((boxer: any) => {
+      const { bouts, ...boxerWithoutBouts } = boxer
+      return {
+        ...boxerWithoutBouts,
+        slug: boxer.slug || generateSlug(boxer.name)
+      }
+    })
+    .sort((a: BoxerMetadata, b: BoxerMetadata) => {
+      const aBouts = a.proTotalBouts || 0
+      const bBouts = b.proTotalBouts || 0
+      if (aBouts !== bBouts) return bBouts - aBouts
+
+      const aWins = a.proWins || 0
+      const bWins = b.proWins || 0
+      return bWins - aWins
+    })
 }
