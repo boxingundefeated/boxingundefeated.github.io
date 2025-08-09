@@ -35,6 +35,7 @@ export function Header() {
           </Link>
           <nav className="hidden md:flex items-center gap-4">
             <NavLink href={getRoute('website.list')}>Boxers</NavLink>
+            <NavLink href="/blog">Blog</NavLink>
             <NavLink href={getRoute('about')}>About</NavLink>
             <NavLink href={getRoute('search')}>Search</NavLink>
           </nav>

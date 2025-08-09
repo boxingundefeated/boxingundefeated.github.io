@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { getBlogSlugs } from '@/lib/blog-loader'
 import { getBoxerCategories, getBoxersWithoutBouts } from '@/lib/boxers-loader'
 
 export const dynamic = 'force-static'
@@ -12,6 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const boxers = await getBoxersWithoutBouts()
   const categories = getBoxerCategories()
+  const blogSlugs = await getBlogSlugs()
 
   // Since we're using static export, we'll create a single sitemap
   // If it grows too large, you can split it manually
@@ -44,6 +46,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.7
+  })
+
+  urls.push({
+    url: `${baseUrl}/blog`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.8
+  })
+
+  // Blog posts
+  blogSlugs.forEach(slug => {
+    urls.push({
+      url: `${baseUrl}/blog/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7
+    })
   })
 
   // Category pages
