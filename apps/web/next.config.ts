@@ -12,12 +12,12 @@ import type { NextConfig } from 'next'
 export const INTERNAL_PACKAGES = [
   '@thedaviddias/design-system',
   '@thedaviddias/analytics',
-  '@thedaviddias/auth',
+  // '@thedaviddias/auth', // Removed - contains server actions incompatible with static export
   '@thedaviddias/caching',
   '@thedaviddias/config-next',
   '@thedaviddias/config-typescript',
   '@thedaviddias/logging',
-  '@thedaviddias/supabase',
+  // '@thedaviddias/supabase', // Removed - not needed for static boxing site
   '@thedaviddias/utils',
   '@thedaviddias/content'
 ]
