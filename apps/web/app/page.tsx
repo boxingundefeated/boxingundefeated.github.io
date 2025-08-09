@@ -1,11 +1,11 @@
-import { getBoxersWithoutBouts } from '@/lib/boxers-loader'
-import { JsonLd } from '@/components/json-ld'
+import { Button } from '@thedaviddias/design-system/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
 import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
+import { Target, TrendingUp, Trophy, Users } from 'lucide-react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Trophy, Users, Target, TrendingUp } from 'lucide-react'
-import { Button } from '@thedaviddias/design-system/button'
+import { JsonLd } from '@/components/json-ld'
+import { getBoxersWithoutBouts } from '@/lib/boxers-loader'
 
 export const metadata: Metadata = {
   title: 'Boxing Directory - Professional Boxers Database',
@@ -32,12 +32,14 @@ export const metadata: Metadata = {
 export default async function Home() {
   const boxers = await getBoxersWithoutBouts()
   const totalBoxers = boxers.length
-  
+
   // Calculate stats
   const activeBoxers = boxers.filter(b => !b.proStatus || b.proStatus !== 'inactive').length
   const totalBouts = boxers.reduce((sum, b) => sum + (b.proTotalBouts || 0), 0)
-  const eliteBoxers = boxers.filter(b => b.proWins && b.proWins > 30 && (!b.proLosses || b.proLosses < 5)).length
-  
+  const eliteBoxers = boxers.filter(
+    b => b.proWins && b.proWins > 30 && (!b.proLosses || b.proLosses < 5)
+  ).length
+
   // Get featured boxers (highest win counts)
   const featuredBoxers = boxers
     .filter(b => b.proWins && b.proTotalBouts)
@@ -59,19 +61,19 @@ export default async function Home() {
       <div className="max-w-6xl mx-auto px-4 py-8 space-y-16">
         {/* Hero Section */}
         <section className="text-center space-y-6">
-          <h1 className="text-5xl font-bold tracking-tight">
-            🥊 Professional Boxing Directory
-          </h1>
+          <h1 className="text-5xl font-bold tracking-tight">🥊 Professional Boxing Directory</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explore comprehensive records and statistics for {totalBoxers.toLocaleString()} professional boxers
-            from around the world.
+            Explore comprehensive records and statistics for {totalBoxers.toLocaleString()}{' '}
+            professional boxers from around the world.
           </p>
           <div className="flex gap-4 justify-center">
             <Link href="/boxers">
               <Button size="lg">Browse All Boxers</Button>
             </Link>
             <Link href="/search">
-              <Button size="lg" variant="outline">Search Database</Button>
+              <Button size="lg" variant="outline">
+                Search Database
+              </Button>
             </Link>
           </div>
         </section>
@@ -168,7 +170,9 @@ export default async function Home() {
           </div>
           <div className="text-center">
             <Link href="/boxers">
-              <Button variant="outline" size="lg">View All Boxers →</Button>
+              <Button variant="outline" size="lg">
+                View All Boxers →
+              </Button>
             </Link>
           </div>
         </section>

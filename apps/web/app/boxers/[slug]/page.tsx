@@ -4,7 +4,13 @@ import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getBoxerBouts, getBoxerBySlug, getBoxerStats, getBoxers, getBoxerSlugByName } from '@/lib/boxers-loader'
+import {
+  getBoxerBouts,
+  getBoxerBySlug,
+  getBoxerSlugByName,
+  getBoxerStats,
+  getBoxers
+} from '@/lib/boxers-loader'
 
 export async function generateStaticParams() {
   const boxers = await getBoxers()
@@ -225,7 +231,7 @@ export default async function BoxerPage({ params }: { params: { slug: string } }
               <CardTitle>Biography</CardTitle>
             </CardHeader>
             <CardContent>
-              <div 
+              <div
                 className="space-y-4 text-sm leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: boxer.bio }}
               />
@@ -248,7 +254,10 @@ export default async function BoxerPage({ params }: { params: { slug: string } }
                         <div className="flex-1">
                           <div className="flex items-center gap-2">
                             {opponentSlug ? (
-                              <Link href={`/boxers/${opponentSlug}`} className="font-semibold hover:underline">
+                              <Link
+                                href={`/boxers/${opponentSlug}`}
+                                className="font-semibold hover:underline"
+                              >
                                 {bout.opponentName}
                               </Link>
                             ) : (
@@ -264,26 +273,26 @@ export default async function BoxerPage({ params }: { params: { slug: string } }
                             {bout.boutDate} • {bout.eventName}
                           </div>
                         </div>
-                      <div className="text-right">
-                        <span
-                          className={`font-bold ${
-                            bout.result === 'win'
-                              ? 'text-green-600'
-                              : bout.result === 'loss'
-                                ? 'text-red-600'
-                                : 'text-yellow-600'
-                          }`}
-                        >
-                          {bout.result ? bout.result.toUpperCase() : 'N/A'}
-                        </span>
-                        {bout.resultMethod && (
-                          <div className="text-xs text-muted-foreground">
-                            {bout.resultMethod} {bout.resultRound && `R${bout.resultRound}`}
-                          </div>
-                        )}
+                        <div className="text-right">
+                          <span
+                            className={`font-bold ${
+                              bout.result === 'win'
+                                ? 'text-green-600'
+                                : bout.result === 'loss'
+                                  ? 'text-red-600'
+                                  : 'text-yellow-600'
+                            }`}
+                          >
+                            {bout.result ? bout.result.toUpperCase() : 'N/A'}
+                          </span>
+                          {bout.resultMethod && (
+                            <div className="text-xs text-muted-foreground">
+                              {bout.resultMethod} {bout.resultRound && `R${bout.resultRound}`}
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
                   )
                 })}
               </div>

@@ -20,9 +20,7 @@ export const DesignSystemProvider = ({
 }: DesignSystemProviderProperties) => {
   const content = (
     <>
-      <TooltipProvider>
-        {children}
-      </TooltipProvider>
+      <TooltipProvider>{children}</TooltipProvider>
       <Toaster />
       {IS_DEVELOPMENT && <VercelToolbar />}
     </>
@@ -31,9 +29,7 @@ export const DesignSystemProvider = ({
   return (
     <ThemeProvider {...properties}>
       {plausibleDomain ? (
-        <AnalyticsProvider plausibleDomain={plausibleDomain}>
-          {content}
-        </AnalyticsProvider>
+        <AnalyticsProvider plausibleDomain={plausibleDomain}>{content}</AnalyticsProvider>
       ) : (
         content
       )}

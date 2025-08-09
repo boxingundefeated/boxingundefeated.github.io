@@ -1,12 +1,8 @@
-import { env } from '@/env'
 import withMDX from '@next/mdx'
-import {
-  baseConfig,
-  withAnalyzer,
-  withVercelToolbarConfig
-} from '@thedaviddias/config-next'
+import { baseConfig, withAnalyzer, withVercelToolbarConfig } from '@thedaviddias/config-next'
 import { withSentry } from '@thedaviddias/observability/next-config'
 import type { NextConfig } from 'next'
+import { env } from '@/env'
 
 export const INTERNAL_PACKAGES = [
   '@thedaviddias/design-system',
@@ -26,7 +22,7 @@ let nextConfig: NextConfig = {
 
   // Enable static export for GitHub Pages
   output: 'export',
-  
+
   // GitHub Pages serves from subdirectory when using project pages
   // Comment out or modify if using custom domain
   basePath: process.env.NODE_ENV === 'production' ? '/boxing-directory' : '',

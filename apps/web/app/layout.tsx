@@ -1,18 +1,19 @@
 import type { Metadata } from 'next'
 import type React from 'react'
 import '../../../packages/design-system/styles/globals.css'
-import { Footer } from '@/components/layout/footer'
-import { Header } from '@/components/layout/header'
-import { GoogleTagManager, GTMNoscript } from '@/components/gtm'
 import { fontVariable } from '@thedaviddias/design-system/lib/fonts'
 import { cn } from '@thedaviddias/design-system/lib/utils'
 import { DesignSystemProvider } from '@thedaviddias/design-system/theme-provider'
 import { SentryUserProvider } from '@thedaviddias/observability/providers'
 import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
+import { GoogleTagManager, GTMNoscript } from '@/components/gtm'
+import { Footer } from '@/components/layout/footer'
+import { Header } from '@/components/layout/header'
 
 export const metadata: Metadata = {
   title: 'Boxing Directory',
-  description: 'Comprehensive database of professional boxers with statistics, records, and fight history',
+  description:
+    'Comprehensive database of professional boxers with statistics, records, and fight history',
   metadataBase: new URL(getBaseUrl())
 }
 
@@ -23,7 +24,7 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   // TODO: Replace with your actual GTM ID
   const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-XXXXXXX'
-  
+
   return (
     <html lang="en" suppressHydrationWarning className={fontVariable}>
       <head>
