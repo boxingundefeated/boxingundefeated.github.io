@@ -30,8 +30,8 @@ let nextConfig: NextConfig = {
   
   // GitHub Pages serves from subdirectory when using project pages
   // Comment out or modify if using custom domain
-  basePath: process.env.NODE_ENV === 'production' ? '/boxing-directory' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/boxing-directory' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/llms-txt-hub' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/llms-txt-hub' : '',
 
   transpilePackages: INTERNAL_PACKAGES,
 

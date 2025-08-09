@@ -1,24 +1,17 @@
 'use client'
 
 import * as Sentry from '@sentry/nextjs'
-import { useAuth } from '@thedaviddias/auth'
+// import { useAuth } from '@thedaviddias/auth' // Removed for static export
 import { useEffect } from 'react'
 
 export function SentryUserProvider({ children }: { children: React.ReactNode }) {
-  const { user } = useAuth()
+  // const { user } = useAuth() // Removed for static export
+  // Static export - no auth, Sentry user tracking disabled
 
   useEffect(() => {
-    if (user) {
-      Sentry.setUser({
-        id: user.id,
-        email: user.email ?? undefined,
-        username: user.name ?? undefined,
-        ip_address: '{{auto}}'
-      })
-    } else {
-      Sentry.setUser(null)
-    }
-  }, [user])
+    // No user tracking in static export mode
+    Sentry.setUser(null)
+  }, [])
 
   return <>{children}</>
 }

@@ -1,5 +1,5 @@
 import { AnalyticsProvider } from '@thedaviddias/analytics'
-import { AuthProviderComponent } from '@thedaviddias/auth'
+// import { AuthProviderComponent } from '@thedaviddias/auth' // Removed for static export
 import { IS_DEVELOPMENT } from '@thedaviddias/utils/environment'
 import { VercelToolbar } from '@vercel/toolbar/next'
 import type { ThemeProviderProps } from 'next-themes'
@@ -22,7 +22,7 @@ export const DesignSystemProvider = ({
     <ThemeProvider {...properties}>
       <AnalyticsProvider plausibleDomain={plausibleDomain}>
         <TooltipProvider>
-          <AuthProviderComponent>{children}</AuthProviderComponent>
+          {children}
         </TooltipProvider>
         <Toaster />
         {IS_DEVELOPMENT && <VercelToolbar />}

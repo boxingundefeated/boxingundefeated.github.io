@@ -1,4 +1,4 @@
-import { currentUser } from '@thedaviddias/auth'
+// import { currentUser } from '@thedaviddias/auth' // Removed for static export
 import { flag } from '@vercel/flags/next'
 
 export const createFlag = (key: string) =>
@@ -6,14 +6,8 @@ export const createFlag = (key: string) =>
     key,
     defaultValue: false,
     async decide() {
-      const user = await currentUser()
-
-      if (!user?.id) {
-        return this.defaultValue as boolean
-      }
-
-      // Since we don't have a feature flag system integrated,
-      // always return the default value for now
+      // const user = await currentUser() // Removed for static export
+      // Static export - no auth, always return default value
       return this.defaultValue as boolean
 
       // When you implement a real feature flag system, uncomment and adapt:

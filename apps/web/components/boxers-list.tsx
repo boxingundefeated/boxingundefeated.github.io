@@ -17,15 +17,28 @@ interface ClientBoxersListProps {
   initialSort?: string
 }
 
-export function ClientBoxersList({ initialBoxers, initialDivision, initialSort }: ClientBoxersListProps) {
+export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [boxers, setBoxers] = useState(initialBoxers)
-  const [divisionFilter, setDivisionFilter] = useState<string>(initialDivision || 'all')
-  const [sortBy, setSortBy] = useState<string>(initialSort || 'wins')
+  
+  // Read filters from URL searchParams on client side
+  const divisionFromUrl = searchParams.get('division') || 'all'
+  const sortFromUrl = searchParams.get('sort') || 'wins'
+  
+  const [divisionFilter, setDivisionFilter] = useState<string>(divisionFromUrl)
+  const [sortBy, setSortBy] = useState<string>(sortFromUrl)
   
   const categories = getBoxerCategories()
+  
+  // Sync state with URL changes
+  useEffect(() => {
+    const newDivision = searchParams.get('division') || 'all'
+    const newSort = searchParams.get('sort') || 'wins'
+    setDivisionFilter(newDivision)
+    setSortBy(newSort)
+  }, [searchParams])
   
   const updateURLParams = (division: string, sort?: string) => {
     const params = new URLSearchParams()
