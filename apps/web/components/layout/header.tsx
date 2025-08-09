@@ -2,7 +2,7 @@
 import { GithubStars } from '@/components/stats/github-stars'
 import { useSearch } from '@/hooks/use-search'
 import { getRoute } from '@/lib/routes'
-import { useAuth } from '@thedaviddias/auth'
+// import { useAuth } from '@thedaviddias/auth' // Removed for static export
 import { Avatar, AvatarFallback, AvatarImage } from '@thedaviddias/design-system/avatar'
 import {
   DropdownMenu,
@@ -40,7 +40,9 @@ function NavLink({ href, children, exact = false }: NavLinkProps) {
 export function Header() {
   const [showMobileSearch, setShowMobileSearch] = useState(false)
   const { searchQuery, setSearchQuery, handleSearch } = useSearch()
-  const { user, signOut } = useAuth()
+  // const { user, signOut } = useAuth() // Removed for static export
+  const user = null as any
+  const signOut = () => {}
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault()
