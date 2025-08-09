@@ -17,6 +17,11 @@ export function getBaseUrl(): string {
     return process.env.NEXT_PUBLIC_WEB_URL
   }
 
+  // GitHub Pages URL
+  if (process.env.NODE_ENV === 'production') {
+    return 'https://devinschumacher.github.io/boxing-directory'
+  }
+
   // Vercel deployment URL
   if (process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL}`

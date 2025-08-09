@@ -1,19 +1,10 @@
 'use client'
-import { GithubStars } from '@/components/stats/github-stars'
-import { useSearch } from '@/hooks/use-search'
-import { getRoute } from '@/lib/routes'
-// import { useAuth } from '@thedaviddias/auth' // Removed for static export
-import { Avatar, AvatarFallback, AvatarImage } from '@thedaviddias/design-system/avatar'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger
-} from '@thedaviddias/design-system/dropdown-menu'
-import { LogOut, Search, User } from 'lucide-react'
+import { Search } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+import { useSearch } from '@/hooks/use-search'
+import { getRoute } from '@/lib/routes'
 
 interface NavLinkProps {
   href: string
@@ -40,10 +31,6 @@ function NavLink({ href, children, exact = false }: NavLinkProps) {
 export function Header() {
   const [showMobileSearch, setShowMobileSearch] = useState(false)
   const { searchQuery, setSearchQuery, handleSearch } = useSearch()
-  // const { user, signOut } = useAuth() // Removed for static export
-  const user = null as any
-  const signOut = () => {}
-
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (searchQuery.trim()) {
@@ -94,58 +81,7 @@ export function Header() {
             <Search className="h-5 w-5" />
           </button>
 
-
-          {user ? (
-            <DropdownMenu>
-              <DropdownMenuTrigger className="focus:outline-none">
-                <Avatar className="cursor-pointer h-8 w-8 rounded-full">
-                  {user.imageUrl ? (
-                    <AvatarImage src={user.imageUrl} alt={user.name || 'User avatar'} />
-                  ) : (
-                    <AvatarFallback>
-                      {user.name ? user.name.charAt(0).toUpperCase() : 'U'}
-                    </AvatarFallback>
-                  )}
-                </Avatar>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-56">
-                <div className="flex items-center justify-start gap-2 p-2">
-                  <div className="flex flex-col space-y-1 leading-none">
-                    {user.name && <p className="font-medium">{user.name}</p>}
-                    {user.email && (
-                      <p className="text-sm text-muted-foreground truncate w-[180px]">
-                        {user.email}
-                      </p>
-                    )}
-                  </div>
-                </div>
-                <DropdownMenuItem asChild>
-                  <Link
-                    href={getRoute('submit')}
-                    className="cursor-pointer flex w-full items-center"
-                  >
-                    <User className="mr-2 h-4 w-4" />
-                    <span>Add Boxer</span>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => signOut()}
-                  className="cursor-pointer text-destructive focus:text-destructive"
-                >
-                  <LogOut className="mr-2 h-4 w-4" />
-                  <span>Log out</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          ) : (
-            <Link
-              href={getRoute('submit')}
-              className="inline-flex justify-center rounded-lg text-sm font-semibold py-1.5 px-3 text-slate-900 bg-slate-900 dark:bg-white text-white dark:text-slate-900"
-            >
-              <span className="hidden md:inline">Add Boxer</span>
-              <span className="md:hidden">Add</span>
-            </Link>
-          )}
+          {/* Removed Add Boxer button - no auth in static export */}
         </div>
       </div>
 
