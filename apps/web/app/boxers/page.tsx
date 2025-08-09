@@ -4,7 +4,8 @@ import { Breadcrumb } from '@thedaviddias/design-system/breadcrumb'
 import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
 import type { Metadata } from 'next'
 
-export const dynamic = 'force-dynamic'
+// Removed force-dynamic for GitHub Pages static export
+// export const dynamic = 'force-dynamic'
 
 interface BoxersPageProps {
   searchParams: { division?: string; sort?: string }

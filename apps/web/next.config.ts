@@ -25,11 +25,20 @@ export const INTERNAL_PACKAGES = [
 let nextConfig: NextConfig = {
   ...baseConfig,
 
+  // Enable static export for GitHub Pages
+  output: 'export',
+  
+  // GitHub Pages serves from subdirectory when using project pages
+  // Comment out or modify if using custom domain
+  basePath: process.env.NODE_ENV === 'production' ? '/boxing-directory' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/boxing-directory' : '',
+
   transpilePackages: INTERNAL_PACKAGES,
 
   pageExtensions: ['mdx', 'ts', 'tsx'],
 
   images: {
+    unoptimized: true, // Required for static export
     remotePatterns: [
       {
         protocol: 'https',
@@ -40,6 +49,11 @@ let nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'avatars.githubusercontent.com',
         pathname: '/u/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'boxrec.com',
+        pathname: '/**'
       }
     ]
   },

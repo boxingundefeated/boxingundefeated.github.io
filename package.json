@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "node scripts/search-index-generator.cjs && turbo build",
+    "export": "cd apps/web && next build",
     "check:frontmatter": "tsx scripts/check-frontmatter.ts",
     "check:links": "lychee --config ./lychee.toml --verbose .",
     "clean": "git clean -xdf node_modules dist .next",
