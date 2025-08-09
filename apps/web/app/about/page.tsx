@@ -1,134 +1,105 @@
-import { getRoute } from '@/lib/routes'
-import { Button } from '@thedaviddias/design-system/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
-import { Code, FileText, Zap } from 'lucide-react'
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
+import { Trophy, Users, Target, TrendingUp } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About llms.txt hub',
-  description:
-    'Learn about the llms.txt hub, its mission, and how it helps AI models better understand documentation.'
+  title: 'About - Boxing Directory',
+  description: 'Learn about the comprehensive boxing directory and database.'
 }
 
 export default function AboutPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="max-w-3xl mx-auto space-y-8">
-        <section className="space-y-4">
-          <h1 className="text-4xl font-bold">About llms.txt hub</h1>
-          <p className="text-xl text-muted-foreground">
-            Discover how llms.txt is revolutionizing AI-ready documentation and enhancing AI model
-            interactions.
-          </p>
-        </section>
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold mb-8">About Boxing Directory</h1>
+      
+      <div className="space-y-6">
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Trophy className="h-5 w-5" />
+              Our Mission
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              Boxing Directory is a comprehensive database dedicated to preserving and presenting 
+              the rich history of professional boxing. We maintain detailed records for thousands 
+              of professional boxers from around the world, making this information easily 
+              accessible to fans, researchers, and boxing enthusiasts.
+            </p>
+          </CardContent>
+        </Card>
 
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">What is llms.txt?</h2>
-          <p>
-            llms.txt is a standard file that helps AI models better understand and interact with
-            your website's documentation and content structure. Similar to how robots.txt guides
-            search engines, llms.txt provides a structured format for AI models to navigate and
-            comprehend your site's information architecture.
-          </p>
-        </section>
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Users className="h-5 w-5" />
+              What We Offer
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>• Complete professional boxing records</li>
+              <li>• Detailed fighter statistics and analytics</li>
+              <li>• Historical fight data and results</li>
+              <li>• Fighter biographies and career highlights</li>
+              <li>• Division and weight class information</li>
+              <li>• Nationality and regional data</li>
+            </ul>
+          </CardContent>
+        </Card>
 
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">Our Mission</h2>
-          <p>
-            Created by{' '}
-            <a
-              href="https://thedaviddias.com"
-              className="font-bold underline dark:text-gray-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              David Dias
-            </a>
-            , llms.txt hub has the mission to create a central directory and resource center for
-            websites and tools implementing the llms.txt standard. It aim to:
-          </p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Promote the adoption of the llms.txt standard across the web</li>
-            <li>Provide resources and tools for developers to implement llms.txt effectively</li>
-            <li>Foster a community of AI-ready documentation enthusiasts</li>
-            <li>Improve the interaction between AI models and web content</li>
-          </ul>
-        </section>
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Target className="h-5 w-5" />
+              Our Database
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground mb-4">
+              Our database currently contains records for over 4,400 professional boxers, 
+              spanning multiple decades of boxing history. Each fighter's profile includes:
+            </p>
+            <ul className="space-y-1 text-muted-foreground">
+              <li>• Win/Loss/Draw records</li>
+              <li>• Knockout statistics</li>
+              <li>• Total number of professional bouts</li>
+              <li>• Weight division history</li>
+              <li>• Biographical information</li>
+              <li>• Career status (active/inactive)</li>
+            </ul>
+          </CardContent>
+        </Card>
 
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">How it Works</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <FileText className="h-5 w-5" />
-                  Create llms.txt
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>
-                  Add an llms.txt file to your website's root directory to define your content
-                  structure.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Code className="h-5 w-5" />
-                  Implement Standard
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>
-                  Follow the llms.txt specification to describe your site's content and AI
-                  interaction preferences.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Zap className="h-5 w-5" />
-                  Enhance AI Interactions
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>
-                  Improve how AI tools understand and interact with your website's content and
-                  documentation.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <TrendingUp className="h-5 w-5" />
+              Data Accuracy
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              We strive to maintain accurate and up-to-date information for all fighters 
+              in our database. Our data is compiled from various reliable sources and is 
+              regularly reviewed for accuracy. If you notice any discrepancies or have 
+              additional information about a fighter, please contact us.
+            </p>
+          </CardContent>
+        </Card>
 
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">Join the Community</h2>
-          <p>
-            Whether you're a developer, content creator, or AI enthusiast, there are many ways to
-            get involved with the llms.txt hub community:
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild>
-              <Link href={getRoute('submit')}>Submit Your llms.txt</Link>
-            </Button>
-            <Button asChild variant="outline">
-              <Link href={getRoute('projects')}>Explore Resources</Link>
-            </Button>
-          </div>
-        </section>
-
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold">Contact Us</h2>
-          <p>
-            Have questions or suggestions? We'd love to hear from you! Reach out to us at{' '}
-            <a href="mailto:contact@llmstxthub.com" className="text-primary hover:underline">
-              contact@llmstxthub.com
-            </a>
-          </p>
-        </section>
+        <Card>
+          <CardHeader>
+            <CardTitle>Contact</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              Have questions or suggestions? We'd love to hear from you! 
+              This directory is maintained as a resource for the boxing community.
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </div>
   )

@@ -54,14 +54,13 @@ export function Header() {
     <header className="border-b">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-6">
-          <Link href={getRoute('home')} className="font-medium">
-            llms.txt hub
+          <Link href={getRoute('home')} className="font-bold text-xl">
+            🥊 Boxing Directory
           </Link>
           <nav className="hidden md:flex items-center gap-4">
-            <NavLink href={getRoute('website.list')}>Websites</NavLink>
-            <NavLink href={getRoute('guides.list')}>Guides</NavLink>
-            <NavLink href={getRoute('projects')}>Projects</NavLink>
-            <NavLink href={getRoute('news')}>News</NavLink>
+            <NavLink href={getRoute('website.list')}>Boxers</NavLink>
+            <NavLink href={getRoute('about')}>About</NavLink>
+            <NavLink href={getRoute('search')}>Search</NavLink>
           </nav>
         </div>
 
@@ -70,7 +69,7 @@ export function Header() {
           <form onSubmit={onSubmit} className="hidden md:block relative">
             <input
               type="text"
-              placeholder="Search..."
+              placeholder="Search boxers..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
               className="w-full rounded-md border border-input bg-background px-3 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
@@ -93,7 +92,6 @@ export function Header() {
             <Search className="h-5 w-5" />
           </button>
 
-          <GithubStars />
 
           {user ? (
             <DropdownMenu>
@@ -125,7 +123,7 @@ export function Header() {
                     className="cursor-pointer flex w-full items-center"
                   >
                     <User className="mr-2 h-4 w-4" />
-                    <span>Submit llms.txt</span>
+                    <span>Add Boxer</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem
@@ -142,8 +140,8 @@ export function Header() {
               href={getRoute('submit')}
               className="inline-flex justify-center rounded-lg text-sm font-semibold py-1.5 px-3 text-slate-900 bg-slate-900 dark:bg-white text-white dark:text-slate-900"
             >
-              <span className="hidden md:inline">Submit llms.txt</span>
-              <span className="md:hidden">Submit</span>
+              <span className="hidden md:inline">Add Boxer</span>
+              <span className="md:hidden">Add</span>
             </Link>
           )}
         </div>
@@ -155,7 +153,7 @@ export function Header() {
           <form onSubmit={onSubmit} className="relative">
             <input
               type="text"
-              placeholder="Search..."
+              placeholder="Search boxers..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
               className="w-full rounded-md border border-input bg-background px-3 py-1.5 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"

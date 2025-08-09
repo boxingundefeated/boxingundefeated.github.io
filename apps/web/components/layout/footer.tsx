@@ -1,5 +1,4 @@
 import { getRoute } from '@/lib/routes'
-import { SiGithub, SiReddit, SiX } from '@icons-pack/react-simple-icons'
 import Link from 'next/link'
 import { ModeToggle } from '../mode-toggle'
 
@@ -10,122 +9,80 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
           <div className="space-y-3 md:col-span-2">
-            <h3 className="font-semibold">llms.txt hub</h3>
+            <h3 className="font-semibold text-lg">🥊 Boxing Directory</h3>
             <p className="text-sm text-muted-foreground">
-              Discover AI-ready documentation and explore websites implementing the proposed{' '}
-              <a href="https://llmstxt.org/" className="underline">
-                llms.txt standard.
-              </a>
+              Comprehensive database of professional boxers from around the world. 
+              Browse statistics, records, and fight history for thousands of fighters.
             </p>
             <div className="flex space-x-4 my-6">
               <ModeToggle />
-              <div className="flex space-x-4">
-                <Link
-                  href="https://github.com/thedaviddias/llms-txt-hub"
-                  className="hover:text-foreground"
-                >
-                  <SiGithub className="h-5 w-5" />
-                  <span className="sr-only">GitHub</span>
-                </Link>
-                <Link href="https://www.reddit.com/r/llmstxt/" className="hover:text-foreground">
-                  <SiReddit className="h-5 w-5" />
-                  <span className="sr-only">Reddit</span>
-                </Link>
-                <Link href="https://x.com/llmstxthub" className="hover:text-foreground">
-                  <SiX className="h-5 w-5" />
-                  <span className="sr-only">X (Twitter)</span>
-                </Link>
-              </div>
             </div>
-            <a
-              title="Install llms-txt Raycast Extension"
-              href="https://www.raycast.com/thedaviddias/llms-txt"
-            >
-              <img
-                src="https://www.raycast.com/thedaviddias/llms-txt/install_button@2x.png"
-                height={64}
-                alt="Install llms-txt Raycast Extension"
-                style={{ height: '64px' }}
-              />
-            </a>
           </div>
-          <div className="md:col-span-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h4 className="font-medium mb-3">Directory</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href={getRoute('website.list')} className="hover:text-foreground">
-                    Websites
-                  </Link>
-                </li>
-                <li>
-                  <Link href={getRoute('guides.list')} className="hover:text-foreground">
-                    Guides
-                  </Link>
-                </li>
-                <li>
-                  <Link href={getRoute('projects')} className="hover:text-foreground">
-                    Projects
-                  </Link>
-                </li>
-                <li>
-                  <Link href={getRoute('faq')} className="hover:text-foreground">
-                    FAQ
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-medium mb-3">Features</h4>
-              <ul className="space-y-2 text-sm">
-                {/* <li>
-                  <Link href={getRoute('llmsTxt')} className="hover:text-foreground">
-                    llms.txt file
-                  </Link>
-                </li> */}
-                <li>
-                  <Link href={getRoute('submit')} className="hover:text-foreground">
-                    Submit llms.txt
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-medium mb-3">Resources</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href={getRoute('about')} className="hover:text-foreground">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href={getRoute('privacy')} className="hover:text-foreground">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href={getRoute('terms')} className="hover:text-foreground">
-                    Terms of Service
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          <div className="space-y-3">
+            <h3 className="font-semibold">Browse</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/boxers" className="text-muted-foreground hover:text-foreground">
+                  All Boxers
+                </Link>
+              </li>
+              <li>
+                <Link href="/boxers?division=heavy" className="text-muted-foreground hover:text-foreground">
+                  Heavyweight
+                </Link>
+              </li>
+              <li>
+                <Link href="/boxers?division=middle" className="text-muted-foreground hover:text-foreground">
+                  Middleweight
+                </Link>
+              </li>
+              <li>
+                <Link href="/boxers?division=light" className="text-muted-foreground hover:text-foreground">
+                  Lightweight
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="space-y-3">
+            <h3 className="font-semibold">Information</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href={getRoute('about')} className="text-muted-foreground hover:text-foreground">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href={getRoute('search')} className="text-muted-foreground hover:text-foreground">
+                  Search
+                </Link>
+              </li>
+              <li>
+                <Link href={getRoute('faq')} className="text-muted-foreground hover:text-foreground">
+                  FAQ
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="space-y-3">
+            <h3 className="font-semibold">Legal</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href={getRoute('privacy')} className="text-muted-foreground hover:text-foreground">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href={getRoute('terms')} className="text-muted-foreground hover:text-foreground">
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <div>© {new Date().getFullYear()} llms.txt hub. All rights reserved.</div>
-          <div className="mt-4 md:mt-0">
-            Made with ❤️ by{' '}
-            <a
-              href="https://thedaviddias.com"
-              className="font-bold underline dark:text-gray-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              David Dias
-            </a>{' '}
-            for the Open-Source Community.
-          </div>
+        <div className="mt-8 pt-8 border-t">
+          <p className="text-center text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Boxing Directory. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

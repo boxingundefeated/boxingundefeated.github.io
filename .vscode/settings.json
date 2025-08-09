@@ -74,5 +74,8 @@
   ],
 
   // -- Emmet ----------
-  "emmet.showExpandedAbbreviation": "never"
+  "emmet.showExpandedAbbreviation": "never",
+  "diffEditor.renderSideBySide": false,
+  "diffEditor.experimental.showMoves": true,
+  "scm.diffDecorationsGutterAction": "diff"
 }

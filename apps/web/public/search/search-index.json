@@ -264,6 +264,17 @@
     "llmsFullUrl": "https://docs.convex.dev/llms.txt"
   },
   {
+    "name": "Count",
+    "description": "Count is a canvas-based BI tool that helps data teams grow their business, not just build dashboards.",
+    "url": "/count-llms-txt",
+    "content": "# Count\n\nCount is a canvas-based BI tool that helps data teams grow their business, not just build dashboards.",
+    "category": "data-analytics",
+    "slug": "count-llms-txt",
+    "website": "https://count.co/",
+    "llmsUrl": "https://count.co/llms.txt",
+    "llmsFullUrl": ""
+  },
+  {
     "name": "Creative Handbook Production Resource Directory",
     "description": "Creative Handbook Production Resource Directory In Los Angeles and the following States: Los Angeles, California, Georgia, Louisiana, Nevada, New York.",
     "url": "/creative-handbook-llms-txt",
@@ -297,6 +308,17 @@
     "llmsFullUrl": "https://docs.cursor.com/llms-full.txt"
   },
   {
+    "name": "daisyUI",
+    "description": "Best Tailwind Components Library - Free UI components for Tailwind CSS.",
+    "url": "/daisyui-llms-txt",
+    "content": "# daisyUI\n\nBest Tailwind Components Library - Free UI components for Tailwind CSS.",
+    "category": "developer-tools",
+    "slug": "daisyui-llms-txt",
+    "website": "https://daisyui.com/",
+    "llmsUrl": "https://daisyui.com/llms.txt",
+    "llmsFullUrl": ""
+  },
+  {
     "name": "Datafold",
     "description": "Data reliability and testing platform",
     "url": "/datafold-llms-txt",
@@ -327,6 +349,17 @@
     "slug": "dev-hub-llms-txt",
     "website": "https://www.devhub.com/",
     "llmsUrl": "https://api-docs.devhub.com/llms.txt",
+    "llmsFullUrl": ""
+  },
+  {
+    "name": "Docker Docs",
+    "description": "Official Docker library of resources, manuals, and guides to help you containerize applications.",
+    "url": "/docker-docs-llms-txt",
+    "content": "# Docker Docs\n\nOfficial Docker library of resources, manuals, and guides to help you containerize applications.",
+    "category": "developer-tools",
+    "slug": "docker-docs-llms-txt",
+    "website": "https://docs.docker.com",
+    "llmsUrl": "https://docs.docker.com/llms.txt",
     "llmsFullUrl": ""
   },
   {
@@ -451,6 +484,17 @@
     "llmsFullUrl": ""
   },
   {
+    "name": "Expo Documentation",
+    "description": "Build one JavaScript/TypeScript project that runs natively on all your users' devices.",
+    "url": "/expo-documentation-llms-txt",
+    "content": "# Expo Documentation\n\nBuild one JavaScript/TypeScript project that runs natively on all your users' devices.",
+    "category": "developer-tools",
+    "slug": "expo-documentation-llms-txt",
+    "website": "https://docs.expo.dev",
+    "llmsUrl": "https://docs.expo.dev/llms.txt",
+    "llmsFullUrl": "https://docs.expo.dev/llms-full.txt"
+  },
+  {
     "name": "Fabric",
     "description": "E-commerce platform and infrastructure",
     "url": "/fabric-llms-txt",
@@ -470,6 +514,17 @@
     "slug": "fasthtml-llms-txt",
     "website": "https://fastht.ml",
     "llmsUrl": "https://docs.fastht.ml/llms.txt",
+    "llmsFullUrl": ""
+  },
+  {
+    "name": "Fibery",
+    "description": "Fibery is a work platform that replaces scattered tools and connects teams. Chosen by nerds, appreciated by everyone.",
+    "url": "/fibery-llms-txt",
+    "content": "# Fibery\n\nFibery is a work platform that replaces scattered tools and connects teams. Chosen by nerds, appreciated by everyone.",
+    "category": "integration-automation",
+    "slug": "fibery-llms-txt",
+    "website": "https://fibery.io",
+    "llmsUrl": "https://fibery.io/llms.txt",
     "llmsFullUrl": ""
   },
   {
@@ -559,6 +614,17 @@
     "website": "https://rungalileo.io",
     "llmsUrl": "https://docs.rungalileo.io/llms.txt",
     "llmsFullUrl": "https://docs.rungalileo.io/llms-full.txt"
+  },
+  {
+    "name": "Giselle",
+    "description": "Design AI apps with Giselle's AI App Builder. Simplify tasks and create smart assistants powered by LLM technology.",
+    "url": "/giselle-llms-txt",
+    "content": "# Giselle\n\nDesign AI apps with Giselle's AI App Builder. Simplify tasks and create smart assistants powered by LLM technology.",
+    "category": "ai-ml",
+    "slug": "giselle-llms-txt",
+    "website": "https://giselles.ai/",
+    "llmsUrl": "https://docs.giselles.ai/llms.txt",
+    "llmsFullUrl": "https://docs.giselles.ai/llms-full.txt"
   },
   {
     "name": "Glama",
@@ -770,6 +836,17 @@
     "llmsFullUrl": "https://lmstudio.ai/llms-full.txt"
   },
   {
+    "name": "LogLayer",
+    "description": "A structured logging library with a fluent API for specifying log messages, metadata and errors.",
+    "url": "/loglayer-llms-txt",
+    "content": "# LogLayer - A logger for Typescript\n\nA structured logging library with a fluent API for specifying log messages, metadata and errors.",
+    "category": "developer-tools",
+    "slug": "loglayer-llms-txt",
+    "website": "https://loglayer.dev",
+    "llmsUrl": "https://loglayer.dev/llms.txt",
+    "llmsFullUrl": "https://loglayer.dev/llms-full.txt"
+  },
+  {
     "name": "Loops",
     "description": "Customer communication and engagement platform",
     "url": "/loops-llms-txt",
@@ -812,6 +889,17 @@
     "website": "https://mangopay.com",
     "llmsUrl": "https://docs.mangopay.com/llms.txt",
     "llmsFullUrl": "https://docs.mangopay.com/llms-full.txt"
+  },
+  {
+    "name": "Medusa",
+    "description": "A digital commerce platform with a built-in framework for customizations.",
+    "url": "/medusa-llms-txt",
+    "content": "# Medusa\n\nA digital commerce platform with a built-in framework for customizations.",
+    "category": "developer-tools",
+    "slug": "medusa-llms-txt",
+    "website": "https://medusajs.com/",
+    "llmsUrl": "https://docs.medusajs.com/llms.txt",
+    "llmsFullUrl": "https://docs.medusajs.com/llms-full.txt"
   },
   {
     "name": "MeshConnect",
@@ -979,6 +1067,17 @@
     "llmsFullUrl": "https://postfa.st/llms-full.txt"
   },
   {
+    "name": "Prettier",
+    "description": "Prettier is an opinionated code formatter.",
+    "url": "/prettier-llms-txt",
+    "content": "# Prettier\n\nPrettier is an opinionated code formatter.",
+    "category": "developer-tools",
+    "slug": "prettier-llms-txt",
+    "website": "https://prettier.io/",
+    "llmsUrl": "https://prettier.io/llms.txt",
+    "llmsFullUrl": "https://prettier.io/llms-full.txt"
+  },
+  {
     "name": "PrimeV",
     "description": "Cloud infrastructure and virtualization platform",
     "url": "/primev-llms-txt",
@@ -1012,6 +1111,28 @@
     "llmsFullUrl": "https://docs.projectdiscovery.io/llms-full.txt"
   },
   {
+    "name": "promptfoo",
+    "description": "Evaluate and test LLM outputs, collect human feedback, prevent regressions, and improve your prompts",
+    "url": "/promptfoo-llms-txt",
+    "content": "# promptfoo\n\npromptfoo provides comprehensive tools for testing, evaluating, and improving LLM outputs and prompt engineering.\n\n## Key Focus Areas\n\n- LLM Output Evaluation\n- Prompt Testing & Versioning\n- Red Team Testing\n- Benchmarking & Regression Testing\n\n## About llms.txt Implementation\n\npromptfoo's llms.txt provides structured documentation on testing and evaluating LLM outputs, helping developers build more reliable AI applications.",
+    "category": "ai-ml",
+    "slug": "promptfoo-llms-txt",
+    "website": "https://www.promptfoo.dev",
+    "llmsUrl": "https://www.promptfoo.dev/llms.txt",
+    "llmsFullUrl": ""
+  },
+  {
+    "name": "Pydantic",
+    "description": "Pydantic is the most widely used data validation library for Python.",
+    "url": "/pydantic-llms-txt",
+    "content": "# Pydantic\n\nPydantic is the most widely used data validation library for Python.",
+    "category": "developer-tools",
+    "slug": "pydantic-llms-txt",
+    "website": "https://docs.pydantic.dev/latest/",
+    "llmsUrl": "https://docs.pydantic.dev/latest/llms.txt",
+    "llmsFullUrl": "https://docs.pydantic.dev/latest/llms-full.txt"
+  },
+  {
     "name": "Quill",
     "description": "SQL query builder and database management platform",
     "url": "/quill-llms-txt",
@@ -1021,6 +1142,17 @@
     "website": "https://quillsql.com",
     "llmsUrl": "https://docs.quillsql.com/llms.txt",
     "llmsFullUrl": ""
+  },
+  {
+    "name": "Qwikrank",
+    "description": "Generate SEO-Optimized Content with AI in Minutes.",
+    "url": "/qwikrank-llms-txt",
+    "content": "# Qwikrank\n\nGenerate SEO-Optimized Content with AI in Minutes.",
+    "category": "integration-automation",
+    "slug": "qwikrank-llms-txt",
+    "website": "https://qwikrank.com",
+    "llmsUrl": "https://qwikrank.com/llms.txt",
+    "llmsFullUrl": "https://qwikrank.com/llms-full.txt"
   },
   {
     "name": "RainbowKit",
@@ -1089,6 +1221,39 @@
     "llmsFullUrl": ""
   },
   {
+    "name": "Rsbuild",
+    "description": "Rsbuild is a high-performance build tool powered by Rspack. It provides out-of-the-box setup for enjoyable development experience.",
+    "url": "/rsbuild-llms-txt",
+    "content": "# Rsbuild\n\nRsbuild is a high-performance build tool powered by Rspack. It provides out-of-the-box setup for enjoyable development experience.",
+    "category": "developer-tools",
+    "slug": "rsbuild-llms-txt",
+    "website": "https://rsbuild.dev",
+    "llmsUrl": "https://rsbuild.dev/llms.txt",
+    "llmsFullUrl": "https://rsbuild.dev/llms-full.txt"
+  },
+  {
+    "name": "Rslib",
+    "description": "Rslib is a library development tool that leverages the well-designed configurations and plugins of Rsbuild.",
+    "url": "/rslib-llms-txt",
+    "content": "# Rslib\n\nRslib is a library development tool that leverages the well-designed configurations and plugins of Rsbuild.",
+    "category": "developer-tools",
+    "slug": "rslib-llms-txt",
+    "website": "https://lib.rsbuild.dev",
+    "llmsUrl": "https://lib.rsbuild.dev/llms.txt",
+    "llmsFullUrl": "https://lib.rsbuild.dev/llms-full.txt"
+  },
+  {
+    "name": "Rspack",
+    "description": "Rspack is a high performance JavaScript bundler written in Rust. It offers strong compatibility with the webpack ecosystem, and lightning fast build speeds.",
+    "url": "/rspack-llms-txt",
+    "content": "# Rspack\n\nRspack is a high performance JavaScript bundler written in Rust. It offers strong compatibility with the webpack ecosystem, and lightning fast build speeds.",
+    "category": "developer-tools",
+    "slug": "rspack-llms-txt",
+    "website": "https://rspack.dev",
+    "llmsUrl": "https://rspack.dev/llms.txt",
+    "llmsFullUrl": "https://rspack.dev/llms-full.txt"
+  },
+  {
     "name": "Salesbricks",
     "description": "Sales automation and management platform",
     "url": "/salesbricks-llms-txt",
@@ -1098,6 +1263,17 @@
     "website": "https://salesbricks.com",
     "llmsUrl": "https://docs.salesbricks.com/llms.txt",
     "llmsFullUrl": "https://docs.salesbricks.com/llms-full.txt"
+  },
+  {
+    "name": "Salesforce Marketing Cloud Consultants",
+    "description": "Boost ROI with Salesforce Marketing Cloud. Meet your team of certified Marketing Cloud consultants and specialists in Sales Cloud and Data Cloud.",
+    "url": "/salesforce-marketing-cloud-llms-txt",
+    "content": "# Salesforce Marketing Cloud Consultants\n\nBoost ROI with Salesforce Marketing Cloud. Meet your team of certified Marketing Cloud consultants and specialists in Sales Cloud and Data Cloud.",
+    "category": "integration-automation",
+    "slug": "salesforce-marketing-cloud-llms-txt",
+    "website": "https://marcloudconsulting.com/",
+    "llmsUrl": "https://marcloudconsulting.com/llms.txt",
+    "llmsFullUrl": "https://marcloudconsulting.com/llms-full.txt"
   },
   {
     "name": "Sardine",
@@ -1232,6 +1408,17 @@
     "llmsFullUrl": "https://svelte.dev/llms-full.txt"
   },
   {
+    "name": "Tamagui",
+    "description": "React style library and UI kit that unifies React Native and React web.",
+    "url": "/tamagui-llms-txt",
+    "content": "# Tamagui\n\nReact style library and UI kit that unifies React Native and React web.",
+    "category": "developer-tools",
+    "slug": "tamagui-llms-txt",
+    "website": "https://tamagui.dev",
+    "llmsUrl": "https://tamagui.dev/llms.txt",
+    "llmsFullUrl": ""
+  },
+  {
     "name": "Tavus",
     "description": "AI-powered video personalization platform",
     "url": "/tavus-llms-txt",
@@ -1320,6 +1507,17 @@
     "llmsFullUrl": "https://trigger.dev/docs/llms-full.txt"
   },
   {
+    "name": "TrueProfit",
+    "description": "Instantly track your Net Profit. Say goodbye to these spreadsheet nightmares: Stay on top of your true business health with our Net Profit Analytics dashboard.",
+    "url": "/trueprofit-llms-txt",
+    "content": "# TrueProfit\n\nInstantly track your Net Profit. Say goodbye to these spreadsheet nightmares: Stay on top of your true business health with our Net Profit Analytics dashboard.",
+    "category": "data-analytics",
+    "slug": "trueprofit-llms-txt",
+    "website": "https://trueprofit.io/",
+    "llmsUrl": "https://trueprofit.io/llms.txt",
+    "llmsFullUrl": ""
+  },
+  {
     "name": "Turbo",
     "description": "Turbo is an incremental bundler and build system optimized for JavaScript and TypeScript, written in Rust.",
     "url": "/turbo-llms-txt",
@@ -1351,6 +1549,17 @@
     "website": "https://unifygtm.com",
     "llmsUrl": "https://docs.unifygtm.com/llms.txt",
     "llmsFullUrl": ""
+  },
+  {
+    "name": "UniWebView",
+    "description": "UniWebView is a modern web view component for mobile Unity 3D games for native iOS/Android. Integrating web content to your games was never easier.",
+    "url": "/uniwebview-llms-txt",
+    "content": "# UniWebView\n\nUniWebView is a modern web view component for mobile Unity 3D games for native iOS/Android. Integrating web content to your games was never easier.",
+    "category": "developer-tools",
+    "slug": "uniwebview-llms-txt",
+    "website": "https://docs.uniwebview.com",
+    "llmsUrl": "https://docs.uniwebview.com/llms.txt",
+    "llmsFullUrl": "https://docs.uniwebview.com/llms-full.txt"
   },
   {
     "name": "Unkey",

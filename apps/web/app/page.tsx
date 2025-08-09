@@ -1,30 +1,22 @@
-import { getHomePageData } from '@/actions/get-home-page-data'
+import { getBoxers } from '@/lib/boxers-loader'
 import { JsonLd } from '@/components/json-ld'
-import { CategoriesSection } from '@/components/sections/categories-section'
-import { FAQSection } from '@/components/sections/faq-section'
-import { FeaturedGuidesSection } from '@/components/sections/featured-guides-section'
-import { FeaturedProjectsSection } from '@/components/sections/featured-projects-section'
-import { HeroSection } from '@/components/sections/hero-section'
-import { HowItWorksSection } from '@/components/sections/how-it-works-section'
-import { LatestNewsSection } from '@/components/sections/latest-news-section'
-import { LatestUpdatesSection } from '@/components/sections/latest-updates-section'
-import { NewsletterSection } from '@/components/sections/newsletter-section'
-import { ToolsSection } from '@/components/sections/tools-section'
-import { getGuides } from '@/lib/content-loader'
+import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
 import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
 import type { Metadata } from 'next'
-import { CommunitiesSection } from '@/components/sections/communities-section'
+import Link from 'next/link'
+import { Trophy, Users, Target, TrendingUp } from 'lucide-react'
+import { Button } from '@thedaviddias/design-system/button'
 
 export const metadata: Metadata = {
-  title: 'llms.txt hub - Discover AI-Ready Documentation',
+  title: 'Boxing Directory - Professional Boxers Database',
   description:
-    'Explore AI-friendly websites and tools implementing the llms.txt standard. Find and submit llms.txt files for better AI integration.',
+    'Explore our comprehensive database of professional boxers. Find boxer statistics, records, and fight history.',
   openGraph: {
-    title: 'llms.txt hub - Discover AI-Ready Documentation',
+    title: 'Boxing Directory - Professional Boxers Database',
     description:
-      'Explore AI-friendly websites and tools implementing the llms.txt standard. Find and submit llms.txt files for better AI integration.',
-    url: 'https://llmstxthub.com',
-    siteName: 'llms.txt hub',
+      'Explore our comprehensive database of professional boxers. Find boxer statistics, records, and fight history.',
+    url: getBaseUrl(),
+    siteName: 'Boxing Directory',
     images: [
       {
         url: `${getBaseUrl()}/opengraph-image.png`,
@@ -34,19 +26,23 @@ export const metadata: Metadata = {
     ],
     locale: 'en_US',
     type: 'website'
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'llms.txt hub - Discover AI-Ready Documentation',
-    description:
-      'Explore AI-friendly websites and tools implementing the llms.txt standard. Find and submit llms.txt files for better AI integration.',
-    images: [`${getBaseUrl()}/opengraph-image.png`]
   }
 }
 
 export default async function Home() {
-  const { featuredProjects, recentlyUpdatedProjects } = await getHomePageData()
-  const featuredGuides = await getGuides()
+  const boxers = await getBoxers()
+  const totalBoxers = boxers.length
+  
+  // Calculate stats
+  const activeBoxers = boxers.filter(b => b.proStatus === 'active').length
+  const totalBouts = boxers.reduce((sum, b) => sum + (b.proTotalBouts || 0), 0)
+  const champions = boxers.filter(b => b.proWins && b.proWins > 20 && b.proLosses && b.proLosses < 5).length
+  
+  // Get featured boxers (highest win counts)
+  const featuredBoxers = boxers
+    .filter(b => b.proWins && b.proTotalBouts)
+    .sort((a, b) => (b.proWins || 0) - (a.proWins || 0))
+    .slice(0, 6)
 
   return (
     <>
@@ -54,27 +50,146 @@ export default async function Home() {
         data={{
           '@context': 'https://schema.org',
           '@type': 'WebSite',
-          name: 'llms.txt hub',
-          url: 'https://llmstxthub.com',
+          name: 'Boxing Directory',
+          url: getBaseUrl(),
           description:
-            'Discover AI-Ready Documentation and explore websites implementing the llms.txt standard.'
+            'Comprehensive database of professional boxers with statistics, records, and fight history.'
         }}
       />
       <div className="max-w-6xl mx-auto px-4 py-8 space-y-16">
-        <HeroSection />
-        <FeaturedProjectsSection projects={featuredProjects} />
-        <FeaturedGuidesSection guides={featuredGuides} />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <LatestUpdatesSection projects={recentlyUpdatedProjects} />
-          <LatestNewsSection />
-        </div>
-        <ToolsSection />
-        <CategoriesSection />
-        <HowItWorksSection />
-        {/* <CommunityStatsSection allProjects={allProjects} /> */}
-        <FAQSection />
-        <CommunitiesSection />
-        <NewsletterSection />
+        {/* Hero Section */}
+        <section className="text-center space-y-6">
+          <h1 className="text-5xl font-bold tracking-tight">
+            🥊 Professional Boxing Directory
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Explore comprehensive records and statistics for {totalBoxers.toLocaleString()} professional boxers
+            from around the world.
+          </p>
+          <div className="flex gap-4 justify-center">
+            <Link href="/boxers">
+              <Button size="lg">Browse All Boxers</Button>
+            </Link>
+            <Link href="/search">
+              <Button size="lg" variant="outline">Search Database</Button>
+            </Link>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Total Boxers</CardTitle>
+              <Users className="h-4 w-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">{totalBoxers.toLocaleString()}</div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Active Fighters</CardTitle>
+              <Target className="h-4 w-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">{activeBoxers.toLocaleString()}</div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Total Bouts</CardTitle>
+              <TrendingUp className="h-4 w-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">{totalBouts.toLocaleString()}</div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Elite Fighters</CardTitle>
+              <Trophy className="h-4 w-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">{champions.toLocaleString()}</div>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Featured Boxers */}
+        <section className="space-y-6">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold mb-2">Top Fighters</h2>
+            <p className="text-muted-foreground">Boxers with the most professional wins</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {featuredBoxers.map(boxer => (
+              <Card key={boxer.id} className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle>
+                    <Link href={`/boxers/${boxer.slug}`} className="hover:underline">
+                      {boxer.name}
+                    </Link>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <dl className="space-y-2">
+                    <div className="flex justify-between">
+                      <dt className="text-sm text-muted-foreground">Record</dt>
+                      <dd className="font-semibold">
+                        {boxer.proWins}-{boxer.proLosses}-{boxer.proDraws || 0}
+                      </dd>
+                    </div>
+                    {boxer.proDivision && (
+                      <div className="flex justify-between">
+                        <dt className="text-sm text-muted-foreground">Division</dt>
+                        <dd className="capitalize">{boxer.proDivision}</dd>
+                      </div>
+                    )}
+                    {boxer.nationality && (
+                      <div className="flex justify-between">
+                        <dt className="text-sm text-muted-foreground">Country</dt>
+                        <dd>{boxer.nationality}</dd>
+                      </div>
+                    )}
+                  </dl>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="text-center">
+            <Link href="/boxers">
+              <Button variant="outline" size="lg">View All Boxers →</Button>
+            </Link>
+          </div>
+        </section>
+
+        {/* Browse by Division */}
+        <section className="space-y-6">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold mb-2">Browse by Weight Division</h2>
+            <p className="text-muted-foreground">Find boxers in specific weight classes</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {['heavy', 'light-heavy', 'middle', 'welter', 'light', 'feather', 'bantam', 'fly'].map(division => {
+              const divisionBoxers = boxers.filter(b => b.proDivision === division)
+              const divisionName = division.replace('-', ' ')
+              return (
+                <Link key={division} href={`/boxers?division=${division}`}>
+                  <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+                    <CardContent className="p-4">
+                      <div className="text-center">
+                        <div className="font-semibold capitalize">{divisionName}weight</div>
+                        <div className="text-2xl font-bold mt-1">{divisionBoxers.length}</div>
+                        <div className="text-xs text-muted-foreground">boxers</div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              )
+            })}
+          </div>
+        </section>
       </div>
     </>
   )

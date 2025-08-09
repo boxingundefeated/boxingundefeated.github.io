@@ -46,3 +46,9 @@ lychee-out.md
 .lycheecache
 .env*.local
 .content-collections
+
+# Coders in Flow
+.codersinflow
+.vscode
+node_modules
+.env

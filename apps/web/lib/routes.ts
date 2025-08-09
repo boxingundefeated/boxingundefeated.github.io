@@ -6,12 +6,20 @@
 export const routes = {
   home: '/',
   llmsTxt: '/llms.txt',
+  boxers: {
+    list: '/boxers',
+    detail: '/boxers/[slug]',
+    featured: '/boxers',
+    latest: '/boxers?sort=latest',
+    withDivision: '/boxers?division=[division]'
+  },
+  // Keep website routes for backward compatibility but redirect to boxers
   website: {
-    list: '/websites',
-    detail: '/websites/[slug]',
-    featured: '/websites',
-    latest: '/websites?sort=latest',
-    withCategory: '/websites?category=[category]'
+    list: '/boxers',
+    detail: '/boxers/[slug]',
+    featured: '/boxers',
+    latest: '/boxers?sort=latest',
+    withCategory: '/boxers?category=[category]'
   },
   about: '/about',
   guides: {
@@ -32,6 +40,9 @@ export const routes = {
 type StaticRoutes =
   | 'home'
   | 'llmsTxt'
+  | 'boxers.list'
+  | 'boxers.featured'
+  | 'boxers.latest'
   | 'website.list'
   | 'website.featured'
   | 'website.latest'
@@ -47,11 +58,13 @@ type StaticRoutes =
   | 'terms'
   | 'rss'
 
-type DynamicRoutes = 'website.detail' | 'website.withCategory' | 'guides.guide'
+type DynamicRoutes = 'boxers.detail' | 'boxers.withDivision' | 'website.detail' | 'website.withCategory' | 'guides.guide'
 
 type Routes = StaticRoutes | DynamicRoutes
 
 type DynamicRouteParams = {
+  'boxers.detail': { slug: string }
+  'boxers.withDivision': { division: string }
   'website.detail': { slug: string }
   'website.withCategory': { category: string }
   'guides.guide': { slug: string }

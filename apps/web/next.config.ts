@@ -8,7 +8,6 @@ import {
 } from '@thedaviddias/config-next'
 import { withSentry } from '@thedaviddias/observability/next-config'
 import type { NextConfig } from 'next'
-import { withContentCollections } from '@content-collections/next'
 
 export const INTERNAL_PACKAGES = [
   '@thedaviddias/design-system',
@@ -72,5 +71,4 @@ if (env.ANALYZE === 'true') {
   nextConfig = withAnalyzer(nextConfig)
 }
 
-// withContentCollections must be the outermost wrapper
-export default withContentCollections(nextConfig)
+export default nextConfig
