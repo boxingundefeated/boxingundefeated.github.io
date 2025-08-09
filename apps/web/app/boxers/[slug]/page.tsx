@@ -1,28 +1,32 @@
-import { getBoxerBySlug, getBoxers, getBoxerStats } from '@/lib/boxers-loader'
 import { Breadcrumb } from '@thedaviddias/design-system/breadcrumb'
+import { Button } from '@thedaviddias/design-system/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
 import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
-import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
-import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import { Button } from '@thedaviddias/design-system/button'
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import { getBoxerBouts, getBoxerBySlug, getBoxerStats, getBoxers } from '@/lib/boxers-loader'
 
 export async function generateStaticParams() {
   const boxers = await getBoxers()
-  return boxers.map((boxer) => ({
-    slug: boxer.slug,
+  return boxers.map(boxer => ({
+    slug: boxer.slug
   }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({
+  params
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
   const { slug } = await params
   const boxer = await getBoxerBySlug(slug)
   const baseUrl = getBaseUrl()
 
   if (!boxer) {
     return {
-      title: 'Boxer Not Found',
+      title: 'Boxer Not Found'
     }
   }
 
@@ -38,13 +42,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 export default async function BoxerPage({ params }: { params: { slug: string } }) {
   const { slug } = await params
   const boxer = await getBoxerBySlug(slug)
-  
+
   if (!boxer) {
     notFound()
   }
 
   const baseUrl = getBaseUrl()
   const stats = getBoxerStats(boxer)
+  const bouts = getBoxerBouts(boxer)
   const breadcrumbItems = [
     { name: 'Boxers', href: '/boxers' },
     { name: boxer.name, href: `/boxers/${slug}` }
@@ -53,7 +58,7 @@ export default async function BoxerPage({ params }: { params: { slug: string } }
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumb items={breadcrumbItems} baseUrl={baseUrl} />
-      
+
       <Link href="/boxers">
         <Button variant="ghost" className="mb-4">
           <ArrowLeft className="mr-2 h-4 w-4" />
@@ -62,16 +67,23 @@ export default async function BoxerPage({ params }: { params: { slug: string } }
       </Link>
 
       <div className="space-y-6">
-        <div>
-          <h1 className="text-4xl font-bold tracking-tight mb-2">
-            {boxer.name}
-            {boxer.nicknames && (
-              <span className="ml-3 text-2xl text-muted-foreground">"{boxer.nicknames}"</span>
-            )}
-          </h1>
-          {boxer.residence && (
-            <p className="text-muted-foreground">{boxer.residence}</p>
+        <div className="flex items-start gap-6">
+          {boxer.avatarImage && (
+            <img
+              src={boxer.avatarImage}
+              alt={boxer.name}
+              className="w-32 h-32 rounded-full object-cover"
+            />
           )}
+          <div>
+            <h1 className="text-4xl font-bold tracking-tight mb-2">
+              {boxer.name}
+              {boxer.nicknames && (
+                <span className="ml-3 text-2xl text-muted-foreground">"{boxer.nicknames}"</span>
+              )}
+            </h1>
+            {boxer.residence && <p className="text-muted-foreground">{boxer.residence}</p>}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -105,9 +117,7 @@ export default async function BoxerPage({ params }: { params: { slug: string } }
             </CardHeader>
             <CardContent>
               <div className="text-3xl font-bold">{stats.koRate}</div>
-              <div className="text-sm text-muted-foreground mt-1">
-                of victories
-              </div>
+              <div className="text-sm text-muted-foreground mt-1">of victories</div>
             </CardContent>
           </Card>
         </div>
@@ -160,10 +170,58 @@ export default async function BoxerPage({ params }: { params: { slug: string } }
                   <dd className="font-medium">{boxer.proTotalBouts}</dd>
                 </>
               )}
+              {boxer.proTotalRounds && (
+                <>
+                  <dt className="text-sm text-muted-foreground">Total Rounds</dt>
+                  <dd className="font-medium">{boxer.proTotalRounds}</dd>
+                </>
+              )}
               {boxer.birthPlace && (
                 <>
                   <dt className="text-sm text-muted-foreground">Birth Place</dt>
                   <dd className="font-medium">{boxer.birthPlace}</dd>
+                </>
+              )}
+              {boxer.dateOfBirth && (
+                <>
+                  <dt className="text-sm text-muted-foreground">Date of Birth</dt>
+                  <dd className="font-medium">{boxer.dateOfBirth}</dd>
+                </>
+              )}
+              {boxer.birthName && boxer.birthName !== boxer.name && (
+                <>
+                  <dt className="text-sm text-muted-foreground">Birth Name</dt>
+                  <dd className="font-medium">{boxer.birthName}</dd>
+                </>
+              )}
+              {boxer.proDebutDate && (
+                <>
+                  <dt className="text-sm text-muted-foreground">Pro Debut</dt>
+                  <dd className="font-medium">{boxer.proDebutDate}</dd>
+                </>
+              )}
+              {boxer.gym && (
+                <>
+                  <dt className="text-sm text-muted-foreground">Gym</dt>
+                  <dd className="font-medium">{boxer.gym}</dd>
+                </>
+              )}
+              {boxer.trainers && (
+                <>
+                  <dt className="text-sm text-muted-foreground">Trainers</dt>
+                  <dd className="font-medium">{boxer.trainers}</dd>
+                </>
+              )}
+              {boxer.managers && (
+                <>
+                  <dt className="text-sm text-muted-foreground">Managers</dt>
+                  <dd className="font-medium">{boxer.managers}</dd>
+                </>
+              )}
+              {boxer.promoters && (
+                <>
+                  <dt className="text-sm text-muted-foreground">Promoters</dt>
+                  <dd className="font-medium">{boxer.promoters}</dd>
                 </>
               )}
             </dl>
@@ -176,10 +234,64 @@ export default async function BoxerPage({ params }: { params: { slug: string } }
               <CardTitle>Biography</CardTitle>
             </CardHeader>
             <CardContent>
-              <div 
+              <div
                 className="prose prose-sm max-w-none dark:prose-invert"
                 dangerouslySetInnerHTML={{ __html: boxer.bio }}
               />
+            </CardContent>
+          </Card>
+        )}
+
+        {bouts.length > 0 && (
+          <Card>
+            <CardHeader>
+              <CardTitle>Fight History ({bouts.length} Bouts)</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3 max-h-96 overflow-y-auto">
+                {bouts.slice(0, 20).map((bout, index) => (
+                  <div key={`${bout.boxrecId}-${index}`} className="border-b pb-3 last:border-0">
+                    <div className="flex justify-between items-start">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <span className="font-semibold">{bout.opponentName}</span>
+                          {bout.titleFight && (
+                            <span className="text-xs bg-yellow-500 text-black px-2 py-0.5 rounded">
+                              Title Fight
+                            </span>
+                          )}
+                        </div>
+                        <div className="text-sm text-muted-foreground mt-1">
+                          {bout.boutDate} • {bout.eventName}
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <span
+                          className={`font-bold ${
+                            bout.result === 'win'
+                              ? 'text-green-600'
+                              : bout.result === 'loss'
+                                ? 'text-red-600'
+                                : 'text-yellow-600'
+                          }`}
+                        >
+                          {bout.result.toUpperCase()}
+                        </span>
+                        {bout.resultMethod && (
+                          <div className="text-xs text-muted-foreground">
+                            {bout.resultMethod} {bout.resultRound && `R${bout.resultRound}`}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                {bouts.length > 20 && (
+                  <div className="text-center text-sm text-muted-foreground pt-2">
+                    Showing 20 of {bouts.length} fights
+                  </div>
+                )}
+              </div>
             </CardContent>
           </Card>
         )}

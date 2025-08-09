@@ -1,15 +1,15 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import { Button } from '@thedaviddias/design-system/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
 import { ToggleGroup, ToggleGroupItem } from '@thedaviddias/design-system/toggle-group'
-import { Grid, List, Trophy, Target, Users, SortAsc } from 'lucide-react'
-import type { BoxerMetadata } from '@/lib/boxers-loader'
-import { getBoxerCategories, getBoxerStats } from '@/lib/boxers-loader'
-import { EmptyState } from '@/components/empty-state'
+import { Grid, List, SortAsc, Trophy, Users } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import { EmptyState } from '@/components/empty-state'
+import type { BoxerMetadata } from '@/lib/boxers-loader'
+import { getBoxerCategories, getBoxerStats } from '@/lib/boxers-loader'
 
 interface ClientBoxersListProps {
   initialBoxers: BoxerMetadata[]
@@ -22,28 +22,33 @@ export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
   const searchParams = useSearchParams()
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [boxers, setBoxers] = useState(initialBoxers)
-  
+  const [currentPage, setCurrentPage] = useState(1)
+  const itemsPerPage = 24
+
   // Read filters from URL searchParams on client side
   const divisionFromUrl = searchParams.get('division') || 'all'
   const sortFromUrl = searchParams.get('sort') || 'wins'
-  
+
   const [divisionFilter, setDivisionFilter] = useState<string>(divisionFromUrl)
   const [sortBy, setSortBy] = useState<string>(sortFromUrl)
-  
+
   const categories = getBoxerCategories()
-  
+
   // Sync state with URL changes
   useEffect(() => {
     const newDivision = searchParams.get('division') || 'all'
     const newSort = searchParams.get('sort') || 'wins'
+    const newPage = parseInt(searchParams.get('page') || '1')
     setDivisionFilter(newDivision)
     setSortBy(newSort)
+    setCurrentPage(newPage)
   }, [searchParams])
-  
-  const updateURLParams = (division: string, sort?: string) => {
+
+  const updateURLParams = (division?: string, sort?: string, page?: number) => {
     const params = new URLSearchParams()
-    if (division !== 'all') params.set('division', division)
+    if (division && division !== 'all') params.set('division', division)
     if (sort && sort !== 'wins') params.set('sort', sort)
+    if (page && page !== 1) params.set('page', page.toString())
     const query = params.toString()
     router.push(`/boxers${query ? `?${query}` : ''}`)
   }
@@ -66,22 +71,39 @@ export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
     }
 
     setBoxers(filteredBoxers)
+    // Reset to first page when filters change
+    setCurrentPage(1)
   }, [initialBoxers, divisionFilter, sortBy])
+
+  // Calculate pagination
+  const totalPages = Math.ceil(boxers.length / itemsPerPage)
+  const startIndex = (currentPage - 1) * itemsPerPage
+  const endIndex = startIndex + itemsPerPage
+  const paginatedBoxers = boxers.slice(startIndex, endIndex)
 
   const BoxerCard = ({ boxer }: { boxer: BoxerMetadata }) => {
     const stats = getBoxerStats(boxer)
-    
+
     return (
       <Card className="hover:shadow-lg transition-shadow">
         <CardHeader>
-          <CardTitle className="flex items-start justify-between">
-            <Link href={`/boxers/${boxer.slug}`} className="hover:underline">
-              {boxer.name}
-            </Link>
-            {boxer.nicknames && (
-              <span className="text-sm text-muted-foreground">"{boxer.nicknames}"</span>
+          <div className="flex items-start gap-4">
+            {boxer.avatarImage && (
+              <img
+                src={boxer.avatarImage}
+                alt={boxer.name}
+                className="w-16 h-16 rounded-full object-cover"
+              />
             )}
-          </CardTitle>
+            <CardTitle className="flex-1 flex items-start justify-between">
+              <Link href={`/boxers/${boxer.slug}`} className="hover:underline">
+                {boxer.name}
+              </Link>
+              {boxer.nicknames && (
+                <span className="text-sm text-muted-foreground">"{boxer.nicknames}"</span>
+              )}
+            </CardTitle>
+          </div>
         </CardHeader>
         <CardContent>
           <div className="space-y-2">
@@ -131,23 +153,32 @@ export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
 
   const BoxerListItem = ({ boxer }: { boxer: BoxerMetadata }) => {
     const stats = getBoxerStats(boxer)
-    
+
     return (
       <div className="border rounded-lg p-4 hover:shadow-md transition-shadow">
         <div className="flex items-center justify-between">
-          <div className="flex-1">
-            <h3 className="font-semibold text-lg">
-              <Link href={`/boxers/${boxer.slug}`} className="hover:underline">
-                {boxer.name}
-              </Link>
-              {boxer.nicknames && (
-                <span className="ml-2 text-sm text-muted-foreground">"{boxer.nicknames}"</span>
-              )}
-            </h3>
-            <div className="flex gap-4 mt-1 text-sm text-muted-foreground">
-              <span>Record: {stats.record}</span>
-              {boxer.proDivision && <span>Division: {boxer.proDivision}</span>}
-              {boxer.nationality && <span>{boxer.nationality}</span>}
+          <div className="flex items-center gap-4 flex-1">
+            {boxer.avatarImage && (
+              <img
+                src={boxer.avatarImage}
+                alt={boxer.name}
+                className="w-12 h-12 rounded-full object-cover"
+              />
+            )}
+            <div className="flex-1">
+              <h3 className="font-semibold text-lg">
+                <Link href={`/boxers/${boxer.slug}`} className="hover:underline">
+                  {boxer.name}
+                </Link>
+                {boxer.nicknames && (
+                  <span className="ml-2 text-sm text-muted-foreground">"{boxer.nicknames}"</span>
+                )}
+              </h3>
+              <div className="flex gap-4 mt-1 text-sm text-muted-foreground">
+                <span>Record: {stats.record}</span>
+                {boxer.proDivision && <span>Division: {boxer.proDivision}</span>}
+                {boxer.nationality && <span>{boxer.nationality}</span>}
+              </div>
             </div>
           </div>
           <div className="flex gap-4 text-sm">
@@ -176,7 +207,7 @@ export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
             size="sm"
             onClick={() => {
               setDivisionFilter('all')
-              updateURLParams('all', sortBy)
+              updateURLParams('all', sortBy, 1)
             }}
             className="rounded-full"
           >
@@ -189,7 +220,7 @@ export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
               size="sm"
               onClick={() => {
                 setDivisionFilter(category.slug)
-                updateURLParams(category.slug, sortBy)
+                updateURLParams(category.slug, sortBy, 1)
               }}
               className="rounded-full"
             >
@@ -221,7 +252,12 @@ export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
           <ToggleGroup
             type="single"
             value={sortBy}
-            onValueChange={(value: string) => value && setSortBy(value)}
+            onValueChange={(value: string) => {
+              if (value) {
+                setSortBy(value)
+                updateURLParams(divisionFilter, value, currentPage)
+              }
+            }}
             className="bg-background border rounded-md"
           >
             <ToggleGroupItem value="wins" className="px-3 py-2 h-10 data-[state=on]:bg-accent">
@@ -247,18 +283,87 @@ export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
           actionLabel="View All"
           actionHref="/boxers"
         />
-      ) : viewMode === 'grid' ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {boxers.map(boxer => (
-            <BoxerCard key={boxer.id} boxer={boxer} />
-          ))}
-        </div>
       ) : (
-        <div className="space-y-2">
-          {boxers.map(boxer => (
-            <BoxerListItem key={boxer.id} boxer={boxer} />
-          ))}
-        </div>
+        <>
+          {viewMode === 'grid' ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {paginatedBoxers.map(boxer => (
+                <BoxerCard key={boxer.id} boxer={boxer} />
+              ))}
+            </div>
+          ) : (
+            <div className="space-y-2">
+              {paginatedBoxers.map(boxer => (
+                <BoxerListItem key={boxer.id} boxer={boxer} />
+              ))}
+            </div>
+          )}
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-2 mt-8">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  const newPage = Math.max(1, currentPage - 1)
+                  setCurrentPage(newPage)
+                  updateURLParams(divisionFilter, sortBy, newPage)
+                }}
+                disabled={currentPage === 1}
+              >
+                Previous
+              </Button>
+
+              <div className="flex items-center gap-1">
+                {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+                  let pageNum
+                  if (totalPages <= 5) {
+                    pageNum = i + 1
+                  } else if (currentPage <= 3) {
+                    pageNum = i + 1
+                  } else if (currentPage >= totalPages - 2) {
+                    pageNum = totalPages - 4 + i
+                  } else {
+                    pageNum = currentPage - 2 + i
+                  }
+
+                  return (
+                    <Button
+                      key={pageNum}
+                      variant={currentPage === pageNum ? 'default' : 'outline'}
+                      size="sm"
+                      onClick={() => {
+                        setCurrentPage(pageNum)
+                        updateURLParams(divisionFilter, sortBy, pageNum)
+                      }}
+                      className="w-10"
+                    >
+                      {pageNum}
+                    </Button>
+                  )
+                })}
+              </div>
+
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  const newPage = Math.min(totalPages, currentPage + 1)
+                  setCurrentPage(newPage)
+                  updateURLParams(divisionFilter, sortBy, newPage)
+                }}
+                disabled={currentPage === totalPages}
+              >
+                Next
+              </Button>
+            </div>
+          )}
+
+          <div className="text-center text-sm text-muted-foreground mt-4">
+            Showing {startIndex + 1}-{Math.min(endIndex, boxers.length)} of {boxers.length} boxers
+          </div>
+        </>
       )}
     </div>
   )
