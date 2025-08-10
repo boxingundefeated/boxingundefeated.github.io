@@ -288,7 +288,12 @@ export function VirtualizedBoxersList() {
       </div>
 
       {displayedBoxers.length === 0 ? (
-        <EmptyState />
+        <EmptyState
+          title="No boxers found"
+          description="There are no boxers matching your current filters."
+          actionLabel="View all boxers"
+          actionHref="/boxers"
+        />
       ) : (
         <>
           {viewMode === 'grid' ? (
