@@ -246,7 +246,7 @@ export function VirtualizedBoxersList() {
               onClick={() => handleDivisionChange(category.slug)}
               className="whitespace-nowrap"
             >
-              {category.label}
+              {category.name}
             </Button>
           ))}
         </div>
