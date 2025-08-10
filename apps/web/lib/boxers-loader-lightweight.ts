@@ -10,7 +10,7 @@ export function getBoxersFromFile(): BoxerMetadata[] {
   if (typeof window !== 'undefined') {
     throw new Error('getBoxersFromFile can only be used at build time')
   }
-  
+
   const dataPath = path.join(process.cwd(), 'data', 'boxers.json')
   const data = fs.readFileSync(dataPath, 'utf-8')
   return JSON.parse(data)
@@ -19,7 +19,16 @@ export function getBoxersFromFile(): BoxerMetadata[] {
 // Get a single boxer without loading all data
 export function getBoxerBySlugFromFile(slug: string): BoxerMetadata | null {
   const boxers = getBoxersFromFile()
-  return boxers.find(b => (b.slug || b.name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')) === slug) || null
+  return (
+    boxers.find(
+      b =>
+        (b.slug ||
+          b.name
+            .toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/[^\w-]/g, '')) === slug
+    ) || null
+  )
 }
 
 // Get boxer stats without loading all data

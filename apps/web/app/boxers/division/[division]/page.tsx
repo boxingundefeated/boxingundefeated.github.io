@@ -20,7 +20,7 @@ export async function generateMetadata({
   const { division } = await params
   const categories = getBoxerCategories()
   const category = categories.find(c => c.slug === division)
-  
+
   if (!category) {
     return {
       title: 'Division Not Found'
@@ -33,27 +33,21 @@ export async function generateMetadata({
   }
 }
 
-export default async function DivisionPage({ 
-  params 
-}: { 
-  params: { division: string } 
-}) {
+export default async function DivisionPage({ params }: { params: { division: string } }) {
   const { division } = await params
   const categories = getBoxerCategories()
   const category = categories.find(c => c.slug === division)
-  
+
   if (!category) {
     notFound()
   }
 
   // Get ALL boxers but filter server-side
   const allBoxers = await getBoxersWithoutBouts()
-  
+
   // Filter boxers by division on the server
-  const divisionBoxers = allBoxers.filter(
-    boxer => boxer.proDivision === category.division
-  )
-  
+  const divisionBoxers = allBoxers.filter(boxer => boxer.proDivision === category.division)
+
   // Sort by wins on the server
   divisionBoxers.sort((a, b) => (b.proWins || 0) - (a.proWins || 0))
 

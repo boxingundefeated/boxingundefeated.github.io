@@ -6,10 +6,10 @@ import { ToggleGroup, ToggleGroupItem } from '@thedaviddias/design-system/toggle
 import { Grid, List, SortAsc, Trophy, Users } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { useEffect, useState, useTransition, useMemo } from 'react'
+import { useEffect, useMemo, useState, useTransition } from 'react'
+import { BoxerCardSkeleton, BoxerListSkeleton } from '@/components/boxer-skeleton'
 import { EmptyState } from '@/components/empty-state'
 import { LazyImage } from '@/components/lazy-image'
-import { BoxerCardSkeleton, BoxerListSkeleton } from '@/components/boxer-skeleton'
 import type { BoxerMetadata } from '@/lib/boxers-loader'
 import { getBoxerCategories, getBoxerStats } from '@/lib/boxers-loader'
 

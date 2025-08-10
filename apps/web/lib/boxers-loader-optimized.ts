@@ -31,10 +31,10 @@ export async function loadBoxersByDivision(divisionSlug: string): Promise<BoxerM
   try {
     const response = await fetch(`/data/boxers/${divisionSlug}.json`)
     const data = await response.json()
-    
+
     // Cache the result
     divisionCache.set(divisionSlug, data)
-    
+
     return data
   } catch (error) {
     console.error(`Failed to load division ${divisionSlug}:`, error)
@@ -61,7 +61,7 @@ export function getDivisionSlug(division: string): string {
 // Sort boxers by different criteria
 export function sortBoxers(boxers: BoxerMetadata[], sortBy: string): BoxerMetadata[] {
   const sorted = [...boxers]
-  
+
   switch (sortBy) {
     case 'wins':
       sorted.sort((a, b) => (b.proWins || 0) - (a.proWins || 0))
@@ -75,6 +75,6 @@ export function sortBoxers(boxers: BoxerMetadata[], sortBy: string): BoxerMetada
     default:
       sorted.sort((a, b) => (b.proWins || 0) - (a.proWins || 0))
   }
-  
+
   return sorted
 }

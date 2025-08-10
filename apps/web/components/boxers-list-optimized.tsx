@@ -6,17 +6,17 @@ import { ToggleGroup, ToggleGroupItem } from '@thedaviddias/design-system/toggle
 import { Grid, List, SortAsc, Trophy, Users } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { useEffect, useState, useCallback, useRef } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { BoxerCardSkeleton, BoxerListSkeleton } from '@/components/boxer-skeleton'
 import { EmptyState } from '@/components/empty-state'
 import { LazyImage } from '@/components/lazy-image'
-import { BoxerCardSkeleton, BoxerListSkeleton } from '@/components/boxer-skeleton'
-import type { BoxerMetadata } from '@/lib/boxers-loader'
 import { getBoxerCategories, getBoxerStats } from '@/lib/boxer-utils'
-import { 
-  loadBoxersByDivision, 
-  loadSearchIndex, 
+import type { BoxerMetadata } from '@/lib/boxers-loader'
+import {
   getDivisionSlug,
-  sortBoxers 
+  loadBoxersByDivision,
+  loadSearchIndex,
+  sortBoxers
 } from '@/lib/boxers-loader-optimized'
 
 export function OptimizedBoxersList() {
@@ -31,7 +31,7 @@ export function OptimizedBoxersList() {
   const itemsPerPage = 48
 
   const categories = getBoxerCategories()
-  
+
   // Keep ref in sync with state
   useEffect(() => {
     sortByRef.current = sortBy
@@ -40,10 +40,10 @@ export function OptimizedBoxersList() {
   // Load boxers based on selected division - don't include sortBy in dependencies
   const loadBoxers = useCallback(async (division: string, sort: string) => {
     setIsLoading(true)
-    
+
     try {
       let data: BoxerMetadata[] = []
-      
+
       if (division === 'all') {
         // For "all", load just the heavyweight division as a sample
         // This is much faster than loading everything
@@ -65,7 +65,7 @@ export function OptimizedBoxersList() {
           data = await loadBoxersByDivision(divisionSlug)
         }
       }
-      
+
       // Sort the data
       const sorted = sortBoxers(data, sort)
       setBoxers(sorted)
@@ -370,7 +370,10 @@ export function OptimizedBoxersList() {
             {divisionFilter === 'all' ? (
               <p>Showing top boxers from major divisions</p>
             ) : (
-              <p>Showing {startIndex + 1}-{Math.min(endIndex, boxers.length)} of {boxers.length} boxers</p>
+              <p>
+                Showing {startIndex + 1}-{Math.min(endIndex, boxers.length)} of {boxers.length}{' '}
+                boxers
+              </p>
             )}
           </div>
         </>

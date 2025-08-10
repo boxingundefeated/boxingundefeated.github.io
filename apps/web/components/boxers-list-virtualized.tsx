@@ -6,17 +6,17 @@ import { ToggleGroup, ToggleGroupItem } from '@thedaviddias/design-system/toggle
 import { Grid, List, SortAsc, Trophy, Users } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { useEffect, useState, useCallback, useRef, useMemo } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { BoxerCardSkeleton, BoxerListSkeleton } from '@/components/boxer-skeleton'
 import { EmptyState } from '@/components/empty-state'
 import { LazyImage } from '@/components/lazy-image'
-import { BoxerCardSkeleton, BoxerListSkeleton } from '@/components/boxer-skeleton'
-import type { BoxerMetadata } from '@/lib/boxers-loader'
 import { getBoxerCategories, getBoxerStats } from '@/lib/boxer-utils'
-import { 
-  loadBoxersByDivision, 
-  loadSearchIndex, 
+import type { BoxerMetadata } from '@/lib/boxers-loader'
+import {
   getDivisionSlug,
-  sortBoxers 
+  loadBoxersByDivision,
+  loadSearchIndex,
+  sortBoxers
 } from '@/lib/boxers-loader-optimized'
 
 const ITEMS_PER_PAGE = 24 // Reduced from 48 for faster initial load
@@ -38,49 +38,52 @@ export function VirtualizedBoxersList() {
   const categories = getBoxerCategories()
 
   // Load boxers data
-  const loadBoxers = useCallback(async (division: string, sort: string) => {
-    setIsLoading(true)
-    currentPageRef.current = 1
-    
-    try {
-      let data: BoxerMetadata[] = []
-      
-      if (division === 'all') {
-        // Load a sample from heavyweight division for "all" view
-        const heavyData = await loadBoxersByDivision('heavy')
-        data = heavyData.slice(0, 200) // Load up to 200 for "all"
-      } else {
-        const category = categories.find(c => c.slug === division)
-        if (category) {
-          const divisionSlug = getDivisionSlug(category.division)
-          data = await loadBoxersByDivision(divisionSlug)
+  const loadBoxers = useCallback(
+    async (division: string, sort: string) => {
+      setIsLoading(true)
+      currentPageRef.current = 1
+
+      try {
+        let data: BoxerMetadata[] = []
+
+        if (division === 'all') {
+          // Load a sample from heavyweight division for "all" view
+          const heavyData = await loadBoxersByDivision('heavy')
+          data = heavyData.slice(0, 200) // Load up to 200 for "all"
+        } else {
+          const category = categories.find(c => c.slug === division)
+          if (category) {
+            const divisionSlug = getDivisionSlug(category.division)
+            data = await loadBoxersByDivision(divisionSlug)
+          }
         }
+
+        const sorted = sortBoxers(data, sort)
+        setBoxers(sorted)
+        setDisplayedBoxers(sorted.slice(0, ITEMS_PER_PAGE))
+        setHasMore(sorted.length > ITEMS_PER_PAGE)
+      } catch (error) {
+        console.error('Failed to load boxers:', error)
+        setBoxers([])
+        setDisplayedBoxers([])
+        setHasMore(false)
+      } finally {
+        setIsLoading(false)
       }
-      
-      const sorted = sortBoxers(data, sort)
-      setBoxers(sorted)
-      setDisplayedBoxers(sorted.slice(0, ITEMS_PER_PAGE))
-      setHasMore(sorted.length > ITEMS_PER_PAGE)
-    } catch (error) {
-      console.error('Failed to load boxers:', error)
-      setBoxers([])
-      setDisplayedBoxers([])
-      setHasMore(false)
-    } finally {
-      setIsLoading(false)
-    }
-  }, [categories])
+    },
+    [categories]
+  )
 
   // Load more boxers when scrolling
   const loadMore = useCallback(() => {
     if (isLoadingMore || !hasMore) return
-    
+
     setIsLoadingMore(true)
     const nextPage = currentPageRef.current + 1
     const startIndex = (nextPage - 1) * ITEMS_PER_PAGE
     const endIndex = startIndex + ITEMS_PER_PAGE
     const moreBoxers = boxers.slice(startIndex, endIndex)
-    
+
     setTimeout(() => {
       setDisplayedBoxers(prev => [...prev, ...moreBoxers])
       currentPageRef.current = nextPage
@@ -92,15 +95,15 @@ export function VirtualizedBoxersList() {
   // Set up intersection observer for infinite scroll
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
+      entries => {
         if (entries[0].isIntersecting && hasMore && !isLoadingMore) {
           loadMore()
         }
       },
-      { 
+      {
         root: null,
         rootMargin: `${LOAD_MORE_THRESHOLD}px`,
-        threshold: 0.1 
+        threshold: 0.1
       }
     )
 
@@ -127,81 +130,79 @@ export function VirtualizedBoxersList() {
   }
 
   // Render boxer card
-  const renderBoxerCard = useCallback((boxer: BoxerMetadata) => {
-    const stats = getBoxerStats(boxer)
-    
-    if (viewMode === 'list') {
-      return (
-        <Link
-          key={boxer.slug}
-          href={`/boxers/${boxer.slug}`}
-          className="block hover:bg-gray-50 transition-colors"
-          prefetch={false}
-        >
-          <div className="flex items-center gap-4 p-4 border-b">
-            <LazyImage
-              src={boxer.avatarImage || ''}
-              alt={boxer.name}
-              className="w-12 h-12 rounded-full object-cover"
-            />
-            <div className="flex-1">
-              <h3 className="font-semibold">{boxer.name}</h3>
-              <p className="text-sm text-muted-foreground">
-                {boxer.nationality} • {boxer.proDivision}
-              </p>
-            </div>
-            <div className="text-right">
-              <p className="font-semibold">{stats.record}</p>
-              <p className="text-sm text-muted-foreground">{stats.winRate} Win Rate</p>
-            </div>
-          </div>
-        </Link>
-      )
-    }
+  const renderBoxerCard = useCallback(
+    (boxer: BoxerMetadata) => {
+      const stats = getBoxerStats(boxer)
 
-    return (
-      <Link
-        key={boxer.slug}
-        href={`/boxers/${boxer.slug}`}
-        className="block"
-        prefetch={false}
-      >
-        <Card className="h-full hover:shadow-lg transition-shadow">
-          <CardHeader className="pb-3">
-            <div className="flex items-start gap-3">
+      if (viewMode === 'list') {
+        return (
+          <Link
+            key={boxer.slug}
+            href={`/boxers/${boxer.slug}`}
+            className="block hover:bg-gray-50 transition-colors"
+            prefetch={false}
+          >
+            <div className="flex items-center gap-4 p-4 border-b">
               <LazyImage
                 src={boxer.avatarImage || ''}
                 alt={boxer.name}
-                className="w-16 h-16 rounded-full object-cover"
+                className="w-12 h-12 rounded-full object-cover"
               />
-              <div className="flex-1 min-w-0">
-                <CardTitle className="text-base line-clamp-1">{boxer.name}</CardTitle>
-                <p className="text-sm text-muted-foreground mt-1">
+              <div className="flex-1">
+                <h3 className="font-semibold">{boxer.name}</h3>
+                <p className="text-sm text-muted-foreground">
                   {boxer.nationality} • {boxer.proDivision}
                 </p>
               </div>
-            </div>
-          </CardHeader>
-          <CardContent className="pt-0">
-            <div className="grid grid-cols-3 gap-2 text-center">
-              <div>
-                <p className="text-lg font-bold">{boxer.proWins || 0}</p>
-                <p className="text-xs text-muted-foreground">Wins</p>
-              </div>
-              <div>
-                <p className="text-lg font-bold">{boxer.proLosses || 0}</p>
-                <p className="text-xs text-muted-foreground">Losses</p>
-              </div>
-              <div>
-                <p className="text-lg font-bold">{boxer.proWinsByKnockout || 0}</p>
-                <p className="text-xs text-muted-foreground">KOs</p>
+              <div className="text-right">
+                <p className="font-semibold">{stats.record}</p>
+                <p className="text-sm text-muted-foreground">{stats.winRate} Win Rate</p>
               </div>
             </div>
-          </CardContent>
-        </Card>
-      </Link>
-    )
-  }, [viewMode])
+          </Link>
+        )
+      }
+
+      return (
+        <Link key={boxer.slug} href={`/boxers/${boxer.slug}`} className="block" prefetch={false}>
+          <Card className="h-full hover:shadow-lg transition-shadow">
+            <CardHeader className="pb-3">
+              <div className="flex items-start gap-3">
+                <LazyImage
+                  src={boxer.avatarImage || ''}
+                  alt={boxer.name}
+                  className="w-16 h-16 rounded-full object-cover"
+                />
+                <div className="flex-1 min-w-0">
+                  <CardTitle className="text-base line-clamp-1">{boxer.name}</CardTitle>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    {boxer.nationality} • {boxer.proDivision}
+                  </p>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="pt-0">
+              <div className="grid grid-cols-3 gap-2 text-center">
+                <div>
+                  <p className="text-lg font-bold">{boxer.proWins || 0}</p>
+                  <p className="text-xs text-muted-foreground">Wins</p>
+                </div>
+                <div>
+                  <p className="text-lg font-bold">{boxer.proLosses || 0}</p>
+                  <p className="text-xs text-muted-foreground">Losses</p>
+                </div>
+                <div>
+                  <p className="text-lg font-bold">{boxer.proWinsByKnockout || 0}</p>
+                  <p className="text-xs text-muted-foreground">KOs</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </Link>
+      )
+    },
+    [viewMode]
+  )
 
   if (isLoading) {
     return (
@@ -237,7 +238,7 @@ export function VirtualizedBoxersList() {
           >
             All
           </Button>
-          {categories.map((category) => (
+          {categories.map(category => (
             <Button
               key={category.slug}
               variant={divisionFilter === category.slug ? 'default' : 'outline'}
@@ -249,12 +250,12 @@ export function VirtualizedBoxersList() {
             </Button>
           ))}
         </div>
-        
+
         <div className="flex gap-2">
           <ToggleGroup
             type="single"
             value={sortBy}
-            onValueChange={(value) => value && setSortBy(value)}
+            onValueChange={value => value && setSortBy(value)}
             className="hidden sm:flex"
           >
             <ToggleGroupItem value="wins" size="sm">
@@ -270,7 +271,7 @@ export function VirtualizedBoxersList() {
               Bouts
             </ToggleGroupItem>
           </ToggleGroup>
-          
+
           <ToggleGroup
             type="single"
             value={viewMode}
@@ -296,12 +297,10 @@ export function VirtualizedBoxersList() {
             </div>
           ) : (
             <Card>
-              <CardContent className="p-0">
-                {displayedBoxers.map(renderBoxerCard)}
-              </CardContent>
+              <CardContent className="p-0">{displayedBoxers.map(renderBoxerCard)}</CardContent>
             </Card>
           )}
-          
+
           {/* Loading indicator for infinite scroll */}
           {hasMore && (
             <div ref={loadingRef} className="py-8 text-center">

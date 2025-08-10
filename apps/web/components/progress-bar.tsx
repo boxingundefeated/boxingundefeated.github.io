@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
 export function ProgressBar() {
   const [loading, setLoading] = useState(false)
@@ -32,13 +32,13 @@ export function ProgressBar() {
     const originalPushState = history.pushState
     const originalReplaceState = history.replaceState
 
-    history.pushState = function (...args) {
+    history.pushState = (...args) => {
       handleStart()
       originalPushState.apply(history, args)
       setTimeout(handleComplete, 500)
     }
 
-    history.replaceState = function (...args) {
+    history.replaceState = (...args) => {
       handleStart()
       originalReplaceState.apply(history, args)
       setTimeout(handleComplete, 500)

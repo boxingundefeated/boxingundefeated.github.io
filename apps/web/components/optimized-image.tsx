@@ -1,7 +1,7 @@
 'use client'
 
-import { useState } from 'react'
 import { cn } from '@thedaviddias/design-system/lib/utils'
+import { useState } from 'react'
 
 interface OptimizedImageProps {
   src: string
@@ -12,32 +12,24 @@ interface OptimizedImageProps {
   priority?: boolean
 }
 
-export function OptimizedImage({ 
-  src, 
-  alt, 
+export function OptimizedImage({
+  src,
+  alt,
   className,
   width = 200,
   height = 200,
   priority = false
 }: OptimizedImageProps) {
   const [error, setError] = useState(false)
-  
+
   // Skip external images or use placeholder
   if (!src || error) {
     return (
-      <div 
-        className={cn(
-          'bg-gray-200 flex items-center justify-center text-gray-400',
-          className
-        )}
+      <div
+        className={cn('bg-gray-200 flex items-center justify-center text-gray-400', className)}
         style={{ width, height }}
       >
-        <svg
-          className="w-12 h-12"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -48,7 +40,7 @@ export function OptimizedImage({
       </div>
     )
   }
-  
+
   return (
     <img
       src={src}

@@ -9,7 +9,7 @@ export interface SearchResult {
 
 export class LightweightSearch {
   private index: SearchResult[] = []
-  
+
   constructor(data: any[]) {
     this.index = data.map(boxer => ({
       slug: boxer.slug,
@@ -22,13 +22,13 @@ export class LightweightSearch {
 
   search(query: string, limit: number = 20): SearchResult[] {
     if (!query || query.length < 2) return []
-    
+
     const searchTerm = query.toLowerCase().trim()
     const results: SearchResult[] = []
-    
+
     for (const item of this.index) {
       let score = 0
-      
+
       // Exact match
       if (item.name === searchTerm) {
         score = 100
@@ -49,15 +49,13 @@ export class LightweightSearch {
       else if (item.nationality?.includes(searchTerm)) {
         score = 30
       }
-      
+
       if (score > 0) {
         results.push({ ...item, score })
       }
     }
-    
+
     // Sort by score and return top results
-    return results
-      .sort((a, b) => b.score - a.score)
-      .slice(0, limit)
+    return results.sort((a, b) => b.score - a.score).slice(0, limit)
   }
 }

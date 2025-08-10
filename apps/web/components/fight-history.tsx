@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import type { Bout } from '@/lib/boxers-loader'
 
 interface FightHistoryProps {
@@ -14,7 +14,7 @@ export function FightHistory({ bouts, opponentLinks }: FightHistoryProps) {
   const [displayedBouts, setDisplayedBouts] = useState<Bout[]>([])
   const [showAll, setShowAll] = useState(false)
   const initialDisplay = 10 // Show only 10 fights initially
-  
+
   useEffect(() => {
     // Initially show only the first 10 bouts
     setDisplayedBouts(bouts.slice(0, initialDisplay))
@@ -42,7 +42,7 @@ export function FightHistory({ bouts, opponentLinks }: FightHistoryProps) {
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       {opponentSlug ? (
-                        <Link 
+                        <Link
                           href={`/boxers/${opponentSlug}`}
                           className="font-semibold hover:text-blue-600 hover:underline transition-colors"
                           prefetch={false}

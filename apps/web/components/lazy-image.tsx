@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
 import { cn } from '@thedaviddias/design-system/lib/utils'
+import { useEffect, useRef, useState } from 'react'
 
 interface LazyImageProps {
   src: string
@@ -10,7 +10,12 @@ interface LazyImageProps {
   fallback?: string
 }
 
-export function LazyImage({ src, alt, className, fallback = '/placeholder-avatar.png' }: LazyImageProps) {
+export function LazyImage({
+  src,
+  alt,
+  className,
+  fallback = '/placeholder-avatar.png'
+}: LazyImageProps) {
   const [imageSrc, setImageSrc] = useState<string>('')
   const [imageLoaded, setImageLoaded] = useState(false)
   const [error, setError] = useState(false)
@@ -18,8 +23,8 @@ export function LazyImage({ src, alt, className, fallback = '/placeholder-avatar
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             setImageSrc(src)
             observer.disconnect()
@@ -38,9 +43,7 @@ export function LazyImage({ src, alt, className, fallback = '/placeholder-avatar
 
   return (
     <div ref={imgRef} className={cn('relative overflow-hidden bg-gray-100', className)}>
-      {!imageLoaded && !error && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
-      )}
+      {!imageLoaded && !error && <div className="absolute inset-0 bg-gray-200 animate-pulse" />}
       {imageSrc && (
         <img
           src={error ? fallback : imageSrc}

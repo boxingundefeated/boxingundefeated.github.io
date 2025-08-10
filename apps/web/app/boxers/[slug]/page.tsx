@@ -1,19 +1,15 @@
 import { Breadcrumb } from '@thedaviddias/design-system/breadcrumb'
 import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
 import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
+import fs from 'fs'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { OptimizedImage } from '@/components/optimized-image'
-import { FightHistory } from '@/components/fight-history'
-import {
-  getBoxerBouts,
-  getBoxerStats,
-  type BoxerMetadata
-} from '@/lib/boxers-loader'
-import { getOpponentLinksForBouts } from '@/lib/opponent-mapper'
-import fs from 'fs'
 import path from 'path'
+import { FightHistory } from '@/components/fight-history'
+import { OptimizedImage } from '@/components/optimized-image'
+import { type BoxerMetadata, getBoxerBouts, getBoxerStats } from '@/lib/boxers-loader'
+import { getOpponentLinksForBouts } from '@/lib/opponent-mapper'
 
 // Load individual boxer data from split JSON files
 function getBoxerBySlugOptimized(slug: string): BoxerMetadata | null {
