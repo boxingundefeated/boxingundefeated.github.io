@@ -95,9 +95,6 @@ importers:
       '@thedaviddias/analytics':
         specifier: workspace:*
         version: link:../../packages/analytics
-      '@thedaviddias/caching':
-        specifier: workspace:*
-        version: link:../../packages/caching
       '@thedaviddias/config-next':
         specifier: workspace:*
         version: link:../../configs/next
@@ -122,9 +119,6 @@ importers:
       '@thedaviddias/observability':
         specifier: workspace:*
         version: link:../../packages/observability
-      '@thedaviddias/rate-limiting':
-        specifier: workspace:*
-        version: link:../../packages/rate-limiting
       '@thedaviddias/utils':
         specifier: workspace:*
         version: link:../../packages/utils

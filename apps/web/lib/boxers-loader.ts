@@ -1,5 +1,22 @@
 // @ts-ignore - Large JSON file
-const boxersData = require('../../../data/boxers.json')
+// Lazy load the data only when needed
+let boxersData: any = null
+
+function loadBoxersData() {
+  if (!boxersData) {
+    // Only load in Node.js environment (build time)
+    // This prevents the data from being bundled in client-side JS
+    if (typeof window === 'undefined') {
+      boxersData = require('../../../data/boxers.json')
+    } else {
+      // In browser, return empty array
+      // The data should already be in the static HTML
+      console.warn('Attempting to load boxers data in browser - this should not happen')
+      return []
+    }
+  }
+  return boxersData
+}
 
 export interface Bout {
   boxerId: string
@@ -67,7 +84,8 @@ function generateSlug(name: string): string {
 }
 
 export function getBoxers(): BoxerMetadata[] {
-  return boxersData
+  const data = loadBoxersData()
+  return data
     .map((boxer: any) => ({
       ...boxer,
       // Ensure slug exists
@@ -167,7 +185,8 @@ export function getBoxerSlugByName(name: string): string | null {
 
 // Optimized function to get boxers without bout data for listing pages
 export function getBoxersWithoutBouts(): BoxerMetadata[] {
-  return boxersData
+  const data = loadBoxersData()
+  return data
     .map((boxer: any) => {
       const { bouts, ...boxerWithoutBouts } = boxer
       return {

@@ -34,7 +34,7 @@ export default async function BlogPage() {
               <div className="flex items-start justify-between">
                 <div>
                   <CardTitle className="text-2xl mb-2">
-                    <Link href={`/blog/${post.slug}`} className="hover:underline">
+                    <Link href={post.slug} className="hover:underline">
                       {post.title}
                     </Link>
                   </CardTitle>

@@ -8,7 +8,7 @@ export const INTERNAL_PACKAGES = [
   '@thedaviddias/design-system',
   '@thedaviddias/analytics',
   // '@thedaviddias/auth', // Removed - contains server actions incompatible with static export
-  '@thedaviddias/caching',
+  // '@thedaviddias/caching', // Removed - Redis/Upstash not needed for static site
   '@thedaviddias/config-next',
   '@thedaviddias/config-typescript',
   '@thedaviddias/logging',
@@ -49,6 +49,39 @@ let nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'boxrec.com',
         pathname: '/**'
+      }
+    ]
+  },
+
+  // Add headers for better caching
+  async headers() {
+    return [
+      {
+        source: '/images/boxers/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
+        source: '/data/boxers/:path*.json',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, stale-while-revalidate'
+          }
+        ]
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
       }
     ]
   },

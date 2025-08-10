@@ -6,8 +6,10 @@ import { ToggleGroup, ToggleGroupItem } from '@thedaviddias/design-system/toggle
 import { Grid, List, SortAsc, Trophy, Users } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useTransition, useMemo } from 'react'
 import { EmptyState } from '@/components/empty-state'
+import { LazyImage } from '@/components/lazy-image'
+import { BoxerCardSkeleton, BoxerListSkeleton } from '@/components/boxer-skeleton'
 import type { BoxerMetadata } from '@/lib/boxers-loader'
 import { getBoxerCategories, getBoxerStats } from '@/lib/boxers-loader'
 
@@ -20,9 +22,11 @@ interface ClientBoxersListProps {
 export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
   const router = useRouter()
   const searchParams = useSearchParams()
+  const [isPending, startTransition] = useTransition()
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [boxers, setBoxers] = useState(initialBoxers)
   const [currentPage, setCurrentPage] = useState(1)
+  const [isLoading, setIsLoading] = useState(false)
   const itemsPerPage = 48
 
   // Read filters from URL searchParams on client side
@@ -45,38 +49,48 @@ export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
   }, [searchParams])
 
   const updateURLParams = (division?: string, sort?: string, page?: number) => {
-    const params = new URLSearchParams()
-    if (division && division !== 'all') params.set('division', division)
-    if (sort && sort !== 'wins') params.set('sort', sort)
-    if (page && page !== 1) params.set('page', page.toString())
-    const query = params.toString()
-    router.push(`/boxers${query ? `?${query}` : ''}`)
+    startTransition(() => {
+      const params = new URLSearchParams()
+      if (division && division !== 'all') params.set('division', division)
+      if (sort && sort !== 'wins') params.set('sort', sort)
+      if (page && page !== 1) params.set('page', page.toString())
+      const query = params.toString()
+      router.push(`/boxers${query ? `?${query}` : ''}`)
+    })
   }
 
-  useEffect(() => {
-    let filteredBoxers = [...initialBoxers]
+  // Use useMemo to optimize filtering and sorting
+  const filteredAndSortedBoxers = useMemo(() => {
+    setIsLoading(true)
+    let filtered = [...initialBoxers]
 
     // Filter by division if selected
     if (divisionFilter !== 'all') {
       // Map division slugs to actual division values
       const category = categories.find(c => c.slug === divisionFilter)
       const divisionValue = category ? category.division : divisionFilter
-      filteredBoxers = filteredBoxers.filter(boxer => boxer.proDivision === divisionValue)
+      filtered = filtered.filter(boxer => boxer.proDivision === divisionValue)
     }
 
     // Sort by selected criteria
     if (sortBy === 'wins') {
-      filteredBoxers.sort((a, b) => (b.proWins || 0) - (a.proWins || 0))
+      filtered.sort((a, b) => (b.proWins || 0) - (a.proWins || 0))
     } else if (sortBy === 'name') {
-      filteredBoxers.sort((a, b) => a.name.localeCompare(b.name))
+      filtered.sort((a, b) => a.name.localeCompare(b.name))
     } else if (sortBy === 'bouts') {
-      filteredBoxers.sort((a, b) => (b.proTotalBouts || 0) - (a.proTotalBouts || 0))
+      filtered.sort((a, b) => (b.proTotalBouts || 0) - (a.proTotalBouts || 0))
     }
 
-    setBoxers(filteredBoxers)
+    // Small delay to show loading state
+    setTimeout(() => setIsLoading(false), 100)
+    return filtered
+  }, [initialBoxers, divisionFilter, sortBy])
+
+  useEffect(() => {
+    setBoxers(filteredAndSortedBoxers)
     // Reset to first page when filters change
     setCurrentPage(1)
-  }, [initialBoxers, divisionFilter, sortBy])
+  }, [filteredAndSortedBoxers])
 
   // Calculate pagination
   const totalPages = Math.ceil(boxers.length / itemsPerPage)
@@ -92,10 +106,10 @@ export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
         <CardHeader>
           <div className="flex items-start gap-4">
             {boxer.avatarImage && (
-              <img
+              <LazyImage
                 src={boxer.avatarImage}
                 alt={boxer.name}
-                className="w-16 h-16 rounded-full object-cover"
+                className="w-16 h-16 rounded-full"
               />
             )}
             <CardTitle className="flex-1 flex items-start justify-between">
@@ -162,10 +176,10 @@ export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4 flex-1">
             {boxer.avatarImage && (
-              <img
+              <LazyImage
                 src={boxer.avatarImage}
                 alt={boxer.name}
-                className="w-12 h-12 rounded-full object-cover"
+                className="w-12 h-12 rounded-full"
               />
             )}
             <div className="flex-1">
@@ -279,7 +293,17 @@ export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
         </div>
       </div>
 
-      {boxers.length === 0 ? (
+      {isLoading || isPending ? (
+        viewMode === 'grid' ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[...Array(12)].map((_, i) => (
+              <BoxerCardSkeleton key={i} />
+            ))}
+          </div>
+        ) : (
+          <BoxerListSkeleton />
+        )
+      ) : boxers.length === 0 ? (
         <EmptyState
           title="No boxers found"
           description="There are no boxers matching your current filters."

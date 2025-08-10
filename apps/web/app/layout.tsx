@@ -9,6 +9,7 @@ import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
 import { GoogleTagManager, GTMNoscript } from '@/components/gtm'
 import { Footer } from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
+import { ProgressBar } from '@/components/progress-bar'
 
 export const metadata: Metadata = {
   title: 'Boxing Directory',
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <GTMNoscript gtmId={GTM_ID} />
         <DesignSystemProvider>
           <SentryUserProvider>
+            <ProgressBar />
             <div className="flex min-h-screen flex-col">
               <Header />
               <main className="flex-1">{children}</main>

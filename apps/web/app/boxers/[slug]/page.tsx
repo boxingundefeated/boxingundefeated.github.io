@@ -4,18 +4,45 @@ import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { OptimizedImage } from '@/components/optimized-image'
+import { FightHistory } from '@/components/fight-history'
 import {
   getBoxerBouts,
-  getBoxerBySlug,
-  getBoxerSlugByName,
   getBoxerStats,
-  getBoxers
+  type BoxerMetadata
 } from '@/lib/boxers-loader'
+import { getOpponentLinksForBouts } from '@/lib/opponent-mapper'
+import fs from 'fs'
+import path from 'path'
+
+// Load individual boxer data from split JSON files
+function getBoxerBySlugOptimized(slug: string): BoxerMetadata | null {
+  try {
+    const filePath = path.join(process.cwd(), 'public/data/boxers', `${slug}.json`)
+    const data = fs.readFileSync(filePath, 'utf-8')
+    return JSON.parse(data)
+  } catch (error) {
+    return null
+  }
+}
+
+// Load index for generating static params
+function getBoxerSlugs(): string[] {
+  try {
+    const indexPath = path.join(process.cwd(), 'public/data/boxers', 'index.json')
+    const data = fs.readFileSync(indexPath, 'utf-8')
+    const index = JSON.parse(data)
+    return index.map((boxer: any) => boxer.slug)
+  } catch (error) {
+    console.error('Failed to load boxer index:', error)
+    return []
+  }
+}
 
 export async function generateStaticParams() {
-  const boxers = await getBoxers()
-  return boxers.map(boxer => ({
-    slug: boxer.slug
+  const slugs = getBoxerSlugs()
+  return slugs.map(slug => ({
+    slug
   }))
 }
 
@@ -25,7 +52,7 @@ export async function generateMetadata({
   params: { slug: string }
 }): Promise<Metadata> {
   const { slug } = await params
-  const boxer = await getBoxerBySlug(slug)
+  const boxer = getBoxerBySlugOptimized(slug)
   const baseUrl = getBaseUrl()
 
   if (!boxer) {
@@ -45,7 +72,7 @@ export async function generateMetadata({
 
 export default async function BoxerPage({ params }: { params: { slug: string } }) {
   const { slug } = await params
-  const boxer = await getBoxerBySlug(slug)
+  const boxer = getBoxerBySlugOptimized(slug)
 
   if (!boxer) {
     notFound()
@@ -54,6 +81,7 @@ export default async function BoxerPage({ params }: { params: { slug: string } }
   const baseUrl = getBaseUrl()
   const stats = getBoxerStats(boxer)
   const bouts = getBoxerBouts(boxer)
+  const opponentLinks = getOpponentLinksForBouts(bouts)
   const breadcrumbItems = [
     { name: 'Boxers', href: '/boxers' },
     { name: boxer.name, href: `/boxers/${slug}` }
@@ -66,10 +94,13 @@ export default async function BoxerPage({ params }: { params: { slug: string } }
       <div className="space-y-6 mt-6">
         <div className="flex items-start gap-6">
           {boxer.avatarImage && (
-            <img
+            <OptimizedImage
               src={boxer.avatarImage}
               alt={boxer.name}
+              width={128}
+              height={128}
               className="w-32 h-32 rounded-full object-cover"
+              priority={true}
             />
           )}
           <div>
@@ -239,66 +270,7 @@ export default async function BoxerPage({ params }: { params: { slug: string } }
           </Card>
         )}
 
-        {bouts.length > 0 && (
-          <Card>
-            <CardHeader>
-              <CardTitle>Fight History ({bouts.length} Bouts)</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-3">
-                {bouts.map((bout, index) => {
-                  const opponentSlug = getBoxerSlugByName(bout.opponentName)
-                  return (
-                    <div key={`${bout.boxrecId}-${index}`} className="border-b pb-3 last:border-0">
-                      <div className="flex justify-between items-start">
-                        <div className="flex-1">
-                          <div className="flex items-center gap-2">
-                            {opponentSlug ? (
-                              <Link
-                                href={`/boxers/${opponentSlug}`}
-                                className="font-semibold hover:underline"
-                              >
-                                {bout.opponentName}
-                              </Link>
-                            ) : (
-                              <span className="font-semibold">{bout.opponentName}</span>
-                            )}
-                            {bout.titleFight && (
-                              <span className="text-xs bg-yellow-500 text-black px-2 py-0.5 rounded">
-                                Title Fight
-                              </span>
-                            )}
-                          </div>
-                          <div className="text-sm text-muted-foreground mt-1">
-                            {bout.boutDate} • {bout.eventName}
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <span
-                            className={`font-bold ${
-                              bout.result === 'win'
-                                ? 'text-green-600'
-                                : bout.result === 'loss'
-                                  ? 'text-red-600'
-                                  : 'text-yellow-600'
-                            }`}
-                          >
-                            {bout.result ? bout.result.toUpperCase() : 'N/A'}
-                          </span>
-                          {bout.resultMethod && (
-                            <div className="text-xs text-muted-foreground">
-                              {bout.resultMethod} {bout.resultRound && `R${bout.resultRound}`}
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
-            </CardContent>
-          </Card>
-        )}
+        <FightHistory bouts={bouts} opponentLinks={opponentLinks} />
       </div>
     </div>
   )
