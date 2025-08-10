@@ -18,45 +18,45 @@ From design and construction to weight and balance, we've got you covered. So bu
 
 ## The Top 16 Best 90 lb Kettlebells
 
-1. [Adjustable Weight Kettlebells for At-Home Fitness](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - The USA Sports Kettlebells, ranging from 5-100 lbs, offer versatile total body workout solutions for strength and stamina building with their large smooth handles, making them ideal for all fitness enthusiasts.
+1. [Adjustable Weight Kettlebells for At-Home Fitness](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - The USA Sports Kettlebells, ranging from 5-100 lbs, offer versatile total body workout solutions for strength and stamina building with their large smooth handles, making them ideal for all fitness enthusiasts.
 
-2. [Vinyl Coated Kettlebells with Special Protective Bottom](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - Bintiva Kettlebells are professional-grade, color-coded, vinyl-coated cast iron weights offering safety, stability, and easy identification, suitable for full body and core strengthening exercises.
+2. [Vinyl Coated Kettlebells with Special Protective Bottom](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - Bintiva Kettlebells are professional-grade, color-coded, vinyl-coated cast iron weights offering safety, stability, and easy identification, suitable for full body and core strengthening exercises.
 
-3. [Onnit Bigfoot 90lb Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - The Onnit BIGFOOT kettlebell (90lb) is an exceptional addition to your fitness arsenal, providing a robust workout experience while embodying the spirit of strength and determination.
+3. [Onnit Bigfoot 90lb Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - The Onnit BIGFOOT kettlebell (90lb) is an exceptional addition to your fitness arsenal, providing a robust workout experience while embodying the spirit of strength and determination.
 
-4. [Durable and Rust-Proof 100 lbs Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - Experience a total body workout with the Signature Fitness Powder Coated Cast Iron Kettlebell, a durable, rust-proof, and versatile 100 lbs strength-building tool for weightlifting, conditioning, and core development.
+4. [Durable and Rust-Proof 100 lbs Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - Experience a total body workout with the Signature Fitness Powder Coated Cast Iron Kettlebell, a durable, rust-proof, and versatile 100 lbs strength-building tool for weightlifting, conditioning, and core development.
 
-5. [Ethos 106lb Kettlebell for Strength and Stability Training](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - The Ethos Kettlebell is the ultimate full-body workout companion, offering durability and versatility for strength, stability, and endurance training with a comfortable ergonomic handle.
+5. [Ethos 106lb Kettlebell for Strength and Stability Training](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - The Ethos Kettlebell is the ultimate full-body workout companion, offering durability and versatility for strength, stability, and endurance training with a comfortable ergonomic handle.
 
-6. [106lb Cast Iron Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - The Body Solid 106 lb Kettlebell offers advanced, comfortable kettlebell training with steel-reinforced handles and a smooth enamel finish, perfect for developing strength, power, endurance, and balance.
+6. [106lb Cast Iron Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - The Body Solid 106 lb Kettlebell offers advanced, comfortable kettlebell training with steel-reinforced handles and a smooth enamel finish, perfect for developing strength, power, endurance, and balance.
 
-7. [Yes4all 100 lb Powder Coated Cast Iron Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - 32 kg Yes4all Powder-Coated Cast Iron Competition Kettlebell: Durable, powder-coated cast iron construction, ergonomic design, color-coded by weight, and suitable for various exercises for full-body workout.
+7. [Yes4all 100 lb Powder Coated Cast Iron Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - 32 kg Yes4all Powder-Coated Cast Iron Competition Kettlebell: Durable, powder-coated cast iron construction, ergonomic design, color-coded by weight, and suitable for various exercises for full-body workout.
 
-8. [Durable Matte Black Chip-Resistant Kettlebell with Flat Base](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - Introducing the durable and versatile 106lb Body-Solid KBR Powder Coated Iron Kettlebell, designed for unmatched fitness benefits and easy-to-read weight display, making it a great addition to home or commercial gym facilities.
+8. [Durable Matte Black Chip-Resistant Kettlebell with Flat Base](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - Introducing the durable and versatile 106lb Body-Solid KBR Powder Coated Iron Kettlebell, designed for unmatched fitness benefits and easy-to-read weight display, making it a great addition to home or commercial gym facilities.
 
-9. [Durable Vinyl Kettlebell Set for Home Workouts](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - Experience the exhilaration of kettlebell training at home with the Body-Solid KBVS125 Vinyl Kettlebell Set, featuring color-coded cast iron weights, steel reinforced handles, and a versatile range of weights for various fitness levels.
+9. [Durable Vinyl Kettlebell Set for Home Workouts](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - Experience the exhilaration of kettlebell training at home with the Body-Solid KBVS125 Vinyl Kettlebell Set, featuring color-coded cast iron weights, steel reinforced handles, and a versatile range of weights for various fitness levels.
 
-10. [High-Quality 150-Lb Kettlebell with Durable Finish for Fitness Enthusiasts](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - Body Solid Powder Coated Kettlebells enhance workout versatility, promoting strength, power, endurance, and balance for fitness enthusiasts of all levels.
+10. [High-Quality 150-Lb Kettlebell with Durable Finish for Fitness Enthusiasts](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - Body Solid Powder Coated Kettlebells enhance workout versatility, promoting strength, power, endurance, and balance for fitness enthusiasts of all levels.
 
-11. [Kettlebell Kings Competition Kettlebell (20 kg) for Women & Men](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - Experience top-quality kettlebell workouts with Kettlebell Kings' Competition Kettlebell Weights (8-44 kg) for women and men, featuring durable neoprene sleeves, rubber bases for shock absorption, and ergonomic grip for enhanced performance and comfort.
+11. [Kettlebell Kings Competition Kettlebell (20 kg) for Women & Men](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - Experience top-quality kettlebell workouts with Kettlebell Kings' Competition Kettlebell Weights (8-44 kg) for women and men, featuring durable neoprene sleeves, rubber bases for shock absorption, and ergonomic grip for enhanced performance and comfort.
 
-12. [8 lb Yes4All Cast Iron Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - Yes4all Solid Cast Iron Kettlebell offers exceptional workout variety, perfect for both single muscle group strengthening and whole-body athleticism building, with a comfortable grip and various weight options to suit all fitness levels.
+12. [8 lb Yes4All Cast Iron Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - Yes4all Solid Cast Iron Kettlebell offers exceptional workout variety, perfect for both single muscle group strengthening and whole-body athleticism building, with a comfortable grip and various weight options to suit all fitness levels.
 
-13. [Classic Style 90lb Kettlebell with Comfortable Rounded Handle](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - The Troy VTX Cast Iron Kettlebell offers a traditional and sturdy workout solution with a comfortable rounded handle, available in 90 lbs. for maximizing strength, endurance and balance.
+13. [Classic Style 90lb Kettlebell with Comfortable Rounded Handle](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - The Troy VTX Cast Iron Kettlebell offers a traditional and sturdy workout solution with a comfortable rounded handle, available in 90 lbs. for maximizing strength, endurance and balance.
 
-14. [Hammer-Designed Kettlebell for Strength Training](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - Tribe Wod Hammer Kettlebell 15-70lb: Premium cast iron kettlebell with powder-coated finish for secure grips during intense muscle-building and cardio fitness exercises, suitable for both beginners and experienced fitness enthusiasts.
+14. [Hammer-Designed Kettlebell for Strength Training](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - Tribe Wod Hammer Kettlebell 15-70lb: Premium cast iron kettlebell with powder-coated finish for secure grips during intense muscle-building and cardio fitness exercises, suitable for both beginners and experienced fitness enthusiasts.
 
-15. [90 lb Kettlebell with Neoprene Sleeve Protector](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - Kettlebell Kings' 90 lb Powder Coat Cover with 3mm Neoprene Sleeve ensures superior protection and shock absorption, offering a comfortable and durable workout experience.
+15. [90 lb Kettlebell with Neoprene Sleeve Protector](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - Kettlebell Kings' 90 lb Powder Coat Cover with 3mm Neoprene Sleeve ensures superior protection and shock absorption, offering a comfortable and durable workout experience.
 
-16. [Prime 90 lb. Kettlebell for Strength Training](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages) - Power Systems 22817 Kettlebell Prime 90 lb: Durable cast iron construction with a comfortable, textured handle and distinct weight markings for seamless workout progression.
+16. [Prime 90 lb. Kettlebell for Strength Training](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells) - Power Systems 22817 Kettlebell Prime 90 lb: Durable cast iron construction with a comfortable, textured handle and distinct weight markings for seamless workout progression.
 
 _As an Amazon™ Associate, we earn from qualifying purchases._
 
 ## Reviews
 
-### [Adjustable Weight Kettlebells for At-Home Fitness](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [Adjustable Weight Kettlebells for At-Home Fitness](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="usa-sports-kettlebells-5-100-lbs-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/usa-sports-kettlebells-5-100-lbs-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="usa-sports-kettlebells-5-100-lbs-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/usa-sports-kettlebells-5-100-lbs-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 Ah, the USA Sports Kettlebells. I remember the first time I picked one up - I'll never forget that weighty yet surprisingly comfortable feel. I was instantly hooked, and since then, they've become an integral part of my workout routine. The sheer variety of exercises you can do with these things is honestly mind-blowing, from strength training to cardio to flexibility workouts. I've got to admit, the large, smooth handles are a godsend too, making it so much easier to grip and swing without worrying about callouses or blisters. Plus, who doesn't love the sense of accomplishment when lifting something heavy? USA Sports has truly outdone themselves with this one.
 
@@ -64,9 +64,9 @@ One thing that could be improved though, is the weight distribution. Sometimes, 
 
 In conclusion, if you're looking for a versatile piece of workout equipment that'll help you build strength and stamina, then the USA Sports Kettlebells are definitely worth considering. They're not perfect, but what is? The key is to make them work for you, and once you do, there's no stopping you on your fitness journey.
 
-### [Vinyl Coated Kettlebells with Special Protective Bottom](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [Vinyl Coated Kettlebells with Special Protective Bottom](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="bintiva-kettlebells-professional-grade-vinyl-coated-solid-cast-iron-weights-with-a-special-protectiv-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/bintiva-kettlebells-professional-grade-vinyl-coated-solid-cast-iron-weights-with-a-special-protectiv-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="bintiva-kettlebells-professional-grade-vinyl-coated-solid-cast-iron-weights-with-a-special-protectiv-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/bintiva-kettlebells-professional-grade-vinyl-coated-solid-cast-iron-weights-with-a-special-protectiv-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 I recently decided to give Bintiva Kettlebells a try, and boy am I glad I did! These professional-grade, vinyl-coated kettlebells are perfect for anyone looking to enhance their fitness routine. The special protective bottom ensures stability and safety while you work out, and the weights are color-coded by weight so you can easily distinguish them during a workout session.
 
@@ -76,9 +76,9 @@ However, it's worth mentioning that some users have reported issues with the bot
 
 Overall, the Bintiva Kettlebells have been a great addition to my exercise routine. They're well-made, durable, and perfect for full-body workouts. [If you're looking to up your fitness game, these kettlebells are definitely worth checking out!](https://best.serp.co/shop/onnit-kettlebells/)
 
-### [Onnit Bigfoot 90lb Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [Onnit Bigfoot 90lb Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="onnit-primal-bell-bigfoot-90lb-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/onnit-primal-bell-bigfoot-90lb-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="onnit-primal-bell-bigfoot-90lb-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/onnit-primal-bell-bigfoot-90lb-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 I've recently been incorporating the Onnit Primal Bell (Bigfoot - 90lb) into my workout routine, and I must say it's been a game-changer. The unique design of this kettlebell, featuring a detailed Sasquatch face, not only adds a fun twist to my exercise regimen but also inspires me to push harder and break through my fitness plateaus.
 
@@ -90,9 +90,9 @@ However, one minor issue I've encountered with the Bigfoot kettlebell is the way
 
 In conclusion, I would highly recommend the Onnit Primal Bell (Bigfoot - 90lb) to anyone looking to add a little excitement and motivation to their fitness routine. Its unique design, top-notch construction, and impressive durability make it an excellent addition to any home gym. Just be mindful of the ear placement if you plan on using it for specific exercises that require a comfortable grip.
 
-### [Durable and Rust-Proof 100 lbs Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [Durable and Rust-Proof 100 lbs Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="signature-fitness-powder-coated-cast-iron-kettlebell-100-lbs-weights-strength-training-kettlebells-f-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/signature-fitness-powder-coated-cast-iron-kettlebell-100-lbs-weights-strength-training-kettlebells-f-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="signature-fitness-powder-coated-cast-iron-kettlebell-100-lbs-weights-strength-training-kettlebells-f-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/signature-fitness-powder-coated-cast-iron-kettlebell-100-lbs-weights-strength-training-kettlebells-f-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 After incorporating the signature fitness powder coated cast iron kettlebell into my workout routine, I've found it to be a game changer. . The sturdy, rust-proof design means I can use it outside without worrying about damage. . The weight label both in pounds and kilograms makes selecting the right weight hassle-free, and the wide handle ensures a secure grip during my strength training workouts. .
 
@@ -100,9 +100,9 @@ This versatile piece of equipment is perfect for everything from swings to deadl
 
 Overall, I'm thoroughly impressed with the quality and performance of this kettlebell. .
 
-### [Ethos 106lb Kettlebell for Strength and Stability Training](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [Ethos 106lb Kettlebell for Strength and Stability Training](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="ethos-kettlebell-black-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/ethos-kettlebell-black-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="ethos-kettlebell-black-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/ethos-kettlebell-black-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 I recently introduced an Ethos Kettlebell into my workout routine, and I have to say, it's been a game-changer for me. Let me share a bit of my experience with you.
 
@@ -114,9 +114,9 @@ However, there are also a few drawbacks worth mentioning. Firstly, the pricing m
 
 Overall, I've been incredibly satisfied with my Ethos Kettlebell. Its durability, versatility, and ability to help me achieve my fitness goals make it a valuable addition to my workout routine. If you're looking for a quality piece of equipment to help you get fit and strong, I would highly recommend giving the Ethos Kettlebell a try.
 
-### [106lb Cast Iron Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [106lb Cast Iron Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="body-solid-100lb-cast-iron-kettlebell-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/body-solid-100lb-cast-iron-kettlebell-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="body-solid-100lb-cast-iron-kettlebell-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/body-solid-100lb-cast-iron-kettlebell-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 I recently introduced a 106lb cast iron kettlebell by Body Solid into my workout routine, and it's been an absolute game-changer. The steel-reinforced handles offer a sturdy grip, making even the most intense swings and lifts feel secure. Its smoother enamel finish not only adds to its durability but also ensures it moves smoothly in my hands, contributing to the fluidity of my workout.
 
@@ -142,9 +142,9 @@ Product Highlights:
 
 As a daily user, I appreciate the overall construction and experience this Body Solid 106lb kettlebell offers. The weight and size can be initially daunting, but with consistency and patience, it has become an integral part of my fitness journey. Despite its weight, it's designed to last and provide a variety of challenging workouts, transforming my home gym into a dynamic fitness studio.
 
-### [Yes4all 100 lb Powder Coated Cast Iron Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [Yes4all 100 lb Powder Coated Cast Iron Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="yes4all-powder-coated-cast-iron-competition-kettlebell-32-kg-71-lb-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/yes4all-powder-coated-cast-iron-competition-kettlebell-32-kg-71-lb-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="yes4all-powder-coated-cast-iron-competition-kettlebell-32-kg-71-lb-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/yes4all-powder-coated-cast-iron-competition-kettlebell-32-kg-71-lb-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 Sure, I'd love to review the Yes4all Powder Coated Cast Iron Competition Kettlebell, 32 kg, 71 lb. I've been using this kettlebell in my gym routines and I must say, it's a game-changer!
 
@@ -158,9 +158,9 @@ However, there are a few cons that need to be addressed. Firstly, the kettlebell
 
 In conclusion, the Yes4all Powder Coated Cast Iron Competition Kettlebell is a reliable and durable workout companion. It's perfect for anyone looking to enhance their strength training routines. However, beginners might find the weight too heavy, and the packaging could be improved to ensure the product's safety during transit.
 
-### [Durable Matte Black Chip-Resistant Kettlebell with Flat Base](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [Durable Matte Black Chip-Resistant Kettlebell with Flat Base](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="body-solid-kbr-powder-coated-iron-kettlebells-100lb-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/body-solid-kbr-powder-coated-iron-kettlebells-100lb-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="body-solid-kbr-powder-coated-iron-kettlebells-100lb-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/body-solid-kbr-powder-coated-iron-kettlebells-100lb-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 I've been using the Body-Solid KBR Powder Coated Iron Kettlebells for a while now and it's become one of my favorite workout tools. The matte-black powder coat provides an excellent grip even during intense workouts, saving me from potential injuries. Plus, the flat-bottom design ensures a stable base for safety during movement. The weight display is also a lifesaver, helping me quickly identify the right kettlebell size without any confusion.
 
@@ -168,9 +168,9 @@ The variety of weights available, from 5lb to 100lb, ensures that I can always f
 
 Overall, however, the Body-Solid KBR Kettlebells are an excellent addition to any fitness routine, whether at home or at the gym. The durability and convenience make them a worthwhile investment.
 
-### [Durable Vinyl Kettlebell Set for Home Workouts](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [Durable Vinyl Kettlebell Set for Home Workouts](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="body-solid-kbvs125-vinyl-kettlebell-set-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/body-solid-kbvs125-vinyl-kettlebell-set-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="body-solid-kbvs125-vinyl-kettlebell-set-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/body-solid-kbvs125-vinyl-kettlebell-set-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 I've been incorporating the Body-Solid KBVS125 Vinyl Kettlebell Set into my home workout routine lately, and I must say, this kettlebell set has definitely upped my game. The weight options range from 5 to 40lbs, each color-coded for quick identification. A highlight for me is the cast iron construction, encased in durable vinyl, making them easy to handle and maintain.
 
@@ -178,9 +178,9 @@ The steel-reinforced handles on the heavier kettlebells are generous enough to c
 
 Now, to be honest, it's not all roses. The only downside that I've noticed is the size of the set, it's bulky and takes a bit of space. But given the convenience and effectiveness of these kettlebells for home workouts, it's a small price to pay. So, if you're in the market for quality kettlebells to enhance your home workout experience, the Body-Solid KBVS125 Vinyl Kettlebell Set is definitely worth checking out.
 
-### [High-Quality 150-Lb Kettlebell with Durable Finish for Fitness Enthusiasts](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [High-Quality 150-Lb Kettlebell with Durable Finish for Fitness Enthusiasts](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="body-solid-cast-powder-coated-kettlebells-5-100-lbs-kbr-60-lb-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/body-solid-cast-powder-coated-kettlebells-5-100-lbs-kbr-60-lb-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="body-solid-cast-powder-coated-kettlebells-5-100-lbs-kbr-60-lb-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/body-solid-cast-powder-coated-kettlebells-5-100-lbs-kbr-60-lb-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 I recently started incorporating the KBR Powder Coated Iron Kettlebells by Body-Solid into my home workout routine, and let me tell you, they've turned out to be a game-changer! I love how the durable matte-black chip-resistant powder-coat finish not only looks sleek and modern, but also provides an excellent grip during intense workout sessions. The easy-to-read weight display is a real plus as well, since I can quickly and easily spot the right size and weight for my needs.
 
@@ -188,9 +188,9 @@ One of my favorite features of these kettlebells is their flat machined bottoms.
 
 However, one minor drawback I've noticed is the size of the handles on the heavier kettlebells. While they're great for accommodating both hands, I sometimes find them a bit larger than necessary, which can make gripping and transitioning between exercises a little more challenging than I'd like. But overall, the KBR Powder Coated Iron Kettlebells have certainly lived up to their reputation as versatile, high-quality fitness tools that cater to both beginners and experienced athletes alike.
 
-### [Kettlebell Kings Competition Kettlebell (20 kg) for Women & Men](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [Kettlebell Kings Competition Kettlebell (20 kg) for Women & Men](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="kettlebell-kings-competition-kettlebell-weights-8-44-kg-for-women-men-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/kettlebell-kings-competition-kettlebell-weights-8-44-kg-for-women-men-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="kettlebell-kings-competition-kettlebell-weights-8-44-kg-for-women-men-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/kettlebell-kings-competition-kettlebell-weights-8-44-kg-for-women-men-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 Competing in kettlebell sports, I have been using this Kettlebell Kings Competition Kettlebell for about two months now. I must say, the feel and balance of this kettlebell are top-notch, making my workouts more efficient and enjoyable. One of the key features that stands out for me is the grippy handle, which allows me to maintain a firm grasp even during intense workouts. The neoprene sleeve and rubber base provide excellent shock absorption, reducing noise and ensuring that my floors remain undamaged.
 
@@ -198,21 +198,21 @@ However, there are a few cons to consider. Firstly, the neoprene sleeve tends to
 
 Overall, this Kettlebell Kings Competition Kettlebell is a worthy addition to my home gym, offering unmatched quality and performance. Despite its few drawbacks, I am confident that this product will help me achieve my fitness goals and enhance my training sessions.
 
-### [8 lb Yes4All Cast Iron Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [8 lb Yes4All Cast Iron Kettlebell](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="yes4all-solid-cast-iron-kettlebell-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/yes4all-solid-cast-iron-kettlebell-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="yes4all-solid-cast-iron-kettlebell-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/yes4all-solid-cast-iron-kettlebell-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 I've been using Yes4All Solid Cast Kettlebells for a few months now, and I must say, they've become an integral part of my daily workout routine. Not only do they offer a unique and effective way to build strength, but they also help increase my overall fitness levels with their whole-body workout approach.
 
-One of the features I really appreciate is the flat bottom design. It helps keep my kettlebells steady during workout drills like renegade rows, making my gym time more efficient and less frustrating. Another standout is the machined smooth handles that are textured just enough to provide a good grip, even when my hands are sweaty. [Thanks to the ergonomic design, I've noticed significant improvements in my grip strength over time.](https://gist.github.com/codereviewersbestfriend11/dfb1daed1365511890ef4afc78f4fd6a)
+One of the features I really appreciate is the flat bottom design. It helps keep my kettlebells steady during workout drills like renegade rows, making my gym time more efficient and less frustrating. Another standout is the machined smooth handles that are textured just enough to provide a good grip, even when my hands are sweaty. Thanks to the ergonomic design, I've noticed significant improvements in my grip strength over time.
 
 While these kettlebells have certainly helped me achieve my fitness goals, there are a couple of downsides I've experienced. I noticed that the weights are quite accurate, but there can be some inconsistencies in the handling size, making it slightly uncomfortable at times. Additionally, the texture of the kettlebell can be a bit harsh on certain exercises, like glute bridges.
 
 Overall, I'm quite satisfied with my Yes4All Solid Cast Kettlebells. Their durability, portability, and versatility make them an excellent choice for anyone looking to enhance their home gym experience. Just remember that proper handling and technique are essential to achieve optimal results and minimize the risk of injuries.
 
-### [Classic Style 90lb Kettlebell with Comfortable Rounded Handle](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [Classic Style 90lb Kettlebell with Comfortable Rounded Handle](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="troy-vtx-cast-iron-kettlebells-90-lb-single-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/troy-vtx-cast-iron-kettlebells-90-lb-single-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="troy-vtx-cast-iron-kettlebells-90-lb-single-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/troy-vtx-cast-iron-kettlebells-90-lb-single-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 I've been using the Troy VTX Cast Iron Kettlebell (single 90 lb) for a few months now, and I have to say, it's been an absolute game-changer for my home workouts. The classic style and comfortable rounded handle make it a joy to use, and the weight really packs a punch.
 
@@ -222,23 +222,23 @@ However, there have been a couple of minor issues that have caught my attention.
 
 All in all, I'd give the Troy VTX Cast Iron Kettlebell a solid 4 out of 5 stars. Despite the minor issues, it still offers a fantastic workout experience that's perfect for those looking to build strength and improve their overall fitness.
 
-### [Hammer-Designed Kettlebell for Strength Training](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [Hammer-Designed Kettlebell for Strength Training](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="tribe-wod-hammer-kettlebell-15-70lb-strength-training-for-muscle-building-cardio-fitness-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/tribe-wod-hammer-kettlebell-15-70lb-strength-training-for-muscle-building-cardio-fitness-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="tribe-wod-hammer-kettlebell-15-70lb-strength-training-for-muscle-building-cardio-fitness-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/tribe-wod-hammer-kettlebell-15-70lb-strength-training-for-muscle-building-cardio-fitness-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 I received the Tribe Wod Hammer Kettlebell in a box that was double-walled and packed well. Upon opening it, I was pleasantly surprised by the sleek design and solid cast-iron build of this kettlebell. The unique shape of this product adds a fun twist to traditional kettlebell workouts, engaging more of my stabilizer muscles during different exercises.
 
 The first thing that caught my eye was the powder-coated texture finish, which provided a secure grip while lifting. It also has an 6.8" x 4" x 13" dimensions with a handle length of 7", making it suitable for various workouts including windmills, squats, and Russian swings.
 
-[Although the grip quality is good, some users mentioned that it could be better, especially when hands get sweaty.](https://gist.github.com/bestsoftwareappsreview2/f8d301937779337716e47b8d2b8d46d1) The product's size can be limiting as well, but it serves as a unique addition to our home gym.
+Although the grip quality is good, some users mentioned that it could be better, especially when hands get sweaty. The product's size can be limiting as well, but it serves as a unique addition to our home gym.
 
 Overall, the Tribe Wod Hammer Kettlebell has been a joy to use. Its innovative design offers an interesting new way to perform traditional kettlebell exercises. I'm particularly fond of the swing movement with this unit, as it gives a sense of power and strength.
 
 However, I'd like to see some improvements to the grip to add more security and comfort, especially during intense workout sessions. Despite this, the Tribe Wod Hammer Kettlebell still deserves a solid rating for its sturdy build and innovative concept.
 
-### [90 lb Kettlebell with Neoprene Sleeve Protector](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [90 lb Kettlebell with Neoprene Sleeve Protector](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="kettlebell-kings-90-lb-powder-coat-cover-with-3mm-neoprene-sleeve-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/kettlebell-kings-90-lb-powder-coat-cover-with-3mm-neoprene-sleeve-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="kettlebell-kings-90-lb-powder-coat-cover-with-3mm-neoprene-sleeve-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/kettlebell-kings-90-lb-powder-coat-cover-with-3mm-neoprene-sleeve-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 I recently purchased the Kettlebell Kings 90-pound Powder Coat Cover with a 3mm Neoprene Sleeve, and I must say it has revolutionized my home workout routine. The kettlebell's heavy-duty construction, combined with its comfortable 3mm neoprene sleeve, provides an excellent grip that has made me feel confident during even my most intense workouts.
 
@@ -248,9 +248,9 @@ The only inconvenience I experienced was when trying to snatch the kettlebell. D
 
 As for the online reviews, I must concur with those who have praised this kettlebell's quality and performance. The Kettlebell Kings 90-pound Powder Coat Cover with a 3mm Neoprene Sleeve is a worthwhile investment for anyone looking to enhance their home gym experience. It may not be perfect for everyone, but it certainly met my needs and has made a significant difference in my daily workout routine.
 
-### [Prime 90 lb. Kettlebell for Strength Training](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages)
+### [Prime 90 lb. Kettlebell for Strength Training](https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells)
 
-<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img alt="power-systems-22817-kettlebell-prime-90-lb-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/power-systems-22817-kettlebell-prime-90-lb-1/w=720,h=540,fit=pad,background=black"/></a></div>
+<div class="image"><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img alt="power-systems-22817-kettlebell-prime-90-lb-1" src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/power-systems-22817-kettlebell-prime-90-lb-1/w=720,h=540,fit=pad,background=black"/></a></div>
 
 I've been using the Power Systems 22817 Kettlebell for several months now, and it has quickly become my go-to workout tool. The first thing that stood out to me was the matte black powder coat finish, which not only looks sleek but also provides a comfortable grip while holding chalk. I've also noticed that the various weights have a distinct color band on the handle and a tooled weight on each side, making it easy to differentiate between them during a workout.
 
@@ -262,7 +262,7 @@ All in all, the Power Systems 22817 Kettlebell is an excellent addition to my ho
 
 ### 90 lb Kettlebells: An In-Depth Buyer's Guide
 
-<div><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/90+lb+Kettlebells-2/w=720,h=540,fit=pad,background=black" alt="90 lb Kettlebells-2"></a></div>
+<div><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/90+lb+Kettlebells-2/w=720,h=540,fit=pad,background=black" alt="90 lb Kettlebells-2"></a></div>
 
 90 lb kettlebells are an excellent choice for experienced fitness enthusiasts and professional athletes looking to take their strength training to the next level. This guide will provide you with important features, considerations, and general advice to help you make an informed decision when purchasing a 90 lb kettlebell.
 
@@ -286,7 +286,7 @@ Before investing in a 90 lb kettlebell, take the following factors into account:
 
 - Budget: Compare prices from different sellers to find the best value for your investment, but remember that quality and durability are key when choosing a 90 lb kettlebell.
 
-<div><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/90+lb+Kettlebells-3/w=720,h=540,fit=pad,background=black" alt="90 lb Kettlebells-3"></a></div>
+<div><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/90+lb+Kettlebells-3/w=720,h=540,fit=pad,background=black" alt="90 lb Kettlebells-3"></a></div>
 
 ### General Advice on Using 90 lb Kettlebells
 
@@ -304,7 +304,7 @@ By following this comprehensive buyer's guide for 90 lb kettlebells, you will be
 
 ### What is a 90 lb kettlebell?
 
-<div><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/90+lb+Kettlebells-4/w=720,h=540,fit=pad,background=black" alt="90 lb Kettlebells-4"></a></div>
+<div><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/90+lb+Kettlebells-4/w=720,h=540,fit=pad,background=black" alt="90 lb Kettlebells-4"></a></div>
 
 A 90 lb kettlebell is a cast iron or steel weight with a handle on top, typically used for strength training and conditioning exercises. It weighs 90 pounds (40.8 kilograms) and allows users to perform various movements, including swings, snatches, and cleans, to build muscular strength and endurance.
 
@@ -316,7 +316,7 @@ A 90 lb kettlebell primarily works the glutes, hamstrings, shoulders, back, and 
 
 A 90 lb kettlebell is intended for experienced fitness enthusiasts, strength trainers, and athletes who have already built a solid foundation in kettlebell training and are looking for a challenge to advance their skills and strength. Due to its weight, beginners and individuals with wrist, shoulder, or back issues should consult with a healthcare professional before attempting to use this heavy kettlebell.
 
-<div><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/90+lb+Kettlebells-5/w=720,h=540,fit=pad,background=black" alt="90 lb Kettlebells-5"></a></div>
+<div><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/90+lb+Kettlebells-5/w=720,h=540,fit=pad,background=black" alt="90 lb Kettlebells-5"></a></div>
 
 ### How can I get started with 90 lb kettlebell training?
 
@@ -332,7 +332,7 @@ The frequency of your 90 lb kettlebell training sessions will depend on your cur
 
 ### What are some exercises I can do with a 90 lb kettlebell?
 
-<div><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells?utm_source=boxingundefeated&utm_medium=organic&utm_campaign=ghpages"><img src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/90+lb+Kettlebells-6/w=720,h=540,fit=pad,background=black" alt="90 lb Kettlebells-6"></a></div>
+<div><a href="https://serp.ly/@boxingundefeated/amazon/90-lb-kettlebells"><img src="https://imagedelivery.net/vy2bglCGN6hEeWOnSe2c7A/90+lb+Kettlebells-6/w=720,h=540,fit=pad,background=black" alt="90 lb Kettlebells-6"></a></div>
 
 - Two-arm kettlebell swings
 
