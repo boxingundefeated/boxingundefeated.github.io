@@ -23,10 +23,9 @@ let nextConfig: NextConfig = {
   // Enable static export for GitHub Pages
   output: 'export',
 
-  // GitHub Pages serves from subdirectory when using project pages
-  // Comment out or modify if using custom domain
-  basePath: process.env.NODE_ENV === 'production' ? '/boxing' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/boxing' : '',
+  // No basePath needed for organization GitHub Pages (*.github.io)
+  // basePath: process.env.NODE_ENV === 'production' ? '/boxing' : '',
+  // assetPrefix: process.env.NODE_ENV === 'production' ? '/boxing' : '',
 
   transpilePackages: INTERNAL_PACKAGES,
 
