@@ -26,7 +26,7 @@ export default function SearchPage() {
   useEffect(() => {
     async function loadBoxers() {
       try {
-        const response = await fetch('/search/search-index.json')
+        const response = await fetch('/search/boxer-search-index.json')
         const data = await response.json()
         setBoxers(data)
         setIsLoading(false)

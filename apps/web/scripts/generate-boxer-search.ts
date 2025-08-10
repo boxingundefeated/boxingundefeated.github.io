@@ -13,7 +13,7 @@ interface BoxerSearchEntry {
 }
 
 async function generateBoxerSearchIndex() {
-  const dataPath = path.join(process.cwd(), 'data', 'boxers.json')
+  const dataPath = path.join(process.cwd(), '..', '..', 'data', 'boxers.json')
   const boxersData = JSON.parse(fs.readFileSync(dataPath, 'utf8'))
 
   const searchEntries: BoxerSearchEntry[] = boxersData.map((boxer: any) => ({
@@ -33,14 +33,7 @@ async function generateBoxerSearchIndex() {
   }))
 
   // Write the search index
-  const searchIndexPath = path.join(
-    process.cwd(),
-    'apps',
-    'web',
-    'public',
-    'search',
-    'search-index.json'
-  )
+  const searchIndexPath = path.join(process.cwd(), 'public', 'search', 'boxer-search-index.json')
 
   // Ensure the directory exists
   const searchIndexDir = path.dirname(searchIndexPath)

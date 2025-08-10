@@ -11,7 +11,7 @@ export default function BoxersLoading() {
     <div className="max-w-6xl mx-auto px-4 py-8">
       <Breadcrumb items={breadcrumbItems} baseUrl={baseUrl} />
 
-      <h1 className="text-4xl font-bold tracking-tight mb-4">Professional Boxers Directory</h1>
+      <h1 className="text-4xl font-bold tracking-tight mb-4">Boxers</h1>
 
       {/* Division filters skeleton */}
       <div className="mb-8">

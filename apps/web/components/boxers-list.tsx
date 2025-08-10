@@ -215,7 +215,7 @@ export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
 
   return (
     <div>
-      <h1 className="text-4xl font-bold tracking-tight mb-4">Professional Boxers Directory</h1>
+      <h1 className="text-4xl font-bold tracking-tight mb-4">Boxers</h1>
 
       <div className="mb-8">
         <div className="flex flex-wrap gap-2">
