@@ -1,0 +1,51 @@
+import fs from 'node:fs'
+import path from 'node:path'
+
+interface BoxerSearchEntry {
+  name: string
+  slug: string
+  division?: string
+  wins?: number
+  losses?: number
+  draws?: number
+  kos?: number
+  nationality?: string
+}
+
+async function generateBoxerSearchIndex() {
+  const dataPath = path.join(process.cwd(), 'data', 'boxers.json')
+  const boxersData = JSON.parse(fs.readFileSync(dataPath, 'utf8'))
+
+  const searchEntries: BoxerSearchEntry[] = boxersData.map((boxer: any) => ({
+    name: boxer.name,
+    slug: boxer.slug,
+    division: boxer.division,
+    wins: boxer.wins,
+    losses: boxer.losses,
+    draws: boxer.draws,
+    kos: boxer.kos,
+    nationality: boxer.nationality
+  }))
+
+  // Write the search index
+  const searchIndexPath = path.join(
+    process.cwd(),
+    'apps',
+    'web',
+    'public',
+    'search',
+    'search-index.json'
+  )
+
+  // Ensure the directory exists
+  const searchIndexDir = path.dirname(searchIndexPath)
+  if (!fs.existsSync(searchIndexDir)) {
+    fs.mkdirSync(searchIndexDir, { recursive: true })
+  }
+
+  fs.writeFileSync(searchIndexPath, JSON.stringify(searchEntries))
+  console.log(`Boxer search index generated at ${searchIndexPath}`)
+  console.log(`Total boxers indexed: ${searchEntries.length}`)
+}
+
+generateBoxerSearchIndex().catch(console.error)
