@@ -5,20 +5,35 @@ import { Input } from '@thedaviddias/design-system/input'
 import { Search } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import type { BoxerMetadata } from '@/lib/boxers-loader'
-import { getBoxers } from '@/lib/boxers-loader'
+
+interface SearchBoxer {
+  name: string
+  slug: string
+  nationality?: string
+  division?: string
+  wins?: number
+  losses?: number
+  draws?: number
+  kos?: number
+}
 
 export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState('')
-  const [boxers, setBoxers] = useState<BoxerMetadata[]>([])
-  const [filteredBoxers, setFilteredBoxers] = useState<BoxerMetadata[]>([])
+  const [boxers, setBoxers] = useState<SearchBoxer[]>([])
+  const [filteredBoxers, setFilteredBoxers] = useState<SearchBoxer[]>([])
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     async function loadBoxers() {
-      const data = await getBoxers()
-      setBoxers(data)
-      setIsLoading(false)
+      try {
+        const response = await fetch('/search/search-index.json')
+        const data = await response.json()
+        setBoxers(data)
+        setIsLoading(false)
+      } catch (error) {
+        console.error('Failed to load search index:', error)
+        setIsLoading(false)
+      }
     }
     loadBoxers()
   }, [])
@@ -35,7 +50,7 @@ export default function SearchPage() {
         boxer =>
           boxer.name.toLowerCase().includes(query) ||
           boxer.nationality?.toLowerCase().includes(query) ||
-          boxer.proDivision?.toLowerCase().includes(query)
+          boxer.division?.toLowerCase().includes(query)
       )
       .slice(0, 50) // Limit to 50 results
 
@@ -89,13 +104,13 @@ export default function SearchPage() {
                         <div className="flex justify-between">
                           <dt className="text-sm text-muted-foreground">Record</dt>
                           <dd className="font-semibold">
-                            {boxer.proWins}-{boxer.proLosses}-{boxer.proDraws}
+                            {boxer.wins || 0}-{boxer.losses || 0}-{boxer.draws || 0}
                           </dd>
                         </div>
-                        {boxer.proDivision && (
+                        {boxer.division && (
                           <div className="flex justify-between">
                             <dt className="text-sm text-muted-foreground">Division</dt>
-                            <dd className="capitalize">{boxer.proDivision}</dd>
+                            <dd className="capitalize">{boxer.division}</dd>
                           </div>
                         )}
                         {boxer.nationality && (

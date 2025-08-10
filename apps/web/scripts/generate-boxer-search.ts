@@ -18,12 +18,17 @@ async function generateBoxerSearchIndex() {
 
   const searchEntries: BoxerSearchEntry[] = boxersData.map((boxer: any) => ({
     name: boxer.name,
-    slug: boxer.slug,
-    division: boxer.division,
-    wins: boxer.wins,
-    losses: boxer.losses,
-    draws: boxer.draws,
-    kos: boxer.kos,
+    slug:
+      boxer.slug ||
+      boxer.name
+        .toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w-]/g, ''),
+    division: boxer.proDivision,
+    wins: boxer.proWins,
+    losses: boxer.proLosses,
+    draws: boxer.proDraws,
+    kos: boxer.proWinsByKnockout,
     nationality: boxer.nationality
   }))
 
