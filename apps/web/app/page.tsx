@@ -8,15 +8,15 @@ import { JsonLd } from '@/components/json-ld'
 import { getBoxersWithoutBouts } from '@/lib/boxers-loader'
 
 export const metadata: Metadata = {
-  title: 'Boxing Directory - Professional Boxers Database',
+  title: 'Boxing Undefeated - Professional Boxers Database',
   description:
     'Explore our comprehensive database of professional boxers. Find boxer statistics, records, and fight history.',
   openGraph: {
-    title: 'Boxing Directory - Professional Boxers Database',
+    title: 'Boxing Undefeated - Professional Boxers Database',
     description:
       'Explore our comprehensive database of professional boxers. Find boxer statistics, records, and fight history.',
     url: getBaseUrl(),
-    siteName: 'Boxing Directory',
+    siteName: 'Boxing Undefeated',
     images: [
       {
         url: `${getBaseUrl()}/opengraph-image.png`,
@@ -52,7 +52,7 @@ export default async function Home() {
         data={{
           '@context': 'https://schema.org',
           '@type': 'WebSite',
-          name: 'Boxing Directory',
+          name: 'Boxing Undefeated',
           url: getBaseUrl(),
           description:
             'Comprehensive database of professional boxers with statistics, records, and fight history.'
@@ -61,7 +61,7 @@ export default async function Home() {
       <div className="max-w-6xl mx-auto px-4 py-8 space-y-16">
         {/* Hero Section */}
         <section className="text-center space-y-6">
-          <h1 className="text-5xl font-bold tracking-tight">🥊 Professional Boxing Directory</h1>
+          <h1 className="text-5xl font-bold tracking-tight">Boxing Undefeated</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Explore comprehensive records and statistics for {totalBoxers.toLocaleString()}{' '}
             professional boxers from around the world.
