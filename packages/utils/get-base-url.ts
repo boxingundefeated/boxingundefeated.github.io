@@ -19,7 +19,7 @@ export function getBaseUrl(): string {
 
   // GitHub Pages URL
   if (process.env.NODE_ENV === 'production') {
-    return 'https://devinschumacher.github.io/boxing-directory'
+    return 'https://boxingundefeated.github.io'
   }
 
   // Vercel deployment URL

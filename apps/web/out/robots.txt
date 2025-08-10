@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://devinschumacher.github.io/boxing/sitemap.xml
+Sitemap: https://boxingundefeated.github.io/sitemap.xml
