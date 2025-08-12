@@ -5,6 +5,7 @@
   "scripts": {
     "analyze": "ANALYZE=true pnpm build",
     "build": "NODE_NO_WARNINGS=1 next build --debug",
+    "build:vercel": "NODE_NO_WARNINGS=1 next build",
     "build:with-data": "node ../../scripts/split-boxer-data.js && npx tsx scripts/generate-boxer-search.ts && NODE_NO_WARNINGS=1 next build --debug",
     "clean": "git clean -xdf .cache .turbo .next coverage node_modules",
     "predev": "node ../../scripts/split-boxer-data.js && npx tsx scripts/generate-boxer-search.ts",

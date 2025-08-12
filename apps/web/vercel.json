@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd ../.. && TURBO_TELEMETRY_DISABLED=1 turbo run build --filter=web",
+  "buildCommand": "cd ../.. && TURBO_TELEMETRY_DISABLED=1 turbo run build:vercel --filter=web",
   "outputDirectory": "out",
   "installCommand": "cd ../.. && pnpm install",
   "framework": "nextjs",
