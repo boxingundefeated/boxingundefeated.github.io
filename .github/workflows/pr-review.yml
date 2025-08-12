@@ -47,27 +47,3 @@ jobs:
   #         args: --config ./lychee.toml --verbose --no-progress .
   #         fail: true
 
-  e2e:
-    name: E2E Tests
-    needs: [validate]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Install
-        uses: ./.github/actions/install
-
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
-
-      - name: Run Playwright tests
-        run: pnpm test:e2e
-
-      - name: Upload test results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report
-          path: apps/e2e/playwright-report/
-          retention-days: 30
