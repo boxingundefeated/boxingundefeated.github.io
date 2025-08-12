@@ -17,8 +17,8 @@ export const INTERNAL_PACKAGES = [
 let nextConfig: NextConfig = {
   ...baseConfig,
 
-  // Enable static export for GitHub Pages
-  output: 'export',
+  // Use static export only for GitHub Pages, not for Vercel
+  output: process.env.VERCEL ? undefined : 'export',
 
   // No basePath needed for organization GitHub Pages (*.github.io)
   // basePath: process.env.NODE_ENV === 'production' ? '/boxing' : '',
