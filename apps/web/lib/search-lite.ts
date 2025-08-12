@@ -20,7 +20,7 @@ export class LightweightSearch {
     }))
   }
 
-  search(query: string, limit: number = 20): SearchResult[] {
+  search(query: string, limit = 20): SearchResult[] {
     if (!query || query.length < 2) return []
 
     const searchTerm = query.toLowerCase().trim()

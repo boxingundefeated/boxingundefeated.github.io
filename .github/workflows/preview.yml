@@ -17,12 +17,14 @@ jobs:
         uses: ./.github/actions/install
 
       - name: Build
-        run: pnpm build
+        run: pnpm turbo run build:vercel --filter=web
         env:
           NODE_ENV: production
+          TURBO_TELEMETRY_DISABLED: 1
 
       - name: Deploy to Surge
         id: deploy
+        if: ${{ secrets.SURGE_TOKEN != '' }}
         run: |
           npm install -g surge
           export DEPLOY_DOMAIN=https://boxingundefeated-pr-${{ github.event.pull_request.number }}.surge.sh
@@ -30,6 +32,7 @@ jobs:
           echo "url=$DEPLOY_DOMAIN" >> $GITHUB_OUTPUT
 
       - name: Comment PR
+        if: ${{ steps.deploy.outputs.url != '' }}
         uses: actions/github-script@v7
         with:
           script: |

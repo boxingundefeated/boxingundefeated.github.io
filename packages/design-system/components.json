@@ -11,10 +11,10 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@thedaviddias/design-system/components",
+    "components": "@boxingundefeated/design-system/components",
     "utils": "../../lib/utils",
-    "hooks": "@thedaviddias/design-system/hooks",
-    "lib": "@thedaviddias/design-system/lib",
-    "ui": "@thedaviddias/design-system/components/shadcn"
+    "hooks": "@boxingundefeated/design-system/hooks",
+    "lib": "@boxingundefeated/design-system/lib",
+    "ui": "@boxingundefeated/design-system/components/shadcn"
   }
 }

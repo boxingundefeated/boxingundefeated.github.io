@@ -51,8 +51,8 @@ jest.mock('next-themes', () => ({
   useTheme: () => ({ theme: 'light', setTheme: jest.fn() })
 }))
 
-// Mock @thedaviddias/auth
-jest.mock('@thedaviddias/auth', () => ({
+// Mock @boxingundefeated/auth
+jest.mock('@boxingundefeated/auth', () => ({
   AuthProviderComponent: ({ children }: { children: React.ReactNode }) => children,
   useAuth: () => ({
     user: null,

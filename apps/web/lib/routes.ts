@@ -58,7 +58,12 @@ type StaticRoutes =
   | 'terms'
   | 'rss'
 
-type DynamicRoutes = 'boxers.detail' | 'boxers.withDivision' | 'website.detail' | 'website.withCategory' | 'guides.guide'
+type DynamicRoutes =
+  | 'boxers.detail'
+  | 'boxers.withDivision'
+  | 'website.detail'
+  | 'website.withCategory'
+  | 'guides.guide'
 
 type Routes = StaticRoutes | DynamicRoutes
 

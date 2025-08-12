@@ -1,4 +1,4 @@
-import { Button } from '@thedaviddias/design-system/button'
+import { Button } from '@boxingundefeated/design-system/button'
 import { FolderOpen } from 'lucide-react'
 import Link from 'next/link'
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@thedaviddias/design-system/lib/utils'
+import { cn } from '@boxingundefeated/design-system/lib/utils'
 import { ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 

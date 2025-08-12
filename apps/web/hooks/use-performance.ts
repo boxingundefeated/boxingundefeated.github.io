@@ -43,10 +43,7 @@ export function usePerformanceMonitor(componentName: string) {
 }
 
 // Hook to lazy load heavy components
-export function useLazyComponent<T>(
-  importFn: () => Promise<{ default: T }>,
-  delay: number = 0
-): T | null {
+export function useLazyComponent<T>(importFn: () => Promise<{ default: T }>, delay = 0): T | null {
   const [Component, setComponent] = useState<T | null>(null)
 
   useEffect(() => {

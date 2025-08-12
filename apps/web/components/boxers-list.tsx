@@ -1,8 +1,8 @@
 'use client'
 
-import { Button } from '@thedaviddias/design-system/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
-import { ToggleGroup, ToggleGroupItem } from '@thedaviddias/design-system/toggle-group'
+import { Button } from '@boxingundefeated/design-system/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@boxingundefeated/design-system/card'
+import { ToggleGroup, ToggleGroupItem } from '@boxingundefeated/design-system/toggle-group'
 import { Grid, List, SortAsc, Trophy, Users } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -42,7 +42,7 @@ export function ClientBoxersList({ initialBoxers }: ClientBoxersListProps) {
   useEffect(() => {
     const newDivision = searchParams.get('division') || 'all'
     const newSort = searchParams.get('sort') || 'wins'
-    const newPage = parseInt(searchParams.get('page') || '1')
+    const newPage = Number.parseInt(searchParams.get('page') || '1')
     setDivisionFilter(newDivision)
     setSortBy(newSort)
     setCurrentPage(newPage)

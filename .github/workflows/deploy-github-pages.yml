@@ -50,10 +50,10 @@ jobs:
         
       - name: Build and export
         run: |
-          pnpm build
-          pnpm export
+          pnpm turbo run build:vercel --filter=web
         env:
           NODE_OPTIONS: --max-old-space-size=8192
+          TURBO_TELEMETRY_DISABLED: 1
           
       - name: Setup Pages
         uses: actions/configure-pages@v4

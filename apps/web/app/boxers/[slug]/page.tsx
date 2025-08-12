@@ -1,11 +1,10 @@
-import { Breadcrumb } from '@thedaviddias/design-system/breadcrumb'
-import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
-import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
-import fs from 'fs'
+import fs from 'node:fs'
+import path from 'node:path'
+import { Breadcrumb } from '@boxingundefeated/design-system/breadcrumb'
+import { Card, CardContent, CardHeader, CardTitle } from '@boxingundefeated/design-system/card'
+import { getBaseUrl } from '@boxingundefeated/utils/get-base-url'
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import path from 'path'
 import { FightHistory } from '@/components/fight-history'
 import { OptimizedImage } from '@/components/optimized-image'
 import { type BoxerMetadata, getBoxerBouts, getBoxerStats } from '@/lib/boxers-loader'
@@ -14,10 +13,23 @@ import { getOpponentLinksForBouts } from '@/lib/opponent-mapper'
 // Load individual boxer data from split JSON files
 function getBoxerBySlugOptimized(slug: string): BoxerMetadata | null {
   try {
-    const filePath = path.join(process.cwd(), 'public/data/boxers', `${slug}.json`)
-    const data = fs.readFileSync(filePath, 'utf-8')
-    return JSON.parse(data)
-  } catch (error) {
+    // Try multiple possible paths to handle different working directories
+    const possiblePaths = [
+      path.join(process.cwd(), 'public/data/boxers', `${slug}.json`),
+      path.join(process.cwd(), 'apps/web/public/data/boxers', `${slug}.json`),
+      path.join(__dirname, '../../../public/data/boxers', `${slug}.json`)
+    ]
+
+    for (const filePath of possiblePaths) {
+      try {
+        const data = fs.readFileSync(filePath, 'utf-8')
+        return JSON.parse(data)
+      } catch {
+        // Try next path
+      }
+    }
+    return null
+  } catch {
     return null
   }
 }
@@ -25,8 +37,28 @@ function getBoxerBySlugOptimized(slug: string): BoxerMetadata | null {
 // Load index for generating static params
 function getBoxerSlugs(): string[] {
   try {
-    const indexPath = path.join(process.cwd(), 'public/data/boxers', 'index.json')
-    const data = fs.readFileSync(indexPath, 'utf-8')
+    // Try multiple possible paths to handle different working directories
+    const possiblePaths = [
+      path.join(process.cwd(), 'public/data/boxers/index.json'),
+      path.join(process.cwd(), 'apps/web/public/data/boxers/index.json'),
+      path.join(__dirname, '../../../public/data/boxers/index.json')
+    ]
+
+    let data: string | null = null
+    for (const indexPath of possiblePaths) {
+      try {
+        data = fs.readFileSync(indexPath, 'utf-8')
+        break
+      } catch {
+        // Try next path
+      }
+    }
+
+    if (!data) {
+      console.error('Failed to load boxer index from any path')
+      return []
+    }
+
     const index = JSON.parse(data)
     return index.map((boxer: any) => boxer.slug)
   } catch (error) {
@@ -258,6 +290,7 @@ export default async function BoxerPage({ params }: { params: { slug: string } }
               <CardTitle>Biography</CardTitle>
             </CardHeader>
             <CardContent>
+              {/* biome-ignore lint/security/noDangerouslySetInnerHtml: Bio content is from trusted source */}
               <div
                 className="space-y-4 text-sm leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: boxer.bio }}

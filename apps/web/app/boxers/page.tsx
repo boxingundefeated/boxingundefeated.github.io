@@ -1,5 +1,5 @@
-import { Breadcrumb } from '@thedaviddias/design-system/breadcrumb'
-import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
+import { Breadcrumb } from '@boxingundefeated/design-system/breadcrumb'
+import { getBaseUrl } from '@boxingundefeated/utils/get-base-url'
 import type { Metadata } from 'next'
 import { OptimizedBoxersList } from '@/components/boxers-list-optimized'
 
