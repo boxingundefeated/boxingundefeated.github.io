@@ -53,3 +53,12 @@ lychee-out.md
 .vscode
 node_modules
 .env
+
+# Coders in Flow
+.venv
+.codex
+out
+*.vsix
+.claude
+CLAUDE.md
+apps/web/public/data

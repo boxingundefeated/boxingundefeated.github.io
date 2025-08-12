@@ -23,7 +23,7 @@ pre-commit:
 #         LEFTHOOK: 0
 
 # Validate commit messages; can be used with or without cz.
-commit-msg:
-  commands:
-    "lint commit message":
-      run: pnpm commitlint --edit {1}
+# commit-msg:
+#   commands:
+#     "lint commit message":
+#       run: pnpm commitlint --edit {1}
