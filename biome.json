@@ -58,18 +58,7 @@
       }
     }
   },
-  "overrides": [
-    {
-      "includes": ["packages/logging/**", "packages/monitoring/**"],
-      "linter": {
-        "rules": {
-          "suspicious": {
-            "noConsole": "off"
-          }
-        }
-      }
-    }
-  ],
+  "overrides": [],
   "javascript": {
     "formatter": {
       "arrowParentheses": "asNeeded",
