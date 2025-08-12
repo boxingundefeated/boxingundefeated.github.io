@@ -1,4 +1,0 @@
-User-Agent: *
-Allow: /
-
-Sitemap: https://boxingundefeated.github.io/sitemap.xml
