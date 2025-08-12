@@ -1,29 +1,5 @@
-'use client'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { getRoute } from '@/lib/routes'
-
-interface NavLinkProps {
-  href: string
-  children: React.ReactNode
-  exact?: boolean
-}
-
-function NavLink({ href, children, exact = false }: NavLinkProps) {
-  const pathname = usePathname()
-  const isActive = exact ? pathname === href : pathname.startsWith(href)
-
-  return (
-    <Link
-      href={href}
-      className={`text-sm transition-colors ${
-        isActive ? 'text-foreground font-medium' : 'text-muted-foreground hover:text-foreground'
-      }`}
-    >
-      {children}
-    </Link>
-  )
-}
 
 export function Header() {
   return (
@@ -34,17 +10,39 @@ export function Header() {
             🥊 Boxing Directory
           </Link>
           <nav className="hidden md:flex items-center gap-4">
-            <NavLink href={getRoute('website.list')}>Boxers</NavLink>
-            <NavLink href="/blog">Blog</NavLink>
-            <NavLink href={getRoute('about')}>About</NavLink>
-            <NavLink href={getRoute('search')}>Search</NavLink>
             <Link
-              href={getRoute('submit')}
-              className="ml-2 px-3 py-1.5 text-sm bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+              href={getRoute('website.list')}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Submit Boxer
+              Boxers
+            </Link>
+            <Link
+              href="/blog"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Blog
+            </Link>
+            <Link
+              href={getRoute('about')}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              About
+            </Link>
+            <Link
+              href={getRoute('search')}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Search
             </Link>
           </nav>
+        </div>
+        <div className="flex items-center gap-2">
+          <Link
+            href={getRoute('submit')}
+            className="px-3 py-1.5 text-sm bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+          >
+            Submit Boxer
+          </Link>
         </div>
       </div>
     </header>

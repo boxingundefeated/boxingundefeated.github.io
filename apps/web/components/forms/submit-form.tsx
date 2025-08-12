@@ -105,30 +105,14 @@ export function SubmitForm() {
     nationality: ''
   })
 
-  // Handle GitHub OAuth callback or check for existing token
+  // Load existing token on mount (user should already be authenticated)
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search)
-    const code = urlParams.get('code')
-
-    if (code && !githubToken) {
-      // If we have a token exchange service, use it
-      if (TOKEN_EXCHANGE_URL) {
-        exchangeCodeForToken(code)
-      } else {
-        // For static sites, we can't exchange the code
-        // Clean up URL and show instructions
-        window.history.replaceState({}, document.title, '/submit')
-        setError('Please use a Personal Access Token for authentication (see instructions below)')
-      }
-    } else {
-      // Check for existing token
-      const storedToken = localStorage.getItem('github_token')
-      if (storedToken) {
-        setGithubToken(storedToken)
-        fetchGithubUser(storedToken)
-      }
+    const storedToken = localStorage.getItem('github_token')
+    if (storedToken) {
+      setGithubToken(storedToken)
+      fetchGithubUser(storedToken)
     }
-  }, [githubToken])
+  }, [])
 
   const exchangeCodeForToken = async (code: string) => {
     try {
