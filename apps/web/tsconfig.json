@@ -19,5 +19,16 @@
     ".next/types/**/*.ts",
     ".content-collections/generated/**/*.ts"
   ],
-  "exclude": ["node_modules", ".next"]
+  "exclude": [
+    "node_modules",
+    ".next",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "jest.setup.ts",
+    "jest.setup.tsx",
+    "jest.config.ts",
+    "test/**/*"
+  ]
 }
