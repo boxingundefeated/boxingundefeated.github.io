@@ -3,7 +3,6 @@
 
   "editor.wordWrapColumn": 110,
   "editor.minimap.enabled": false,
-  "editor.fontFamily": "Monaco, 'Courier New', monospace",
   "editor.rulers": [110],
   "editor.codeActionsOnSave": {
     "quickfix.biome": "explicit",
