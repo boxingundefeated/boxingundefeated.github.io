@@ -13,9 +13,6 @@
     "commit": "cz",
     "dev": "cross-env FORCE_COLOR=1 turbo dev --parallel",
     "format": "biome check --write .",
-    "generate-search-index": "node scripts/search-index-generator.js",
-    "generate-llms-chatbot-index": "node scripts/llms-chatbot-index-generator.js",
-    "generate-websites": "tsx scripts/generate-websites.ts",
     "generate:llms": "pnpm --filter generator start",
     "generate:website": "turbo gen website",
     "postinstall": "manypkg fix",
@@ -28,8 +25,7 @@
     "test": "turbo test --cache-dir=.turbo",
     "test:watch": "turbo test:watch --cache-dir=.turbo",
     "typecheck": "turbo typecheck",
-    "update": "pnpm update -r",
-    "update-llms-list": "node scripts/update-llms-list.js"
+    "update": "pnpm update -r"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "^11.3.0",

@@ -34,6 +34,9 @@ npm-debug.log*
 # typescript
 *.tsbuildinfo
 
+# SWC
+.swc
+
 /test-results/
 
 # Sentry Config File

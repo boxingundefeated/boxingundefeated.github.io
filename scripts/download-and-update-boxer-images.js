@@ -8,7 +8,7 @@ const boxersDataPath = path.join(__dirname, '../apps/web/data/boxers.json')
 const boxersData = JSON.parse(fs.readFileSync(boxersDataPath, 'utf-8'))
 
 // Output directory for images
-const imagesDir = path.join(__dirname, '../images/boxers')
+const imagesDir = path.join(__dirname, '../apps/web/public/images/boxers')
 
 // Create output directory if it doesn't exist
 if (!fs.existsSync(imagesDir)) {
