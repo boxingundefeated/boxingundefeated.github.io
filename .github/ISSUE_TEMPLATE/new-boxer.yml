@@ -1,0 +1,102 @@
+name: New Boxer Submission
+description: Submit a new boxer to be added to the directory
+title: "[New Boxer] "
+labels: ["new-boxer"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to the Boxing Directory! Please fill out the information below.
+  
+  - type: input
+    id: name
+    attributes:
+      label: Boxer Name
+      description: Full professional name of the boxer
+      placeholder: e.g., Muhammad Ali
+    validations:
+      required: true
+  
+  - type: input
+    id: birth-name
+    attributes:
+      label: Birth Name
+      description: Birth name if different from professional name
+      placeholder: e.g., Cassius Marcellus Clay Jr.
+  
+  - type: input
+    id: nicknames
+    attributes:
+      label: Nicknames
+      description: Known nicknames or ring names
+      placeholder: e.g., The Greatest, The People's Champion
+  
+  - type: input
+    id: date-of-birth
+    attributes:
+      label: Date of Birth
+      description: Format YYYY-MM-DD
+      placeholder: e.g., 1942-01-17
+  
+  - type: input
+    id: nationality
+    attributes:
+      label: Nationality
+      description: Country of nationality
+      placeholder: e.g., USA
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: division
+    attributes:
+      label: Weight Division
+      options:
+        - Heavyweight
+        - Cruiserweight
+        - Light Heavyweight
+        - Super Middleweight
+        - Middleweight
+        - Super Welterweight
+        - Welterweight
+        - Super Lightweight
+        - Lightweight
+        - Super Featherweight
+        - Featherweight
+        - Super Bantamweight
+        - Bantamweight
+        - Super Flyweight
+        - Flyweight
+        - Light Flyweight
+        - Minimumweight
+  
+  - type: dropdown
+    id: status
+    attributes:
+      label: Professional Status
+      options:
+        - Active
+        - Inactive
+        - Retired
+        - Deceased
+  
+  - type: input
+    id: record
+    attributes:
+      label: Professional Record
+      description: Format as Wins-Losses-Draws (KOs)
+      placeholder: e.g., 56-5-0 (37 KOs)
+  
+  - type: textarea
+    id: bio
+    attributes:
+      label: Biography
+      description: Brief biography or notable achievements
+      placeholder: Tell us about this boxer's career highlights...
+  
+  - type: input
+    id: image-url
+    attributes:
+      label: Avatar Image URL
+      description: URL to a profile image of the boxer
+      placeholder: https://example.com/boxer-image.jpg

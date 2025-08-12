@@ -1,0 +1,133 @@
+name: Process Boxer Submissions
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  process-submission:
+    if: contains(github.event.issue.labels.*.name, 'new-boxer') || contains(github.event.issue.labels.*.name, 'update-boxer')
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Parse Issue Content
+        id: parse
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueBody = context.payload.issue.body;
+            
+            // Parse the structured issue content
+            const parseField = (label) => {
+              const regex = new RegExp(`- \\*\\*${label}:\\*\\* (.+)`, 'i');
+              const match = issueBody.match(regex);
+              return match ? match[1] : null;
+            };
+            
+            const data = {
+              name: parseField('Name'),
+              birthName: parseField('Birth Name'),
+              nicknames: parseField('Nicknames'),
+              dateOfBirth: parseField('Date of Birth'),
+              nationality: parseField('Nationality'),
+              height: parseField('Height'),
+              reach: parseField('Reach'),
+              stance: parseField('Stance'),
+              birthPlace: parseField('Birth Place'),
+              residence: parseField('Residence'),
+              proDivision: parseField('Division'),
+              proStatus: parseField('Status'),
+              proWins: parseInt(parseField('Wins') || '0'),
+              proWinsByKnockout: parseInt(parseField('Wins by KO') || '0'),
+              proLosses: parseInt(parseField('Losses') || '0'),
+              proDraws: parseInt(parseField('Draws') || '0'),
+              bio: parseField('Bio'),
+              avatarImage: parseField('Avatar Image URL')
+            };
+            
+            // Clean up "Not provided" values
+            Object.keys(data).forEach(key => {
+              if (data[key] === 'Not provided' || data[key] === null) {
+                delete data[key];
+              }
+            });
+            
+            // Generate slug from name
+            const slug = data.name
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, '-')
+              .replace(/^-|-$/g, '');
+            
+            data.slug = slug;
+            data.id = slug; // Use slug as ID for now
+            
+            // Check if this is an edit
+            const isEdit = context.payload.issue.labels.some(l => l.name === 'update-boxer');
+            const existingBoxerMatch = issueBody.match(/\*\*Existing Boxer:\*\* (.+)/);
+            const existingBoxer = existingBoxerMatch ? existingBoxerMatch[1] : null;
+            
+            return {
+              data: JSON.stringify(data),
+              slug: slug,
+              isEdit: isEdit,
+              existingBoxer: existingBoxer
+            };
+      
+      - name: Create Boxer JSON File
+        run: |
+          mkdir -p temp-submission
+          echo '${{ steps.parse.outputs.data }}' > temp-submission/${{ steps.parse.outputs.slug }}.json
+      
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: |
+            Add/Update boxer: ${{ steps.parse.outputs.slug }}
+            
+            Closes #${{ github.event.issue.number }}
+          branch: boxer-submission-${{ github.event.issue.number }}
+          title: |
+            ${{ steps.parse.outputs.isEdit == 'true' && '[Update]' || '[New]' }} Boxer: ${{ steps.parse.outputs.slug }}
+          body: |
+            ## Boxer Submission
+            
+            This PR was automatically generated from issue #${{ github.event.issue.number }}.
+            
+            ### Changes
+            - ${{ steps.parse.outputs.isEdit == 'true' && 'Updates' || 'Adds' }} boxer data for: **${{ steps.parse.outputs.slug }}**
+            
+            ### Review Checklist
+            - [ ] Boxer information is accurate
+            - [ ] Data format is correct
+            - [ ] No duplicate entries
+            - [ ] Image URL is valid (if provided)
+            
+            Closes #${{ github.event.issue.number }}
+          labels: |
+            boxer-submission
+            automated-pr
+      
+      - name: Comment on Issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.name,
+              issue_number: context.issue.number,
+              body: `Thank you for your submission! 🥊\n\nA pull request has been automatically created for review. You can track its progress in the PR linked above.\n\nOur team will review your submission soon.`
+            })

@@ -38,6 +38,12 @@ export function Header() {
             <NavLink href="/blog">Blog</NavLink>
             <NavLink href={getRoute('about')}>About</NavLink>
             <NavLink href={getRoute('search')}>Search</NavLink>
+            <Link
+              href={getRoute('submit')}
+              className="ml-2 px-3 py-1.5 text-sm bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+            >
+              Submit Boxer
+            </Link>
           </nav>
         </div>
       </div>

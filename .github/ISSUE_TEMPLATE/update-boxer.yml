@@ -1,0 +1,56 @@
+name: Update Boxer Information
+description: Update or correct existing boxer information
+title: "[Update Boxer] "
+labels: ["update-boxer"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us keep boxer information accurate and up-to-date!
+  
+  - type: input
+    id: existing-boxer
+    attributes:
+      label: Existing Boxer
+      description: Name or slug of the boxer to update
+      placeholder: e.g., muhammad-ali or Muhammad Ali
+    validations:
+      required: true
+  
+  - type: textarea
+    id: changes
+    attributes:
+      label: What needs to be updated?
+      description: Describe what information needs to be changed
+      placeholder: |
+        Please specify what fields need updating:
+        - Record: Update to 57-5-0
+        - Status: Changed to Retired
+        - etc.
+    validations:
+      required: true
+  
+  - type: textarea
+    id: updated-info
+    attributes:
+      label: Updated Information
+      description: Provide the complete updated information
+      placeholder: |
+        Name: 
+        Birth Name: 
+        Nicknames: 
+        Date of Birth: 
+        Nationality: 
+        Height: 
+        Reach: 
+        Stance: 
+        Birth Place: 
+        Residence: 
+        Division: 
+        Status: 
+        Wins: 
+        Wins by KO: 
+        Losses: 
+        Draws: 
+        Bio: 
+        Avatar Image URL:
