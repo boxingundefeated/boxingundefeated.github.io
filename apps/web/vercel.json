@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd ../.. && turbo run build --filter=web",
+  "buildCommand": "cd ../.. && TURBO_TELEMETRY_DISABLED=1 turbo run build --filter=web",
   "outputDirectory": "out",
   "installCommand": "cd ../.. && pnpm install",
   "framework": "nextjs",
