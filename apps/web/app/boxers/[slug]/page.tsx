@@ -1,11 +1,10 @@
+import fs from 'node:fs'
+import path from 'node:path'
 import { Breadcrumb } from '@thedaviddias/design-system/breadcrumb'
 import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
 import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
-import fs from 'fs'
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import path from 'path'
 import { FightHistory } from '@/components/fight-history'
 import { OptimizedImage } from '@/components/optimized-image'
 import { type BoxerMetadata, getBoxerBouts, getBoxerStats } from '@/lib/boxers-loader'
@@ -14,10 +13,14 @@ import { getOpponentLinksForBouts } from '@/lib/opponent-mapper'
 // Load individual boxer data from split JSON files
 function getBoxerBySlugOptimized(slug: string): BoxerMetadata | null {
   try {
-    const filePath = path.join(process.cwd(), 'public/data/boxers', `${slug}.json`)
+    // In Vercel, process.cwd() is the monorepo root, so we need apps/web prefix
+    // Locally, process.cwd() is already apps/web
+    const isVercel = process.env.VERCEL === '1'
+    const basePath = isVercel ? 'apps/web/public/data/boxers' : 'public/data/boxers'
+    const filePath = path.join(process.cwd(), basePath, `${slug}.json`)
     const data = fs.readFileSync(filePath, 'utf-8')
     return JSON.parse(data)
-  } catch (error) {
+  } catch {
     return null
   }
 }
@@ -25,12 +28,16 @@ function getBoxerBySlugOptimized(slug: string): BoxerMetadata | null {
 // Load index for generating static params
 function getBoxerSlugs(): string[] {
   try {
-    const indexPath = path.join(process.cwd(), 'public/data/boxers', 'index.json')
+    // In Vercel, process.cwd() is the monorepo root, so we need apps/web prefix
+    // Locally, process.cwd() is already apps/web
+    const isVercel = process.env.VERCEL === '1'
+    const basePath = isVercel ? 'apps/web/public/data/boxers' : 'public/data/boxers'
+    const indexPath = path.join(process.cwd(), basePath, 'index.json')
     const data = fs.readFileSync(indexPath, 'utf-8')
     const index = JSON.parse(data)
     return index.map((boxer: any) => boxer.slug)
-  } catch (error) {
-    console.error('Failed to load boxer index:', error)
+  } catch {
+    console.error('Failed to load boxer index')
     return []
   }
 }
@@ -258,6 +265,7 @@ export default async function BoxerPage({ params }: { params: { slug: string } }
               <CardTitle>Biography</CardTitle>
             </CardHeader>
             <CardContent>
+              {/* biome-ignore lint/security/noDangerouslySetInnerHtml: Bio content is from trusted source */}
               <div
                 className="space-y-4 text-sm leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: boxer.bio }}
