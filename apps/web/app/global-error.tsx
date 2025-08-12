@@ -1,6 +1,5 @@
 'use client'
 
-import { captureException } from '@sentry/nextjs'
 import { Button } from '@thedaviddias/design-system/button'
 import { fontVariable } from '@thedaviddias/design-system/lib/fonts'
 import type NextError from 'next/error'
@@ -13,7 +12,7 @@ type GlobalErrorProperties = {
 
 const GlobalError = ({ error, reset }: GlobalErrorProperties) => {
   useEffect(() => {
-    captureException(error)
+    console.error(error)
   }, [error])
 
   return (

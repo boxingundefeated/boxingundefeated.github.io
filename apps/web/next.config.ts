@@ -1,17 +1,14 @@
 import withMDX from '@next/mdx'
 import { baseConfig, withAnalyzer, withVercelToolbarConfig } from '@thedaviddias/config-next'
-import { withSentry } from '@thedaviddias/observability/next-config'
 import type { NextConfig } from 'next'
 import { env } from '@/env'
 
 export const INTERNAL_PACKAGES = [
   '@thedaviddias/design-system',
-  '@thedaviddias/analytics',
   // '@thedaviddias/auth', // Removed - contains server actions incompatible with static export
   // '@thedaviddias/caching', // Removed - Redis/Upstash not needed for static site
   '@thedaviddias/config-next',
   '@thedaviddias/config-typescript',
-  '@thedaviddias/logging',
   // '@thedaviddias/supabase', // Removed - not needed for static boxing site
   '@thedaviddias/utils',
   '@thedaviddias/content'
@@ -104,7 +101,6 @@ let nextConfig: NextConfig = {
 
 // Apply other plugins first
 nextConfig = withVercelToolbarConfig(nextConfig)
-nextConfig = withSentry(nextConfig)
 nextConfig = withMDX()(nextConfig)
 
 if (env.ANALYZE === 'true') {

@@ -70,7 +70,6 @@
     "@radix-ui/react-toggle-group": "^1.1.2",
     "@radix-ui/react-tooltip": "^1.1.8",
     "@thedaviddias/auth": "workspace:*",
-    "@thedaviddias/observability": "workspace:*",
     "@vercel/toolbar": "^0.1.36",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -94,7 +93,6 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@thedaviddias/analytics": "workspace:*",
     "@thedaviddias/config-typescript": "workspace:*",
     "@thedaviddias/utils": "workspace:*",
     "@types/node": "^22.13.17",

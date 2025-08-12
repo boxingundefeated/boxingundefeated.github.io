@@ -4,7 +4,6 @@ import '../../../packages/design-system/styles/globals.css'
 import { fontVariable } from '@thedaviddias/design-system/lib/fonts'
 import { cn } from '@thedaviddias/design-system/lib/utils'
 import { DesignSystemProvider } from '@thedaviddias/design-system/theme-provider'
-import { SentryUserProvider } from '@thedaviddias/observability/providers'
 import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
 import { GoogleTagManager, GTMNoscript } from '@/components/gtm'
 import { Footer } from '@/components/layout/footer'
@@ -34,14 +33,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className={cn('touch-manipulation font-sans antialiased')}>
         <GTMNoscript gtmId={GTM_ID} />
         <DesignSystemProvider>
-          <SentryUserProvider>
-            <ProgressBar />
-            <div className="flex min-h-screen flex-col">
-              <Header />
-              <main className="flex-1">{children}</main>
-              <Footer />
-            </div>
-          </SentryUserProvider>
+          <ProgressBar />
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
         </DesignSystemProvider>
       </body>
     </html>

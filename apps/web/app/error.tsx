@@ -1,7 +1,6 @@
 'use client'
 
 import { Button } from '@thedaviddias/design-system/button'
-import { logger } from '@thedaviddias/logging'
 import { useEffect } from 'react'
 
 type ErrorProps = {
@@ -12,7 +11,7 @@ type ErrorProps = {
 // biome-ignore lint/suspicious/noShadowRestrictedNames: <explanation>
 export default function Error({ error, reset }: ErrorProps) {
   useEffect(() => {
-    logger.error(error)
+    console.error(error)
   }, [error])
 
   return (

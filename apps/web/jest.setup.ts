@@ -62,23 +62,6 @@ jest.mock('@sentry/nextjs', () => ({
   }
 }))
 
-// Mock logging package
-jest.mock('@thedaviddias/logging', () => ({
-  logger: {
-    error: jest.fn(),
-    info: jest.fn(),
-    warn: jest.fn(),
-    debug: jest.fn()
-  }
-}))
-
-// Mock observability package
-jest.mock('@thedaviddias/observability', () => ({
-  captureError: jest.fn(),
-  captureMessage: jest.fn(),
-  withScope: jest.fn()
-}))
-
 // Mock @thedaviddias/auth
 jest.mock('@thedaviddias/auth', () => ({
   AuthProviderComponent: ({ children }: { children: React.ReactNode }) => children,
