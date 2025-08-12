@@ -2,10 +2,8 @@
   "recommendations": [
     "mikestead.dotenv",
     "christian-kohler.npm-intellisense",
-    "Prisma.prisma",
     "bradlc.vscode-tailwindcss",
     "aaron-bond.better-comments",
-    "biomejs.biome",
-    "vitest.vitest"
+    "biomejs.biome"
   ]
 }

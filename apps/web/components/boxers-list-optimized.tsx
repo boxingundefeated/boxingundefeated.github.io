@@ -11,8 +11,8 @@ import { BoxerCardSkeleton, BoxerListSkeleton } from '@/components/boxer-skeleto
 import { EmptyState } from '@/components/empty-state'
 import { LazyImage } from '@/components/lazy-image'
 import { getBoxerCategories, getBoxerStats } from '@/lib/boxer-utils'
+import { getDivisionSlug, loadBoxersByDivision, sortBoxers } from '@/lib/boxers-client-loader'
 import type { BoxerMetadata } from '@/lib/boxers-loader'
-import { getDivisionSlug, loadBoxersByDivision, sortBoxers } from '@/lib/boxers-loader-optimized'
 
 export function OptimizedBoxersList() {
   const router = useRouter()
