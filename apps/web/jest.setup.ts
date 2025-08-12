@@ -51,17 +51,6 @@ jest.mock('next-themes', () => ({
   useTheme: () => ({ theme: 'light', setTheme: jest.fn() })
 }))
 
-// Mock Sentry
-jest.mock('@sentry/nextjs', () => ({
-  init: jest.fn(),
-  captureException: jest.fn(),
-  captureMessage: jest.fn(),
-  withScope: jest.fn(),
-  Integrations: {
-    BrowserTracing: jest.fn()
-  }
-}))
-
 // Mock @thedaviddias/auth
 jest.mock('@thedaviddias/auth', () => ({
   AuthProviderComponent: ({ children }: { children: React.ReactNode }) => children,

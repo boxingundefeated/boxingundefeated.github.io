@@ -35,17 +35,6 @@ jest.mock('next/navigation', () => ({
   useParams: () => ({})
 }))
 
-// Mock Sentry
-jest.mock('@sentry/nextjs', () => ({
-  init: jest.fn(),
-  captureException: jest.fn(),
-  captureMessage: jest.fn(),
-  withScope: jest.fn(),
-  Integrations: {
-    BrowserTracing: jest.fn()
-  }
-}))
-
 // Mock lucide-react icons
 jest.mock('lucide-react', () => ({
   ChevronDown: () => null,
