@@ -7,7 +7,7 @@ function loadBoxersData() {
     // Only load in Node.js environment (build time)
     // This prevents the data from being bundled in client-side JS
     if (typeof window === 'undefined') {
-      boxersData = require('../../../data/boxers.json')
+      boxersData = require('../data/boxers.json')
     } else {
       // In browser, return empty array
       // The data should already be in the static HTML

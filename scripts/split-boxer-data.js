@@ -5,9 +5,9 @@ const path = require('path')
 // In Vercel, the working directory is the monorepo root
 // Locally when run from package.json, it's apps/web
 const possiblePaths = [
-  path.join(__dirname, '../data/boxers.json'), // When run from scripts/ directory
-  path.join(process.cwd(), 'data/boxers.json'), // When run from monorepo root
-  path.join(process.cwd(), '../../data/boxers.json') // When run from apps/web
+  path.join(__dirname, '../apps/web/data/boxers.json'), // When run from scripts/ directory
+  path.join(process.cwd(), 'apps/web/data/boxers.json'), // When run from monorepo root
+  path.join(process.cwd(), 'data/boxers.json') // When run from apps/web
 ]
 
 let boxersData

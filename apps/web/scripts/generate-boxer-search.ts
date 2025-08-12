@@ -19,7 +19,7 @@ async function generateBoxerSearchIndex() {
   const possiblePaths = [
     path.join(process.cwd(), '..', '..', 'data', 'boxers.json'), // When run from apps/web
     path.join(process.cwd(), 'data', 'boxers.json'), // When run from monorepo root
-    path.join(__dirname, '../../../data/boxers.json') // Relative to script location
+    path.join(__dirname, '../data/boxers.json') // Relative to script location
   ]
 
   let dataPath: string | undefined
