@@ -1,17 +1,8 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "@thedaviddias/config-typescript/base.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "baseUrl": ".",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "target": "ES2022",
-    "esModuleInterop": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "baseUrl": "."
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["data/**/*.mdx", "data/**/*.ts", "websites/**/*.mdx"],
+  "exclude": ["node_modules"]
 }
