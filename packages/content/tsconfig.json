@@ -1,8 +1,0 @@
-{
-  "extends": "@thedaviddias/config-typescript/base.json",
-  "compilerOptions": {
-    "baseUrl": "."
-  },
-  "include": ["data/**/*.mdx", "data/**/*.ts", "websites/**/*.mdx"],
-  "exclude": ["node_modules"]
-}

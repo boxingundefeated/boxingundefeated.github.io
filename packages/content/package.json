@@ -13,13 +13,10 @@
     "data"
   ],
   "scripts": {
-    "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "lint": "eslint ."
   },
   "devDependencies": {
-    "@thedaviddias/config-typescript": "workspace:*",
     "@types/node": "^22.13.17",
-    "eslint": "^9.23.0",
-    "typescript": "^5.8.2"
+    "eslint": "^9.23.0"
   }
 }
