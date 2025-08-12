@@ -1,6 +1,6 @@
 'use client'
 
-import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@boxingundefeated/design-system/card'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import type { Bout } from '@/lib/boxers-loader'
@@ -88,6 +88,7 @@ export function FightHistory({ bouts, opponentLinks }: FightHistoryProps) {
         {!showAll && bouts.length > initialDisplay && (
           <div className="mt-4 text-center">
             <button
+              type="button"
               onClick={handleShowMore}
               className="text-sm text-blue-600 hover:text-blue-800 font-medium"
             >

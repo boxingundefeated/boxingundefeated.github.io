@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 
 // Update main boxers.json
-const boxersFile = path.join(__dirname, '../data/boxers.json')
+const boxersFile = path.join(__dirname, '../apps/web/data/boxers.json')
 const boxersData = JSON.parse(fs.readFileSync(boxersFile, 'utf-8'))
 
 let updatedCount = 0
@@ -15,7 +15,7 @@ boxersData.forEach(boxer => {
 })
 
 fs.writeFileSync(boxersFile, JSON.stringify(boxersData, null, 2))
-console.log(`Updated ${updatedCount} image paths in data/boxers.json`)
+console.log(`Updated ${updatedCount} image paths in apps/web/data/boxers.json`)
 
 // Update individual boxer JSON files
 const boxersDir = path.join(__dirname, '../apps/web/public/data/boxers')

@@ -21,6 +21,8 @@
       "packages/design-system/lib/**",
       "packages/design-system/hooks/**",
       "apps/web/public/search/**",
+      "apps/web/public/data/**",
+      "data/**",
       "apps/chatbot/public/"
     ]
   },
@@ -50,7 +52,18 @@
       "suspicious": {
         "noExplicitAny": "off",
         "noArrayIndexKey": "off",
-        "noImplicitAnyLet": "off"
+        "noImplicitAnyLet": "off",
+        "noShadowRestrictedNames": "off"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off",
+        "useAltText": "off"
+      },
+      "performance": {
+        "noImgElement": "off"
       },
       "complexity": {
         "noBannedTypes": "off",

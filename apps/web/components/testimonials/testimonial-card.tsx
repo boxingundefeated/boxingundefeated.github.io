@@ -1,5 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@thedaviddias/design-system/avatar'
-import { Card } from '@thedaviddias/design-system/card'
+import { Avatar, AvatarFallback, AvatarImage } from '@boxingundefeated/design-system/avatar'
+import { Card } from '@boxingundefeated/design-system/card'
 
 interface TestimonialCardProps {
   quote: string

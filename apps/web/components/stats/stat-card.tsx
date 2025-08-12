@@ -1,5 +1,5 @@
-import { Card } from '@thedaviddias/design-system/card'
-import { Tooltip, TooltipContent, TooltipTrigger } from '@thedaviddias/design-system/tooltip'
+import { Card } from '@boxingundefeated/design-system/card'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@boxingundefeated/design-system/tooltip'
 import type { LucideIcon } from 'lucide-react'
 
 interface StatCardProps {

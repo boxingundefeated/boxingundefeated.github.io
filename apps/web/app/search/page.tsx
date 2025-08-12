@@ -1,7 +1,7 @@
 'use client'
 
-import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
-import { Input } from '@thedaviddias/design-system/input'
+import { Card, CardContent, CardHeader, CardTitle } from '@boxingundefeated/design-system/card'
+import { Input } from '@boxingundefeated/design-system/input'
 import { Search } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'

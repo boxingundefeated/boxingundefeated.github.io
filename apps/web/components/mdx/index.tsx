@@ -1,4 +1,4 @@
-import { cn } from '@thedaviddias/design-system/lib/utils'
+import { cn } from '@boxingundefeated/design-system/lib/utils'
 import type { MDXComponents } from 'mdx/types'
 import Link from 'next/link'
 

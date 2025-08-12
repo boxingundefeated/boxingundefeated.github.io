@@ -1,7 +1,7 @@
 'use client'
 
-import { Button } from '@thedaviddias/design-system/button'
-import { fontVariable } from '@thedaviddias/design-system/lib/fonts'
+import { Button } from '@boxingundefeated/design-system/button'
+import { fontVariable } from '@boxingundefeated/design-system/lib/fonts'
 import type NextError from 'next/error'
 import { useEffect } from 'react'
 

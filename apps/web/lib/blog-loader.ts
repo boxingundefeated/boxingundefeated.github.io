@@ -1,6 +1,6 @@
-import fs from 'fs'
+import fs from 'node:fs'
+import path from 'node:path'
 import matter from 'gray-matter'
-import path from 'path'
 import { remark } from 'remark'
 import html from 'remark-html'
 
@@ -58,7 +58,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
 
           // Get relative path and use as default slug
           const relativePath = path.relative(postsDirectory, filePath)
-          const fileSlug = '/' + relativePath.replace(/\.mdx?$/, '').replace(/\\/g, '/') + '/'
+          const fileSlug = `/${relativePath.replace(/\.mdx?$/, '').replace(/\\/g, '/')}/`
 
           // Use frontmatter slug if available, otherwise use file path
           const slug = data.slug || fileSlug
@@ -108,7 +108,7 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
 
         // Get relative path and use as default slug
         const relativePath = path.relative(postsDirectory, filePath)
-        const fileSlug = '/' + relativePath.replace(/\.mdx?$/, '').replace(/\\/g, '/') + '/'
+        const fileSlug = `/${relativePath.replace(/\.mdx?$/, '').replace(/\\/g, '/')}/`
 
         // Use frontmatter slug if available, otherwise use file path
         const postSlug = data.slug || fileSlug
@@ -158,7 +158,7 @@ export async function getBlogSlugs(): Promise<string[]> {
 
           // Get relative path and use as default slug
           const relativePath = path.relative(postsDirectory, filePath)
-          const fileSlug = '/' + relativePath.replace(/\.mdx?$/, '').replace(/\\/g, '/') + '/'
+          const fileSlug = `/${relativePath.replace(/\.mdx?$/, '').replace(/\\/g, '/')}/`
 
           // Use frontmatter slug if available, otherwise use file path
           const slug = data.slug || fileSlug

@@ -1,5 +1,5 @@
-import { Breadcrumb } from '@thedaviddias/design-system/breadcrumb'
-import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
+import { Breadcrumb } from '@boxingundefeated/design-system/breadcrumb'
+import { getBaseUrl } from '@boxingundefeated/utils/get-base-url'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -22,7 +22,7 @@ export async function generateMetadata({
 }: {
   params: { slug: string[] }
 }): Promise<Metadata> {
-  const slugPath = '/' + params.slug.join('/') + '/'
+  const slugPath = `/${params.slug.join('/')}/`
   const post = await getBlogPost(slugPath)
 
   if (!post) {
@@ -38,7 +38,7 @@ export async function generateMetadata({
 }
 
 export default async function BlogPostPage({ params }: { params: { slug: string[] } }) {
-  const slugPath = '/' + params.slug.join('/') + '/'
+  const slugPath = `/${params.slug.join('/')}/`
   const post = await getBlogPost(slugPath)
 
   if (!post) {

@@ -1,7 +1,6 @@
+import { Button } from '@boxingundefeated/design-system/button'
 import Link from 'next/link'
-
 import { getRoute } from '@/lib/routes'
-import { Button } from '@thedaviddias/design-system/button'
 
 export default async function NotFound() {
   return (

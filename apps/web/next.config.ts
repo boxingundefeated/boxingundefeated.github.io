@@ -1,24 +1,24 @@
+import { baseConfig, withAnalyzer, withVercelToolbarConfig } from '@boxingundefeated/config-next'
 import withMDX from '@next/mdx'
-import { baseConfig, withAnalyzer, withVercelToolbarConfig } from '@thedaviddias/config-next'
 import type { NextConfig } from 'next'
 import { env } from '@/env'
 
 export const INTERNAL_PACKAGES = [
-  '@thedaviddias/design-system',
-  // '@thedaviddias/auth', // Removed - contains server actions incompatible with static export
-  // '@thedaviddias/caching', // Removed - Redis/Upstash not needed for static site
-  '@thedaviddias/config-next',
-  '@thedaviddias/config-typescript',
-  // '@thedaviddias/supabase', // Removed - not needed for static boxing site
-  '@thedaviddias/utils',
-  '@thedaviddias/content'
+  '@boxingundefeated/design-system',
+  // '@boxingundefeated/auth', // Removed - contains server actions incompatible with static export
+  // '@boxingundefeated/caching', // Removed - Redis/Upstash not needed for static site
+  '@boxingundefeated/config-next',
+  '@boxingundefeated/config-typescript',
+  // '@boxingundefeated/supabase', // Removed - not needed for static boxing site
+  '@boxingundefeated/utils',
+  '@boxingundefeated/content'
 ]
 
 let nextConfig: NextConfig = {
   ...baseConfig,
 
-  // Use static export only for GitHub Pages, not for Vercel
-  output: process.env.VERCEL ? undefined : 'export',
+  // Always use static export to avoid serverless function size limits
+  output: 'export',
 
   // No basePath needed for organization GitHub Pages (*.github.io)
   // basePath: process.env.NODE_ENV === 'production' ? '/boxing' : '',

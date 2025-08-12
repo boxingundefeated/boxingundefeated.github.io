@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { getContentFilePath, getContentPath } from '@thedaviddias/utils/content-paths'
+import { getContentFilePath, getContentPath } from '@boxingundefeated/utils/content-paths'
 import matter from 'gray-matter'
 
 interface SearchEntry {

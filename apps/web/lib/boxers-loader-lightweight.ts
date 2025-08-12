@@ -1,8 +1,8 @@
 // Lightweight boxer loader that doesn't import the huge JSON file
 // This is used during build time to generate static pages without loading 71MB
 
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
 import type { BoxerMetadata } from './boxers-loader'
 
 // Only use this in Node.js environment (build time)

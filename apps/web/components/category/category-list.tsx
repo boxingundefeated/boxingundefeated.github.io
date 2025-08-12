@@ -1,7 +1,7 @@
+import { Card, CardDescription, CardHeader, CardTitle } from '@boxingundefeated/design-system/card'
+import Link from 'next/link'
 import { categories } from '@/lib/categories'
 import { getRoute } from '@/lib/routes'
-import { Card, CardDescription, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
-import Link from 'next/link'
 
 export function CategoryList() {
   return (
