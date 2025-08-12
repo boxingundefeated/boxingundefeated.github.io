@@ -9,6 +9,7 @@
     "allowJs": true,
     "jsx": "preserve",
     "noEmit": true,
+    "types": ["node"],
     "paths": {
       "@/*": ["./*"],
       "@thedaviddias/*": ["../../packages/*"]
