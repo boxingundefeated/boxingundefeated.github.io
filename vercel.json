@@ -1,6 +1,7 @@
 {
-  "buildCommand": "cd apps/web && pnpm run build:vercel",
+  "buildCommand": "pnpm turbo run build:vercel --filter=web",
   "outputDirectory": "apps/web/out",
   "installCommand": "pnpm install",
-  "framework": null
+  "framework": null,
+  "ignoreCommand": "git diff HEAD^ HEAD --quiet ."
 }
