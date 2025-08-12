@@ -1,4 +1,3 @@
-import { AnalyticsProvider } from '@thedaviddias/analytics'
 // import { AuthProviderComponent } from '@thedaviddias/auth' // Removed for static export
 import { IS_DEVELOPMENT } from '@thedaviddias/utils/environment'
 import { VercelToolbar } from '@vercel/toolbar/next'
@@ -7,15 +6,10 @@ import { Toaster } from './components/shadcn/sonner'
 import { TooltipProvider } from './components/shadcn/tooltip'
 import { ThemeProvider } from './providers/theme'
 
-interface DesignSystemProviderProperties extends ThemeProviderProps {
-  plausibleDomain?: string
-  monitoringSampleRate?: number
-}
+interface DesignSystemProviderProperties extends ThemeProviderProps {}
 
 export const DesignSystemProvider = ({
   children,
-  plausibleDomain,
-  monitoringSampleRate,
   ...properties
 }: DesignSystemProviderProperties) => {
   const content = (
@@ -26,13 +20,5 @@ export const DesignSystemProvider = ({
     </>
   )
 
-  return (
-    <ThemeProvider {...properties}>
-      {plausibleDomain ? (
-        <AnalyticsProvider plausibleDomain={plausibleDomain}>{content}</AnalyticsProvider>
-      ) : (
-        content
-      )}
-    </ThemeProvider>
-  )
+  return <ThemeProvider {...properties}>{content}</ThemeProvider>
 }

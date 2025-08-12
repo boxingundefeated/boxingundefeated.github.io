@@ -35,34 +35,6 @@ jest.mock('next/navigation', () => ({
   useParams: () => ({})
 }))
 
-// Mock Sentry
-jest.mock('@sentry/nextjs', () => ({
-  init: jest.fn(),
-  captureException: jest.fn(),
-  captureMessage: jest.fn(),
-  withScope: jest.fn(),
-  Integrations: {
-    BrowserTracing: jest.fn()
-  }
-}))
-
-// Mock logging package
-jest.mock('@thedaviddias/logging', () => ({
-  logger: {
-    error: jest.fn(),
-    info: jest.fn(),
-    warn: jest.fn(),
-    debug: jest.fn()
-  }
-}))
-
-// Mock observability package
-jest.mock('@thedaviddias/observability', () => ({
-  captureError: jest.fn(),
-  captureMessage: jest.fn(),
-  withScope: jest.fn()
-}))
-
 // Mock lucide-react icons
 jest.mock('lucide-react', () => ({
   ChevronDown: () => null,
