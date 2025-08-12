@@ -13,13 +13,22 @@ import { getOpponentLinksForBouts } from '@/lib/opponent-mapper'
 // Load individual boxer data from split JSON files
 function getBoxerBySlugOptimized(slug: string): BoxerMetadata | null {
   try {
-    // In Vercel, process.cwd() is the monorepo root, so we need apps/web prefix
-    // Locally, process.cwd() is already apps/web
-    const isVercel = process.env.VERCEL === '1'
-    const basePath = isVercel ? 'apps/web/public/data/boxers' : 'public/data/boxers'
-    const filePath = path.join(process.cwd(), basePath, `${slug}.json`)
-    const data = fs.readFileSync(filePath, 'utf-8')
-    return JSON.parse(data)
+    // Try multiple possible paths to handle different working directories
+    const possiblePaths = [
+      path.join(process.cwd(), 'public/data/boxers', `${slug}.json`),
+      path.join(process.cwd(), 'apps/web/public/data/boxers', `${slug}.json`),
+      path.join(__dirname, '../../../public/data/boxers', `${slug}.json`)
+    ]
+
+    for (const filePath of possiblePaths) {
+      try {
+        const data = fs.readFileSync(filePath, 'utf-8')
+        return JSON.parse(data)
+      } catch {
+        // Try next path
+      }
+    }
+    return null
   } catch {
     return null
   }
@@ -28,16 +37,32 @@ function getBoxerBySlugOptimized(slug: string): BoxerMetadata | null {
 // Load index for generating static params
 function getBoxerSlugs(): string[] {
   try {
-    // In Vercel, process.cwd() is the monorepo root, so we need apps/web prefix
-    // Locally, process.cwd() is already apps/web
-    const isVercel = process.env.VERCEL === '1'
-    const basePath = isVercel ? 'apps/web/public/data/boxers' : 'public/data/boxers'
-    const indexPath = path.join(process.cwd(), basePath, 'index.json')
-    const data = fs.readFileSync(indexPath, 'utf-8')
+    // Try multiple possible paths to handle different working directories
+    const possiblePaths = [
+      path.join(process.cwd(), 'public/data/boxers/index.json'),
+      path.join(process.cwd(), 'apps/web/public/data/boxers/index.json'),
+      path.join(__dirname, '../../../public/data/boxers/index.json')
+    ]
+
+    let data: string | null = null
+    for (const indexPath of possiblePaths) {
+      try {
+        data = fs.readFileSync(indexPath, 'utf-8')
+        break
+      } catch {
+        // Try next path
+      }
+    }
+
+    if (!data) {
+      console.error('Failed to load boxer index from any path')
+      return []
+    }
+
     const index = JSON.parse(data)
     return index.map((boxer: any) => boxer.slug)
-  } catch {
-    console.error('Failed to load boxer index')
+  } catch (error) {
+    console.error('Failed to load boxer index:', error)
     return []
   }
 }
@@ -265,7 +290,7 @@ export default async function BoxerPage({ params }: { params: { slug: string } }
               <CardTitle>Biography</CardTitle>
             </CardHeader>
             <CardContent>
-              {/* biome-ignore lint/security/noDangerouslySetInnerHtml: Bio content is from trusted source */}
+              {/* biome-ignore lint: Bio content is from trusted source */}
               <div
                 className="space-y-4 text-sm leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: boxer.bio }}
