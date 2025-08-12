@@ -1,4 +1,8 @@
 {
+  "buildCommand": "cd ../.. && turbo run build --filter=web",
+  "outputDirectory": ".next",
+  "installCommand": "cd ../.. && pnpm install",
+  "framework": "nextjs",
   "public": true,
   "github": {
     "silent": true
