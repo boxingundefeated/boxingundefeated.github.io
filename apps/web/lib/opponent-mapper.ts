@@ -1,5 +1,5 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
 
 // Cache for opponent name to slug mapping
 let opponentMap: Map<string, string> | null = null

@@ -1,9 +1,8 @@
 'use client'
 
-import type React from 'react'
-
-import { Button } from '@thedaviddias/design-system/button'
+import { Button } from '@boxingundefeated/design-system/button'
 import Link from 'next/link'
+import type React from 'react'
 
 /**
  * Newsletter subscription form component

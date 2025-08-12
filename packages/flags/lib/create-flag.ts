@@ -1,4 +1,4 @@
-// import { currentUser } from '@thedaviddias/auth' // Removed for static export
+// import { currentUser } from '@boxingundefeated/auth' // Removed for static export
 import { flag } from '@vercel/flags/next'
 
 export const createFlag = (key: string) =>

@@ -1,8 +1,8 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { Breadcrumb } from '@thedaviddias/design-system/breadcrumb'
-import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
-import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
+import { Breadcrumb } from '@boxingundefeated/design-system/breadcrumb'
+import { Card, CardContent, CardHeader, CardTitle } from '@boxingundefeated/design-system/card'
+import { getBaseUrl } from '@boxingundefeated/utils/get-base-url'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { FightHistory } from '@/components/fight-history'
@@ -290,7 +290,7 @@ export default async function BoxerPage({ params }: { params: { slug: string } }
               <CardTitle>Biography</CardTitle>
             </CardHeader>
             <CardContent>
-              {/* biome-ignore lint: Bio content is from trusted source */}
+              {/* biome-ignore lint/security/noDangerouslySetInnerHtml: Bio content is from trusted source */}
               <div
                 className="space-y-4 text-sm leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: boxer.bio }}

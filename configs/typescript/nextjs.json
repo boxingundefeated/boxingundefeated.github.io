@@ -12,7 +12,7 @@
     "types": ["node"],
     "paths": {
       "@/*": ["./*"],
-      "@thedaviddias/*": ["../../packages/*"]
+      "@boxingundefeated/*": ["../../packages/*"]
     }
   },
   "exclude": ["node_modules"]

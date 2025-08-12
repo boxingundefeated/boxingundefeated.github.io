@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from '@thedaviddias/design-system/card'
+import { Card, CardContent, CardHeader } from '@boxingundefeated/design-system/card'
 
 export function BoxerCardSkeleton() {
   return (

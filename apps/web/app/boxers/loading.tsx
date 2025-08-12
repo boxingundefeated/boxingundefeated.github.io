@@ -1,6 +1,6 @@
-import { Breadcrumb } from '@thedaviddias/design-system/breadcrumb'
-import { Button } from '@thedaviddias/design-system/button'
-import { getBaseUrl } from '@thedaviddias/utils/get-base-url'
+import { Breadcrumb } from '@boxingundefeated/design-system/breadcrumb'
+import { Button } from '@boxingundefeated/design-system/button'
+import { getBaseUrl } from '@boxingundefeated/utils/get-base-url'
 import { BoxerCardSkeleton } from '@/components/boxer-skeleton'
 
 export default function BoxersLoading() {

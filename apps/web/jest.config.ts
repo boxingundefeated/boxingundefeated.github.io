@@ -22,10 +22,13 @@ const config: Config.InitialOptions = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
     'lucide-react': require.resolve('lucide-react'),
-    '^@thedaviddias/([^/]+)$': ['<rootDir>/../../packages/$1/src', '<rootDir>/../../packages/$1'],
-    '^@thedaviddias/design-system/(.*)$':
+    '^@boxingundefeated/([^/]+)$': [
+      '<rootDir>/../../packages/$1/src',
+      '<rootDir>/../../packages/$1'
+    ],
+    '^@boxingundefeated/design-system/(.*)$':
       '<rootDir>/../../packages/design-system/components/shadcn/$1.tsx',
-    '^@thedaviddias/([^/]+)/(.*)$': [
+    '^@boxingundefeated/([^/]+)/(.*)$': [
       '<rootDir>/../../packages/$1/src/$2',
       '<rootDir>/../../packages/$1/$2'
     ]

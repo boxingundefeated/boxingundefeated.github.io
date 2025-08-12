@@ -1,23 +1,18 @@
 'use client'
 
-import { Button } from '@thedaviddias/design-system/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@thedaviddias/design-system/card'
-import { ToggleGroup, ToggleGroupItem } from '@thedaviddias/design-system/toggle-group'
+import { Button } from '@boxingundefeated/design-system/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@boxingundefeated/design-system/card'
+import { ToggleGroup, ToggleGroupItem } from '@boxingundefeated/design-system/toggle-group'
 import { Grid, List, SortAsc, Trophy, Users } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { BoxerCardSkeleton, BoxerListSkeleton } from '@/components/boxer-skeleton'
 import { EmptyState } from '@/components/empty-state'
 import { LazyImage } from '@/components/lazy-image'
 import { getBoxerCategories, getBoxerStats } from '@/lib/boxer-utils'
 import type { BoxerMetadata } from '@/lib/boxers-loader'
-import {
-  getDivisionSlug,
-  loadBoxersByDivision,
-  loadSearchIndex,
-  sortBoxers
-} from '@/lib/boxers-loader-optimized'
+import { getDivisionSlug, loadBoxersByDivision, sortBoxers } from '@/lib/boxers-loader-optimized'
 
 const ITEMS_PER_PAGE = 24 // Reduced from 48 for faster initial load
 const LOAD_MORE_THRESHOLD = 200 // pixels from bottom to trigger load

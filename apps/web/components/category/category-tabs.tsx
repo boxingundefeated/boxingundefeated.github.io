@@ -1,6 +1,6 @@
 'use client'
 
-import { Tabs, TabsList, TabsTrigger } from '@thedaviddias/design-system/tabs'
+import { Tabs, TabsList, TabsTrigger } from '@boxingundefeated/design-system/tabs'
 
 export function CategoryTabs() {
   return (

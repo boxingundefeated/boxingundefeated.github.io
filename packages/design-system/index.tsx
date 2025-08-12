@@ -1,5 +1,5 @@
-// import { AuthProviderComponent } from '@thedaviddias/auth' // Removed for static export
-import { IS_DEVELOPMENT } from '@thedaviddias/utils/environment'
+// import { AuthProviderComponent } from '@boxingundefeated/auth' // Removed for static export
+import { IS_DEVELOPMENT } from '@boxingundefeated/utils/environment'
 import { VercelToolbar } from '@vercel/toolbar/next'
 import type { ThemeProviderProps } from 'next-themes'
 import { Toaster } from './components/shadcn/sonner'

@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '@thedaviddias/design-system/button'
+import { Button } from '@boxingundefeated/design-system/button'
 import { useEffect } from 'react'
 
 type ErrorProps = {
