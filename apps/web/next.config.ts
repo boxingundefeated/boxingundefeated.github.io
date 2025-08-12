@@ -1,3 +1,9 @@
+console.log('Next.js config loading...')
+console.log('Current working directory:', process.cwd())
+console.log('Node version:', process.version)
+console.log('Environment:', process.env.NODE_ENV)
+console.log('Vercel environment:', process.env.VERCEL)
+
 import withMDX from '@next/mdx'
 import { baseConfig, withAnalyzer, withVercelToolbarConfig } from '@thedaviddias/config-next'
 import type { NextConfig } from 'next'
